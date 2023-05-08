@@ -13,5 +13,6 @@ namespace EntitiyLayer.Entities
         [Key]
         public LifeStyleType Type { get; set; }
         public string Description { get; set; }
+        public double ActivityLevel { get; set; }
     }
 }
