@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Team4Context))]
-    [Migration("20230508185219_mig1")]
+    [Migration("20230508190651_mig1")]
     partial class mig1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,9 +31,6 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int?>("CategoryId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
@@ -55,21 +52,14 @@ namespace DataAccessLayer.Migrations
                     b.Property<double>("TotalCalory")
                         .HasColumnType("float");
 
-                    b.Property<int?>("UnitId")
-                        .HasColumnType("int");
-
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
-
                     b.HasIndex("FoodId");
 
                     b.HasIndex("MealId");
-
-                    b.HasIndex("UnitId");
 
                     b.HasIndex("UserId");
 
@@ -246,16 +236,10 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Entities.Meal", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
                     b.Property<int>("Name")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("Name");
 
                     b.ToTable("Meals");
                 });
@@ -278,10 +262,6 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntitiyLayer.Entities.AddedFood", b =>
                 {
-                    b.HasOne("EntityLayer.Entities.Category", null)
-                        .WithMany("AddedFoods")
-                        .HasForeignKey("CategoryId");
-
                     b.HasOne("EntityLayer.Entities.Food", "Food")
                         .WithMany("AddedFoods")
                         .HasForeignKey("FoodId")
@@ -293,10 +273,6 @@ namespace DataAccessLayer.Migrations
                         .HasForeignKey("MealId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("EntityLayer.Entities.Unit", null)
-                        .WithMany("AddedFoods")
-                        .HasForeignKey("UnitId");
 
                     b.HasOne("EntitiyLayer.Entities.User", "User")
                         .WithMany("AddedFoods")
@@ -325,13 +301,13 @@ namespace DataAccessLayer.Migrations
             modelBuilder.Entity("EntityLayer.Entities.Food", b =>
                 {
                     b.HasOne("EntityLayer.Entities.Category", "Category")
-                        .WithMany()
+                        .WithMany("Foods")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("EntityLayer.Entities.Unit", "Unit")
-                        .WithMany()
+                        .WithMany("Foods")
                         .HasForeignKey("UnitId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -348,7 +324,7 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Entities.Category", b =>
                 {
-                    b.Navigation("AddedFoods");
+                    b.Navigation("Foods");
                 });
 
             modelBuilder.Entity("EntityLayer.Entities.Food", b =>
@@ -363,7 +339,7 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Entities.Unit", b =>
                 {
-                    b.Navigation("AddedFoods");
+                    b.Navigation("Foods");
                 });
 #pragma warning restore 612, 618
         }
