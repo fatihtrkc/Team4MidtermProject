@@ -14,6 +14,7 @@ namespace DataAccessLayer.Configuration
         public void Configure(EntityTypeBuilder<AddedFood> builder)
         {
             
+
         }
     }
 }
