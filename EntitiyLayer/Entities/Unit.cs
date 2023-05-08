@@ -12,6 +12,6 @@ namespace EntityLayer.Entities
     {
         public int Id { get; set; }
         public UnitType Name { get; set; }
-        public ICollection<AddedFood> AddedFoods { get; set; }
+        public ICollection<Food> Foods { get; set; }
     }
 }

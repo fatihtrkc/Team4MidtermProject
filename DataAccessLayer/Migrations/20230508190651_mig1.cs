@@ -53,13 +53,11 @@ namespace DataAccessLayer.Migrations
                 name: "Meals",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Meals", x => x.Id);
+                    table.PrimaryKey("PK_Meals", x => x.Name);
                 });
 
             migrationBuilder.CreateTable(
@@ -147,18 +145,11 @@ namespace DataAccessLayer.Migrations
                     CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     FoodId = table.Column<int>(type: "int", nullable: false),
-                    MealId = table.Column<int>(type: "int", nullable: false),
-                    CategoryId = table.Column<int>(type: "int", nullable: true),
-                    UnitId = table.Column<int>(type: "int", nullable: true)
+                    MealId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AddedFoods", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_AddedFoods_Categories_CategoryId",
-                        column: x => x.CategoryId,
-                        principalTable: "Categories",
-                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_AddedFoods_Foods_FoodId",
                         column: x => x.FoodId,
@@ -169,13 +160,8 @@ namespace DataAccessLayer.Migrations
                         name: "FK_AddedFoods_Meals_MealId",
                         column: x => x.MealId,
                         principalTable: "Meals",
-                        principalColumn: "Id",
+                        principalColumn: "Name",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_AddedFoods_Units_UnitId",
-                        column: x => x.UnitId,
-                        principalTable: "Units",
-                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_AddedFoods_Users_UserId",
                         column: x => x.UserId,
@@ -183,11 +169,6 @@ namespace DataAccessLayer.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_AddedFoods_CategoryId",
-                table: "AddedFoods",
-                column: "CategoryId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AddedFoods_FoodId",
@@ -198,11 +179,6 @@ namespace DataAccessLayer.Migrations
                 name: "IX_AddedFoods_MealId",
                 table: "AddedFoods",
                 column: "MealId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_AddedFoods_UnitId",
-                table: "AddedFoods",
-                column: "UnitId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AddedFoods_UserId",
