@@ -9,10 +9,6 @@ namespace EntityLayer.Entities
 {
     public class Unit
     {
-        public Unit()
-        {
-            AddedFoods = new List<AddedFood>();
-        }
         public int UnitId { get; set; }
         public UnitType UnitType { get; set; }
         public ICollection<AddedFood> AddedFoods { get; set; }

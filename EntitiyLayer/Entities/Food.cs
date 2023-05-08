@@ -9,10 +9,6 @@ namespace EntityLayer.Entities
 {
     public class Food
     {
-        public Food()
-        {
-            AddedFoods = new List<AddedFood>();
-        }
         public int FoodId { get; set; }
         public string FoodName { get; set; }
         public decimal CaloryPerUnit { get; set; }

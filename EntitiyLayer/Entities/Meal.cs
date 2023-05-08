@@ -9,10 +9,6 @@ namespace EntityLayer.Entities
 {
     public class Meal
     {
-        public Meal()
-        {
-            AddedFoods = new List<AddedFood>();
-        }
         public int MealId { get; set; }
         public MealType MealType { get; set;}
 
