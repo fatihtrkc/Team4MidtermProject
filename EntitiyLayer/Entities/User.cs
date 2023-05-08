@@ -24,7 +24,7 @@ namespace EntitiyLayer.Entities
 
         //Relations
         [ForeignKey("LifeStyle")]
-        public int LifeStyleId { get; set; }
+        public LifeStyleType LifeStyleId { get; set; }
         public LifeStyle LifeStyle { get; set; }
         public ICollection<AddedFood> AddedFoods { get; set; }
     }
