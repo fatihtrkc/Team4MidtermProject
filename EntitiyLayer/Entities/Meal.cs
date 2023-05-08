@@ -1,4 +1,5 @@
-﻿using EntityLayer.Enums;
+﻿using EntitiyLayer.Entities;
+using EntityLayer.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
