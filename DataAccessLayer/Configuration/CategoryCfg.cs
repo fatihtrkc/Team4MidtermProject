@@ -9,11 +9,12 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Configuration
 {
-    internal class MealConfiguration : IEntityTypeConfiguration<Meal>
+    internal class CategoryCfg : IEntityTypeConfiguration<Category>
     {
-        public void Configure(EntityTypeBuilder<Meal> builder)
+        public void Configure(EntityTypeBuilder<Category> builder)
         {
-            
+            builder.Property(a => a.Name).HasMaxLength(50);
+            builder.HasIndex(a => a.Name).IsUnique();
         }
     }
 }

@@ -10,11 +10,10 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DataAccessLayer.Configuration
 {
-    internal class UnitConfiguration : IEntityTypeConfiguration<Unit>
+    internal class UnitCfg : IEntityTypeConfiguration<Unit>
     {
         public void Configure(EntityTypeBuilder<Unit> builder)
         {
-           
         }
     }
 }

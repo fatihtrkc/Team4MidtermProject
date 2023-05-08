@@ -8,9 +8,9 @@ namespace EntityLayer.Enums
 {
     public enum MealType
     {
-        Kahvaltı = 1,
-        Öğle,
-        Akşam,
-        Ara
+        Breakfast = 1,
+        Lunch,
+        Snack,
+        Dinner
     }
 }

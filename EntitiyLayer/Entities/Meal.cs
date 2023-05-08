@@ -10,8 +10,8 @@ namespace EntityLayer.Entities
 {
     public class Meal
     {
-        public int MealId { get; set; }
-        public MealType MealType { get; set;}
+        public int Id { get; set; }
+        public MealType Name { get; set;}
 
         public ICollection<AddedFood> AddedFoods { get; set; }
     }

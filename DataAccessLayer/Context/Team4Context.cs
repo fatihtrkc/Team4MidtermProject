@@ -1,4 +1,5 @@
 ﻿using EntitiyLayer.Entities;
+using EntityLayer.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,12 @@ namespace DataAccessLayer.Context
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<Meal> Meals { get; set; }
+        public DbSet<AddedFood> AddedFoods { get; set; }
+        public DbSet<Food> Foods { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Unit> Units { get; set; }
+        public DbSet<LifeStyle> LifeStyles { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

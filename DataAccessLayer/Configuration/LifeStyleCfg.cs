@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Configuration
 {
-    public class AddedFoodConfiguration : IEntityTypeConfiguration<AddedFood>
+    public class LifeStyleCfg : IEntityTypeConfiguration<LifeStyle>
     {
-        public void Configure(EntityTypeBuilder<AddedFood> builder)
+        public void Configure(EntityTypeBuilder<LifeStyle> builder)
         {
-            
+            builder.Property(b => b.Description).HasMaxLength(100);
         }
     }
 }

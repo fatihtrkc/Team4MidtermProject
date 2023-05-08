@@ -1,6 +1,7 @@
 ﻿using EntityLayer.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -16,11 +17,15 @@ namespace EntitiyLayer.Entities
         public DateTime BirthDate { get; set; }
         public double Height { get; set; }
         public double Weight { get; set; }
-        public LifeStyle LifeStyle { get; set; }
         public double BodyMassIndex { get; set; }
         public string SpecificQuestion { get; set; }
         public string QuestionAnswer { get; set; }
         public bool ActivePassiveSituation { get; set; }
+
+        //Relations
+        [ForeignKey("LifeStyle")]
+        public int LifeStyleId { get; set; }
+        public LifeStyle LifeStyle { get; set; }
         public ICollection<AddedFood> AddedFoods { get; set; }
     }
 }

@@ -10,8 +10,8 @@ namespace EntityLayer.Entities
 {
     public class Unit
     {
-        public int UnitId { get; set; }
-        public UnitType UnitType { get; set; }
+        public int Id { get; set; }
+        public UnitType Name { get; set; }
         public ICollection<AddedFood> AddedFoods { get; set; }
     }
 }

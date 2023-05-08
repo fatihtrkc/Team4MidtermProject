@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Configuration
 {
-    public class AdminConfiguration : IEntityTypeConfiguration<Admin>
+    public class AdminCfg : IEntityTypeConfiguration<Admin>
     {
         public void Configure(EntityTypeBuilder<Admin> builder)
         {

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Enums
 {
-    public enum LifeStyle
+    public enum LifeStyleType
     {
+        Never = 1,
+        Low,
+        Middle,
+        High,
+        More
     }
 }
