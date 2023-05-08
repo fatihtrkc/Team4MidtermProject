@@ -10,7 +10,7 @@ namespace EntitiyLayer.Entities
 {
     public class User : PersonBase
     {
-        public string Name { get; set; }
+        public string Names { get; set; }
         public string Surname { get; set; }
         public Gender Gender { get; set; }
         public DateTime BirthDate { get; set; }
