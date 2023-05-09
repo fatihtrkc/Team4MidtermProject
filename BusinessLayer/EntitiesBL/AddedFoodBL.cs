@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.EntitiesBL
 {
-    public class UserBL : ICrud<User>
+    internal class AddedFoodBL : ICrud<AddedFood>
     {
-        public bool Add(User entity)
+        public bool Add(AddedFood entity)
         {
             throw new NotImplementedException();
         }
@@ -20,17 +20,17 @@ namespace BusinessLayer.EntitiesBL
             throw new NotImplementedException();
         }
 
-        public User Find(int entityId)
+        public AddedFood Find(int entityId)
         {
             throw new NotImplementedException();
         }
 
-        public List<User> GetAll()
+        public List<AddedFood> GetAll()
         {
             throw new NotImplementedException();
         }
 
-        public bool Update(User entity)
+        public bool Update(AddedFood entity)
         {
             throw new NotImplementedException();
         }
