@@ -15,7 +15,7 @@ namespace DataAccessLayer.Configuration
     {
         public void Configure(EntityTypeBuilder<Unit> builder)
         {
-            builder.Property(b => b.Description).HasMaxLength(20);
+            builder.Property(b => b.Description).HasMaxLength(50);
 
             builder.HasData
                 (

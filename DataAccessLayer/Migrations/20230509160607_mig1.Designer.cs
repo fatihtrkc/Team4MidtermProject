@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Team4Context))]
-    [Migration("20230509152232_mig6")]
-    partial class mig6
+    [Migration("20230509160607_mig1")]
+    partial class mig1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,7 +35,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<DateTime>("CreationDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 9, 18, 22, 32, 370, DateTimeKind.Local).AddTicks(6319));
+                        .HasDefaultValue(new DateTime(2023, 5, 9, 19, 6, 7, 220, DateTimeKind.Local).AddTicks(9382));
 
                     b.Property<int>("FoodId")
                         .HasColumnType("int");
@@ -97,7 +97,7 @@ namespace DataAccessLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreationDate = new DateTime(2023, 5, 9, 18, 22, 32, 370, DateTimeKind.Local).AddTicks(8162),
+                            CreationDate = new DateTime(2023, 5, 9, 19, 6, 7, 221, DateTimeKind.Local).AddTicks(1063),
                             Email = "admin@admin.com",
                             Password = "Admin1234"
                         });
@@ -170,7 +170,9 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("CreationDate")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2023, 5, 9, 19, 6, 7, 221, DateTimeKind.Local).AddTicks(5484));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -221,6 +223,42 @@ namespace DataAccessLayer.Migrations
                     b.HasIndex("LifeStyleId");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ActivePassiveSituation = false,
+                            BirthDate = new DateTime(2000, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreationDate = new DateTime(2023, 5, 9, 19, 6, 7, 221, DateTimeKind.Local).AddTicks(5621),
+                            Email = "ahmetyilmaz@yilmaz.com",
+                            Gender = 2,
+                            Height = 1.8200000000000001,
+                            LifeStyleId = 2,
+                            Name = "Ahmet",
+                            Password = "AaBb12.,",
+                            QuestionAnswer = "C#",
+                            SpecificQuestion = "En Sevdiğin Programlama Dili?",
+                            Surname = "Yılmaz",
+                            Weight = 103.0
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ActivePassiveSituation = false,
+                            BirthDate = new DateTime(1997, 7, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreationDate = new DateTime(2023, 5, 9, 19, 6, 7, 221, DateTimeKind.Local).AddTicks(5800),
+                            Email = "ayşesevgi@sevgi.com",
+                            Gender = 1,
+                            Height = 1.55,
+                            LifeStyleId = 3,
+                            Name = "Ayşe",
+                            Password = "AaBb12.,",
+                            QuestionAnswer = "Java",
+                            SpecificQuestion = "En Sevdiğin Programlama Dili?",
+                            Surname = "Sevgi",
+                            Weight = 55.0
+                        });
                 });
 
             modelBuilder.Entity("EntityLayer.Entities.Category", b =>
@@ -828,8 +866,8 @@ namespace DataAccessLayer.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Name");
 
