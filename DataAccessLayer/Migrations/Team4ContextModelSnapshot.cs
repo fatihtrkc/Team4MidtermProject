@@ -40,9 +40,7 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("int");
 
                     b.Property<double>("Quantity")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("float")
-                        .HasDefaultValue(1.0);
+                        .HasColumnType("float");
 
                     b.Property<double>("TargetCaloryPerDay")
                         .HasColumnType("float");

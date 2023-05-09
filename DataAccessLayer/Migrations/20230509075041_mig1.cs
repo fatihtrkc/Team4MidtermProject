@@ -139,7 +139,7 @@ namespace DataAccessLayer.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Quantity = table.Column<double>(type: "float", nullable: false, defaultValue: 1.0),
+                    Quantity = table.Column<double>(type: "float", nullable: false),
                     TotalCalory = table.Column<double>(type: "float", nullable: false),
                     TargetCaloryPerDay = table.Column<double>(type: "float", nullable: false),
                     CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
