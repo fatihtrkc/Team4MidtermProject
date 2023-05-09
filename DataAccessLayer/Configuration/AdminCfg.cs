@@ -15,6 +15,11 @@ namespace DataAccessLayer.Configuration
         {
             builder.Property(b => b.Email).HasMaxLength(20);
             builder.HasIndex(b => b.Email).IsUnique();
+
+            builder.HasData
+                (
+                new Admin() { Email = "admin@admin.com", Password = "Admin1234", CreationDate = DateTime.Now }
+                );
         }
     }
 }

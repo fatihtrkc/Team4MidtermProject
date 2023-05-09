@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.EntitiesBL
 {
-    internal class AddedFoodBL : ICrud<AddedFood>
+    public class AddedFoodBL : ICrud<AddedFood>
     {
         public AddedFoodBL()
         {
