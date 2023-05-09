@@ -67,16 +67,16 @@ namespace DataAccessLayer.Configuration
 
                 //Category name => Fast Food
                 new Food() { Name = "Hamburger", CaloryPerUnit = 351, CategoryId = 6, UnitId = UnitType.Porsiyon },
-                new Food() { Name = "Orta Boy Pizza", CaloryPerUnit = 265 , CategoryId = 6, UnitId = UnitType.Porsiyon },
+                new Food() { Name = "Orta Boy Pizza", CaloryPerUnit = 265, CategoryId = 6, UnitId = UnitType.Porsiyon },
                 new Food() { Name = "Patates Kızartması", CaloryPerUnit = 355, CategoryId = 6, UnitId = UnitType.Porsiyon },
-                new Food() { Name = "Tavuk Döner", CaloryPerUnit = 272 , CategoryId = 6, UnitId = UnitType.Porsiyon },
+                new Food() { Name = "Tavuk Döner", CaloryPerUnit = 272, CategoryId = 6, UnitId = UnitType.Porsiyon },
                 new Food() { Name = "Et Döner", CaloryPerUnit = 391, CategoryId = 6, UnitId = UnitType.Porsiyon },
-                new Food() { Name = "Midye", CaloryPerUnit = 15 , CategoryId = 6, UnitId = UnitType.Adet },
+                new Food() { Name = "Midye", CaloryPerUnit = 15, CategoryId = 6, UnitId = UnitType.Adet },
 
                  //Category name => Tatlı
                  new Food() { Name = "Kazan Dibi", CaloryPerUnit = 202, CategoryId = 7, UnitId = UnitType.Porsiyon },
                  new Food() { Name = "Sütlaç", CaloryPerUnit = 293, CategoryId = 7, UnitId = UnitType.Porsiyon },
-                 new Food() { Name = "Baklava", CaloryPerUnit = 288 , CategoryId = 7, UnitId = UnitType.Porsiyon },
+                 new Food() { Name = "Baklava", CaloryPerUnit = 288, CategoryId = 7, UnitId = UnitType.Porsiyon },
 
                  //Category name => Fırın
                  new Food() { Name = "Beyaz Ekmek", CaloryPerUnit = 76, CategoryId = 8, UnitId = UnitType.Porsiyon },

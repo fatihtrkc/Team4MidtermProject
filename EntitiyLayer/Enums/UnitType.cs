@@ -8,7 +8,7 @@ namespace EntityLayer.Enums
 {
     public enum UnitType
     {
-        gr =1,
+        gr = 1,
         lt,
         Adet,
         Porsiyon
