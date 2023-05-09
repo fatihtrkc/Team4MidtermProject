@@ -14,7 +14,7 @@ namespace DataAccessLayer.Configuration
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.Property(b => b.Email).HasMaxLength(50);
+            builder.Property(b => b.Email).HasMaxLength(30);
             builder.HasIndex(b => b.Email).IsUnique();
             builder.Property(b => b.Name).HasMaxLength(20);
             builder.Property(b => b.Surname).HasMaxLength(20);
