@@ -44,5 +44,12 @@ namespace BusinessLayer.EntitiesBL
             db.Users.Update(entity);
             return db.SaveChanges() > 0;
         }
+
+        //public void VKEHesapla(int entityId)
+        //{
+        //    double weight = db.Users.Find(entityId).Weight;
+        //    double height = db.Users.Find(entityId).Height;
+
+        //}
     }
 }
