@@ -14,7 +14,7 @@ namespace EntityLayer.Entities
 
 
         //Relations
-        public ICollection<AddedFood> AddedFoods { get; set; }
+        public ICollection<Food> Foods { get; set; }
 
     }
 }

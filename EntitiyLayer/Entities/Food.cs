@@ -1,4 +1,5 @@
 ﻿using EntitiyLayer.Entities;
+using EntityLayer.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -19,7 +20,8 @@ namespace EntityLayer.Entities
         //Relations
         public int CategoryId { get; set; }
         public Category Category { get; set; }
-        public int UnitId { get; set; }
+        [ForeignKey("Unit")]
+        public UnitType UnitId { get; set; }
         public Unit Unit { get; set; }
         public ICollection<AddedFood> AddedFoods { get; set; }
     }

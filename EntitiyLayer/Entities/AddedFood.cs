@@ -1,4 +1,5 @@
 ﻿using EntityLayer.Entities;
+using EntityLayer.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -21,7 +22,8 @@ namespace EntitiyLayer.Entities
         public User User { get; set; }
         public int FoodId { get; set; }
         public Food Food { get; set; }
-        public int MealId { get; set; }
+        [ForeignKey("Meal")]
+        public MealType MealId { get; set; }
         public Meal Meal { get; set; }
     }
 }
