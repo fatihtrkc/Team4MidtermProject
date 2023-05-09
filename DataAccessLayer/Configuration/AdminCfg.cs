@@ -13,12 +13,12 @@ namespace DataAccessLayer.Configuration
     {
         public void Configure(EntityTypeBuilder<Admin> builder)
         {
-            builder.Property(b => b.Email).HasMaxLength(30);
+            builder.Property(b => b.Email).HasMaxLength(50);
             builder.HasIndex(b => b.Email).IsUnique();
 
             builder.HasData
                 (
-                new Admin() { Email = "admin@admin.com", Password = "Admin1234", CreationDate = DateTime.Now }
+                new Admin() { Id = 1, Email = "admin@admin.com", Password = "Admin1234", CreationDate = DateTime.Now }
                 );
         }
     }

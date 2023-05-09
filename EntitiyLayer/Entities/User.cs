@@ -17,7 +17,6 @@ namespace EntitiyLayer.Entities
         public DateTime BirthDate { get; set; }
         public double Height { get; set; }
         public double Weight { get; set; }
-        public double BodyMassIndex { get; set; }
         public string SpecificQuestion { get; set; }
         public string QuestionAnswer { get; set; }
         public bool ActivePassiveSituation { get; set; }

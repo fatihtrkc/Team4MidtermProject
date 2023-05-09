@@ -18,16 +18,16 @@ namespace DataAccessLayer.Configuration
 
             builder.HasData
                 (
-                new Category() { Name = "Kahvaltılık" }, //1
-                new Category() { Name = "Süt ve Süt Ürünleri" }, //2
-                new Category() { Name = "Meyve ve Sebze" },//3
-                new Category() { Name = "Ev Yemekleri" },//4
-                new Category() { Name = "Et Yemekleri" },//5
-                new Category() { Name = "Fast Food" },//6
-                new Category() { Name = "Tatlı" },//7
-                new Category() { Name = "Fırın" },//8
-                new Category() { Name = "Atıştırmalık" },//9
-                new Category() { Name = "İçecekler" }//10
+                new Category() { Id = 1, Name = "Kahvaltılık" }, //1
+                new Category() { Id = 2, Name = "Süt ve Süt Ürünleri" }, //2
+                new Category() { Id = 3, Name = "Meyve ve Sebze" },//3
+                new Category() { Id = 4, Name = "Ev Yemekleri" },//4
+                new Category() { Id = 5, Name = "Et Yemekleri" },//5
+                new Category() { Id = 6, Name = "Fast Food" },//6
+                new Category() { Id = 7, Name = "Tatlı" },//7
+                new Category() { Id = 8, Name = "Fırın" },//8
+                new Category() { Id = 9, Name = "Atıştırmalık" },//9
+                new Category() { Id = 10, Name = "İçecekler" }//10
                 );
         }
     }

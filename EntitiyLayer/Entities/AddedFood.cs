@@ -11,6 +11,10 @@ namespace EntitiyLayer.Entities
 {
     public class AddedFood
     {
+        public AddedFood()
+        {
+            CreationDate = DateTime.Now;
+        }
         public int Id { get; set; }
         public double Quantity { get; set; }
         public double TotalCalory { get; set; }
