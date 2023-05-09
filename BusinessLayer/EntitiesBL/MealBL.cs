@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Interfaces;
+using BusinessLayer.Interfaces;
 using DataAccessLayer.Context;
 using EntityLayer.Entities;
 using System;
@@ -21,13 +22,13 @@ namespace BusinessLayer.EntitiesBL
         public bool Add(Meal entity)
         {
             db.Meals.Add(entity);
-            return db.SaveChanges()>0;
+            return db.SaveChanges() > 0;
         }
 
         public bool Delete(int entityId)
         {
             db.Remove(Find(entityId));
-            return db.SaveChanges()>0;
+            return db.SaveChanges() > 0;
         }
 
         public Meal Find(int entityId)
@@ -43,7 +44,7 @@ namespace BusinessLayer.EntitiesBL
         public bool Update(Meal entity)
         {
             db.Meals.Update(entity);
-            return db.SaveChanges()>0;
+            return db.SaveChanges() > 0;
         }
     }
 }

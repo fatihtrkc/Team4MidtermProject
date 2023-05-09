@@ -20,13 +20,13 @@ namespace BusinessLayer.EntitiesBL
         public bool Add(User entity)
         {
             db.Users.Add(entity);
-            return db.SaveChanges()>0;
+            return db.SaveChanges() > 0;
         }
 
         public bool Delete(int entityId)
         {
             db.Users.Remove(Find(entityId));
-            return db.SaveChanges()>0;
+            return db.SaveChanges() > 0;
         }
 
         public User Find(int entityId)
@@ -42,7 +42,7 @@ namespace BusinessLayer.EntitiesBL
         public bool Update(User entity)
         {
             db.Users.Update(entity);
-            return db.SaveChanges()>0;
+            return db.SaveChanges() > 0;
         }
     }
 }

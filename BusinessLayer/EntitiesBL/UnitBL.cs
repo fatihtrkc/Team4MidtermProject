@@ -19,13 +19,13 @@ namespace BusinessLayer.EntitiesBL
         public bool Add(Unit entity)
         {
             db.Units.Add(entity);
-            return db.SaveChanges()>0;
+            return db.SaveChanges() > 0;
         }
 
         public bool Delete(int entityId)
         {
             db.Units.Remove(Find(entityId));
-            return db.SaveChanges()>0;
+            return db.SaveChanges() > 0;
         }
 
         public Unit Find(int entityId)
@@ -41,7 +41,7 @@ namespace BusinessLayer.EntitiesBL
         public bool Update(Unit entity)
         {
             db.Units.Update(entity);
-            return db.SaveChanges()>0;
+            return db.SaveChanges() > 0;
         }
     }
 }
