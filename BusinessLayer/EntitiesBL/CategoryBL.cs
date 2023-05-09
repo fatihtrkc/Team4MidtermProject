@@ -14,7 +14,7 @@ namespace BusinessLayer.EntitiesBL
     {
         public CategoryBL()
         {
-            db = new Team4Context();
+            db = new();
         }
 
         Team4Context db;

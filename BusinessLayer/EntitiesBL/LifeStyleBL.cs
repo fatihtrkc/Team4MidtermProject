@@ -13,7 +13,7 @@ namespace BusinessLayer.EntitiesBL
     {
         public LifeStyleBL()
         {
-            db = new Team4Context();
+            db = new();
         }
         Team4Context db;
         public bool Add(LifeStyle entity)

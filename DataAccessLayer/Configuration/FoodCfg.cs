@@ -14,7 +14,7 @@ namespace DataAccessLayer.Configuration
     {
         public void Configure(EntityTypeBuilder<Food> builder)
         {
-            builder.Property(a => a.Name).HasMaxLength(50);
+            builder.Property(a => a.Name).HasMaxLength(30);
 
             builder.HasData
                 (

@@ -13,7 +13,7 @@ namespace BusinessLayer.EntitiesBL
     {
         public AddedFoodBL()
         {
-            db = new Team4Context();
+            db = new();
         }
 
         Team4Context db;
