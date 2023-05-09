@@ -66,7 +66,34 @@ namespace DataAccessLayer.Configuration
                 new Food() { Name = "Pirzola", CaloryPerUnit = 450, CategoryId = 5, UnitId = UnitType.Porsiyon },
 
                 //Category name => Fast Food
-                new Food() { Name = "Hamburger", CaloryPerUnit = 450, CategoryId = 4, UnitId = UnitType.Porsiyon },
+                new Food() { Name = "Hamburger", CaloryPerUnit = 351, CategoryId = 6, UnitId = UnitType.Porsiyon },
+                new Food() { Name = "Orta Boy Pizza", CaloryPerUnit = 265 , CategoryId = 6, UnitId = UnitType.Porsiyon },
+                new Food() { Name = "Patates Kızartması", CaloryPerUnit = 355, CategoryId = 6, UnitId = UnitType.Porsiyon },
+                new Food() { Name = "Tavuk Döner", CaloryPerUnit = 272 , CategoryId = 6, UnitId = UnitType.Porsiyon },
+                new Food() { Name = "Et Döner", CaloryPerUnit = 391, CategoryId = 6, UnitId = UnitType.Porsiyon },
+                new Food() { Name = "Midye", CaloryPerUnit = 15 , CategoryId = 6, UnitId = UnitType.Adet },
+
+                 //Category name => Tatlı
+                 new Food() { Name = "Kazan Dibi", CaloryPerUnit = 202, CategoryId = 7, UnitId = UnitType.Porsiyon },
+                 new Food() { Name = "Sütlaç", CaloryPerUnit = 293, CategoryId = 7, UnitId = UnitType.Porsiyon },
+                 new Food() { Name = "Baklava", CaloryPerUnit = 288 , CategoryId = 7, UnitId = UnitType.Porsiyon },
+
+                 //Category name => Fırın
+                 new Food() { Name = "Beyaz Ekmek", CaloryPerUnit = 76, CategoryId = 8, UnitId = UnitType.Porsiyon },
+                 new Food() { Name = "Simit", CaloryPerUnit = 220, CategoryId = 8, UnitId = UnitType.Porsiyon },
+                 new Food() { Name = "Poğaça", CaloryPerUnit = 288, CategoryId = 8, UnitId = UnitType.Porsiyon },
+
+                 //Category name => Atıştırmalık
+                 new Food() { Name = "Kuru Meyve", CaloryPerUnit = 6.3, CategoryId = 9, UnitId = UnitType.gr },
+                 new Food() { Name = "Leblebi", CaloryPerUnit = 3.6, CategoryId = 9, UnitId = UnitType.gr },
+                 new Food() { Name = "Karışık Kureyemiş", CaloryPerUnit = 5.8, CategoryId = 9, UnitId = UnitType.gr },
+
+                 //Category name => İçecekler
+                 new Food() { Name = "Cola", CaloryPerUnit = 484, CategoryId = 10, UnitId = UnitType.lt },
+                 new Food() { Name = "Ayran", CaloryPerUnit = 360, CategoryId = 10, UnitId = UnitType.lt },
+                 new Food() { Name = "Enerji İçeceği", CaloryPerUnit = 133, CategoryId = 10, UnitId = UnitType.Adet },
+                 new Food() { Name = "Bira", CaloryPerUnit = 185, CategoryId = 10, UnitId = UnitType.Adet }
+
                 );
         }
     }
