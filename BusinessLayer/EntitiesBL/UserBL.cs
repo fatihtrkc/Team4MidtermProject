@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Interfaces;
+using DataAccessLayer.Context;
 using EntitiyLayer.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,29 +11,38 @@ namespace BusinessLayer.EntitiesBL
 {
     public class UserBL : ICrud<User>
     {
+        public UserBL()
+        {
+            db = new();
+        }
+
+        Team4Context db;
         public bool Add(User entity)
         {
-            throw new NotImplementedException();
+            db.Users.Add(entity);
+            return db.SaveChanges()>0;
         }
 
         public bool Delete(int entityId)
         {
-            throw new NotImplementedException();
+            db.Users.Remove(Find(entityId));
+            return db.SaveChanges()>0;
         }
 
         public User Find(int entityId)
         {
-            throw new NotImplementedException();
+            return db.Users.Find(entityId);
         }
 
         public List<User> GetAll()
         {
-            throw new NotImplementedException();
+            return db.Users.ToList();
         }
 
         public bool Update(User entity)
         {
-            throw new NotImplementedException();
+            db.Users.Update(entity);
+            return db.SaveChanges()>0;
         }
     }
 }
