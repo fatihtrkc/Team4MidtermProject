@@ -15,6 +15,20 @@ namespace DataAccessLayer.Configuration
         {
             builder.Property(a => a.Name).HasMaxLength(50);
             builder.HasIndex(a => a.Name).IsUnique();
+
+            builder.HasData
+                (
+                new Category() { Name = "Kahvaltılık" }, //1
+                new Category() { Name = "Süt ve Süt Ürünleri" }, //2
+                new Category() { Name = "Meyve ve Sebze" },//3
+                new Category() { Name = "Ev Yemekleri" },//4
+                new Category() { Name = "Et Yemekleri" },//5
+                new Category() { Name = "Fast Food" },//6
+                new Category() { Name = "Tatlı" },//7
+                new Category() { Name = "Fırın" },//8
+                new Category() { Name = "Atıştırmalık" },//9
+                new Category() { Name = "İçecekler" }//10
+                );
         }
     }
 }

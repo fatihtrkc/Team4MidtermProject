@@ -14,7 +14,7 @@ namespace EntityLayer.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public decimal CaloryPerUnit { get; set; }
+        public double CaloryPerUnit { get; set; }
 
 
         //Relations
