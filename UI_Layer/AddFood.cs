@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace UI_Layer
 {
-    public partial class AdminScreen : Form
+    public partial class AddFood : Form
     {
-        public AdminScreen()
+        public AddFood()
         {
             InitializeComponent();
-        }
-
-        private void AdminScreen_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
