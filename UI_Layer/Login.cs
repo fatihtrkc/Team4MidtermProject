@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataAccessLayer.Context;
+using EntitiyLayer.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,22 @@ namespace UI_Layer
         public Login()
         {
             InitializeComponent();
+            db = new Team4Context();
+        }
+        Team4Context db;
+        User user;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrWhiteSpace(txtMail.Text) || !string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                user = new User();
+                if(user.Email == txtMail.Text)
+
+            }
+            else
+            {
+                MessageBox.Show("Kullanıcı bulunamadı");
+            }
         }
     }
 }
