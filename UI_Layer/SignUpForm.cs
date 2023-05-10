@@ -65,6 +65,7 @@ namespace UI_Layer
                         user.Weight = (double)nudWeight.Value;
                         bool isAdded = dbbll.UserBL.Add(user);
 
+
                         if (isAdded)
                         {
                             MessageBox.Show("Kullanıcı başarıyla oluşturuldu", "İŞLEM ONAYLANDI", MessageBoxButtons.OK, MessageBoxIcon.Information);
