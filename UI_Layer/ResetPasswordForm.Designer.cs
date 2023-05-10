@@ -1,6 +1,6 @@
 ﻿namespace UI_Layer
 {
-    partial class ResetPassword
+    partial class ResetPasswordForm
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace UI_Layer
 {
-    partial class ForgotPassword
+    partial class ForgotPasswordForm
     {
         /// <summary>
         /// Required designer variable.

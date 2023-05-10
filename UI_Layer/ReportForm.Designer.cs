@@ -1,6 +1,6 @@
 ﻿namespace UI_Layer
 {
-    partial class Report
+    partial class ReportForm
     {
         /// <summary>
         /// Required designer variable.

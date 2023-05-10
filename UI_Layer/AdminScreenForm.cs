@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UI_Layer.Utilities
+namespace UI_Layer
 {
-    public partial class LoginForm : Form
+    public partial class AdminScreenForm : Form
     {
-        public LoginForm()
+        public AdminScreenForm()
         {
             InitializeComponent();
+        }
+
+        private void AdminScreen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

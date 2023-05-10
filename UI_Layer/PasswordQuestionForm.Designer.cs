@@ -1,6 +1,6 @@
 ﻿namespace UI_Layer
 {
-    partial class PasswordQuestion
+    partial class PasswordQuestionForm
     {
         /// <summary>
         /// Required designer variable.

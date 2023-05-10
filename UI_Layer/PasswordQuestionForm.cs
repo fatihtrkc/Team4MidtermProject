@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI_Layer
 {
-    public partial class ResetPassword : Form
+    public partial class PasswordQuestionForm : Form
     {
-        public ResetPassword()
+        public PasswordQuestionForm()
         {
             InitializeComponent();
         }

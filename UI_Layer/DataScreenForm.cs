@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UI_Layer.Utilities
+namespace UI_Layer
 {
-    public partial class UserForm : Form
+    public partial class DataScreenForm : Form
     {
-        public UserForm()
+        public DataScreenForm()
         {
             InitializeComponent();
         }

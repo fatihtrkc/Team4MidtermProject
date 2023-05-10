@@ -1,6 +1,6 @@
 ﻿namespace UI_Layer
 {
-    partial class UserInformation
+    partial class UserInformationForm
     {
         /// <summary>
         /// Required designer variable.

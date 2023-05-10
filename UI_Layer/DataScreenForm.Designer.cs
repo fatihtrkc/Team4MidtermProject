@@ -1,6 +1,6 @@
 ﻿namespace UI_Layer
 {
-    partial class DataScreen
+    partial class DataScreenForm
     {
         /// <summary>
         /// Required designer variable.

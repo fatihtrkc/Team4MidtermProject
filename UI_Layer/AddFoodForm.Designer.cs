@@ -1,6 +1,6 @@
 ﻿namespace UI_Layer
 {
-    partial class AddFood
+    partial class AddFoodForm
     {
         /// <summary>
         /// Required designer variable.

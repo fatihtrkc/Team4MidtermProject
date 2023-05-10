@@ -1,6 +1,6 @@
 ﻿namespace UI_Layer
 {
-    partial class AdminScreen
+    partial class AdminScreenForm
     {
         /// <summary>
         /// Required designer variable.

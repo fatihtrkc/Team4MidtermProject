@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI_Layer
 {
-    public partial class DataScreen : Form
+    public partial class SignUpForm : Form
     {
-        public DataScreen()
+        public SignUpForm()
         {
             InitializeComponent();
         }

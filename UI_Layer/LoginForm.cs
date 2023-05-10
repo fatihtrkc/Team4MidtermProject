@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace UI_Layer
 {
-    public partial class Login : Form
+    public partial class LoginForm : Form
     {
-        public Login()
+        public LoginForm()
         {
             InitializeComponent();
             db = new Team4Context();
@@ -26,7 +26,7 @@ namespace UI_Layer
             if(!string.IsNullOrWhiteSpace(txtMail.Text) || !string.IsNullOrWhiteSpace(txtPassword.Text))
             {
                 user = new User();
-                if(user.Email == txtMail.Text)
+                if (user.Email == txtMail.Text) ;
 
             }
             else

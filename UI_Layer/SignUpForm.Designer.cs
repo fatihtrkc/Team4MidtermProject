@@ -1,6 +1,6 @@
 ﻿namespace UI_Layer
 {
-    partial class Signin
+    partial class SignUpForm
     {
         /// <summary>
         /// Required designer variable.
