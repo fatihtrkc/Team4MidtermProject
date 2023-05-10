@@ -55,7 +55,7 @@
             groupBox1.Controls.Add(txtMail);
             groupBox1.Location = new Point(12, 312);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(236, 230);
+            groupBox1.Size = new Size(356, 230);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             groupBox1.Text = "Giriş Ekranı";
@@ -63,22 +63,24 @@
             // linkLabel2
             // 
             linkLabel2.AutoSize = true;
-            linkLabel2.Location = new Point(141, 212);
+            linkLabel2.Location = new Point(204, 216);
             linkLabel2.Name = "linkLabel2";
             linkLabel2.Size = new Size(95, 15);
             linkLabel2.TabIndex = 3;
             linkLabel2.TabStop = true;
             linkLabel2.Text = "Şifremi Unuttum";
+            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(6, 212);
+            linkLabel1.Location = new Point(69, 216);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(46, 15);
             linkLabel1.TabIndex = 6;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Kayıt ol";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // checkBox1
             // 
@@ -92,7 +94,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(81, 169);
+            button1.Location = new Point(144, 173);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 4;
@@ -122,14 +124,14 @@
             // 
             txtPassword.Location = new Point(114, 96);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(100, 23);
+            txtPassword.Size = new Size(165, 23);
             txtPassword.TabIndex = 1;
             // 
             // txtMail
             // 
             txtMail.Location = new Point(114, 52);
             txtMail.Name = "txtMail";
-            txtMail.Size = new Size(100, 23);
+            txtMail.Size = new Size(165, 23);
             txtMail.TabIndex = 0;
             // 
             // label1
@@ -137,7 +139,7 @@
             label1.BackColor = SystemColors.AppWorkspace;
             label1.Location = new Point(12, 165);
             label1.Name = "label1";
-            label1.Size = new Size(236, 128);
+            label1.Size = new Size(356, 128);
             label1.TabIndex = 4;
             label1.Text = "programla alakalı bilgiler";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -146,20 +148,21 @@
             // 
             pictureBox1.Location = new Point(12, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(236, 133);
+            pictureBox1.Size = new Size(356, 133);
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
             // 
-            // Login
+            // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(258, 580);
+            ClientSize = new Size(412, 580);
             Controls.Add(groupBox1);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
-            Name = "Login";
+            Name = "LoginForm";
             Text = "Login";
+            Load += LoginForm_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

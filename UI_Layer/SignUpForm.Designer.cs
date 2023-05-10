@@ -28,77 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            numericUpDown1 = new NumericUpDown();
+            nudHeight = new NumericUpDown();
             button1 = new Button();
-            textBox10 = new TextBox();
             label11 = new Label();
-            textBox9 = new TextBox();
+            txtAgain = new TextBox();
             label10 = new Label();
             label8 = new Label();
-            textBox8 = new TextBox();
             label9 = new Label();
-            textBox4 = new TextBox();
+            txtSpeAns = new TextBox();
             label5 = new Label();
-            textBox5 = new TextBox();
+            txtSpe = new TextBox();
             label6 = new Label();
-            textBox6 = new TextBox();
+            txtPassword = new TextBox();
             label7 = new Label();
-            textBox3 = new TextBox();
+            txtMail = new TextBox();
             label4 = new Label();
-            textBox2 = new TextBox();
+            txtSurname = new TextBox();
             label3 = new Label();
-            textBox1 = new TextBox();
+            txtName = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            dtBirth = new DateTimePicker();
+            nudWeight = new NumericUpDown();
+            rdFemale = new RadioButton();
+            rdMale = new RadioButton();
+            label12 = new Label();
+            cboxLifeStyle = new ComboBox();
+            label13 = new Label();
+            ((System.ComponentModel.ISupportInitialize)nudHeight).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudWeight).BeginInit();
             SuspendLayout();
             // 
-            // numericUpDown1
+            // nudHeight
             // 
-            numericUpDown1.DecimalPlaces = 1;
-            numericUpDown1.Location = new Point(174, 297);
-            numericUpDown1.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
-            numericUpDown1.Minimum = new decimal(new int[] { 130, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 44;
-            numericUpDown1.Value = new decimal(new int[] { 130, 0, 0, 0 });
+            nudHeight.DecimalPlaces = 1;
+            nudHeight.Location = new Point(174, 355);
+            nudHeight.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
+            nudHeight.Minimum = new decimal(new int[] { 130, 0, 0, 0 });
+            nudHeight.Name = "nudHeight";
+            nudHeight.Size = new Size(120, 23);
+            nudHeight.TabIndex = 44;
+            nudHeight.Value = new decimal(new int[] { 130, 0, 0, 0 });
             // 
             // button1
             // 
-            button1.Location = new Point(149, 370);
+            button1.Location = new Point(149, 428);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 43;
             button1.Text = "Kayıt Ol";
             button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox10
-            // 
-            textBox10.Location = new Point(174, 326);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(120, 23);
-            textBox10.TabIndex = 42;
+            button1.Click += button1_Click;
             // 
             // label11
             // 
-            label11.Location = new Point(68, 326);
+            label11.Location = new Point(68, 384);
             label11.Name = "label11";
             label11.Size = new Size(100, 23);
             label11.TabIndex = 41;
             label11.Text = "Kilo";
             label11.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // textBox9
+            // txtAgain
             // 
-            textBox9.Location = new Point(174, 181);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(120, 23);
-            textBox9.TabIndex = 40;
+            txtAgain.Location = new Point(174, 239);
+            txtAgain.Name = "txtAgain";
+            txtAgain.Size = new Size(120, 23);
+            txtAgain.TabIndex = 40;
             // 
             // label10
             // 
-            label10.Location = new Point(68, 181);
+            label10.Location = new Point(68, 239);
             label10.Name = "label10";
             label10.Size = new Size(100, 23);
             label10.TabIndex = 39;
@@ -107,83 +107,76 @@
             // 
             // label8
             // 
-            label8.Location = new Point(68, 297);
+            label8.Location = new Point(68, 355);
             label8.Name = "label8";
             label8.Size = new Size(100, 23);
             label8.TabIndex = 38;
             label8.Text = "Boy";
             label8.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(174, 268);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(120, 23);
-            textBox8.TabIndex = 37;
-            // 
             // label9
             // 
-            label9.Location = new Point(68, 268);
+            label9.Location = new Point(68, 326);
             label9.Name = "label9";
             label9.Size = new Size(100, 23);
             label9.TabIndex = 36;
             label9.Text = "Doğum Tarihi";
             label9.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // textBox4
+            // txtSpeAns
             // 
-            textBox4.Location = new Point(174, 239);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(120, 23);
-            textBox4.TabIndex = 35;
+            txtSpeAns.Location = new Point(174, 297);
+            txtSpeAns.Name = "txtSpeAns";
+            txtSpeAns.Size = new Size(120, 23);
+            txtSpeAns.TabIndex = 35;
             // 
             // label5
             // 
-            label5.Location = new Point(68, 239);
+            label5.Location = new Point(68, 297);
             label5.Name = "label5";
             label5.Size = new Size(100, 23);
             label5.TabIndex = 34;
             label5.Text = "Özel Soru Cevabı";
             label5.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // textBox5
+            // txtSpe
             // 
-            textBox5.Location = new Point(174, 210);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(120, 23);
-            textBox5.TabIndex = 33;
+            txtSpe.Location = new Point(174, 268);
+            txtSpe.Name = "txtSpe";
+            txtSpe.Size = new Size(120, 23);
+            txtSpe.TabIndex = 33;
             // 
             // label6
             // 
-            label6.Location = new Point(68, 210);
+            label6.Location = new Point(68, 268);
             label6.Name = "label6";
             label6.Size = new Size(100, 23);
             label6.TabIndex = 32;
             label6.Text = "Özel Soru";
             label6.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // textBox6
+            // txtPassword
             // 
-            textBox6.Location = new Point(174, 152);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(120, 23);
-            textBox6.TabIndex = 31;
+            txtPassword.Location = new Point(174, 210);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(120, 23);
+            txtPassword.TabIndex = 31;
             // 
             // label7
             // 
-            label7.Location = new Point(68, 152);
+            label7.Location = new Point(68, 210);
             label7.Name = "label7";
             label7.Size = new Size(100, 23);
             label7.TabIndex = 30;
             label7.Text = "Şifre";
             label7.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // textBox3
+            // txtMail
             // 
-            textBox3.Location = new Point(174, 123);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(120, 23);
-            textBox3.TabIndex = 29;
+            txtMail.Location = new Point(174, 123);
+            txtMail.Name = "txtMail";
+            txtMail.Size = new Size(120, 23);
+            txtMail.TabIndex = 29;
             // 
             // label4
             // 
@@ -194,12 +187,12 @@
             label4.Text = "Mail adresi";
             label4.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // textBox2
+            // txtSurname
             // 
-            textBox2.Location = new Point(174, 94);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(120, 23);
-            textBox2.TabIndex = 27;
+            txtSurname.Location = new Point(174, 94);
+            txtSurname.Name = "txtSurname";
+            txtSurname.Size = new Size(120, 23);
+            txtSurname.TabIndex = 27;
             // 
             // label3
             // 
@@ -210,12 +203,12 @@
             label3.Text = "Soyisim";
             label3.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // textBox1
+            // txtName
             // 
-            textBox1.Location = new Point(174, 65);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(120, 23);
-            textBox1.TabIndex = 25;
+            txtName.Location = new Point(174, 65);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(120, 23);
+            txtName.TabIndex = 25;
             // 
             // label2
             // 
@@ -235,63 +228,141 @@
             label1.TabIndex = 23;
             label1.Text = "Kullanıcı Kayıt Ekranı";
             // 
-            // Signin
+            // dtBirth
+            // 
+            dtBirth.Location = new Point(174, 326);
+            dtBirth.Name = "dtBirth";
+            dtBirth.Size = new Size(120, 23);
+            dtBirth.TabIndex = 45;
+            // 
+            // nudWeight
+            // 
+            nudWeight.DecimalPlaces = 1;
+            nudWeight.Location = new Point(174, 384);
+            nudWeight.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
+            nudWeight.Minimum = new decimal(new int[] { 35, 0, 0, 0 });
+            nudWeight.Name = "nudWeight";
+            nudWeight.Size = new Size(120, 23);
+            nudWeight.TabIndex = 46;
+            nudWeight.Value = new decimal(new int[] { 35, 0, 0, 0 });
+            // 
+            // rdFemale
+            // 
+            rdFemale.AutoSize = true;
+            rdFemale.Checked = true;
+            rdFemale.Location = new Point(174, 156);
+            rdFemale.Name = "rdFemale";
+            rdFemale.Size = new Size(55, 19);
+            rdFemale.TabIndex = 48;
+            rdFemale.TabStop = true;
+            rdFemale.Text = "Kadın";
+            rdFemale.UseVisualStyleBackColor = true;
+            // 
+            // rdMale
+            // 
+            rdMale.AutoSize = true;
+            rdMale.Location = new Point(239, 156);
+            rdMale.Name = "rdMale";
+            rdMale.Size = new Size(53, 19);
+            rdMale.TabIndex = 49;
+            rdMale.Text = "Erkek";
+            rdMale.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            label12.Location = new Point(68, 154);
+            label12.Name = "label12";
+            label12.Size = new Size(100, 23);
+            label12.TabIndex = 47;
+            label12.Text = "Cinsiyet";
+            label12.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // cboxLifeStyle
+            // 
+            cboxLifeStyle.FormattingEnabled = true;
+            cboxLifeStyle.Location = new Point(174, 181);
+            cboxLifeStyle.Name = "cboxLifeStyle";
+            cboxLifeStyle.Size = new Size(120, 23);
+            cboxLifeStyle.TabIndex = 50;
+            // 
+            // label13
+            // 
+            label13.Location = new Point(68, 181);
+            label13.Name = "label13";
+            label13.Size = new Size(100, 23);
+            label13.TabIndex = 51;
+            label13.Text = "Hayat Biçimi";
+            label13.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // SignUpForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(351, 461);
-            Controls.Add(numericUpDown1);
+            Controls.Add(label13);
+            Controls.Add(cboxLifeStyle);
+            Controls.Add(rdMale);
+            Controls.Add(rdFemale);
+            Controls.Add(label12);
+            Controls.Add(nudWeight);
+            Controls.Add(dtBirth);
+            Controls.Add(nudHeight);
             Controls.Add(button1);
-            Controls.Add(textBox10);
             Controls.Add(label11);
-            Controls.Add(textBox9);
+            Controls.Add(txtAgain);
             Controls.Add(label10);
             Controls.Add(label8);
-            Controls.Add(textBox8);
             Controls.Add(label9);
-            Controls.Add(textBox4);
+            Controls.Add(txtSpeAns);
             Controls.Add(label5);
-            Controls.Add(textBox5);
+            Controls.Add(txtSpe);
             Controls.Add(label6);
-            Controls.Add(textBox6);
+            Controls.Add(txtPassword);
             Controls.Add(label7);
-            Controls.Add(textBox3);
+            Controls.Add(txtMail);
             Controls.Add(label4);
-            Controls.Add(textBox2);
+            Controls.Add(txtSurname);
             Controls.Add(label3);
-            Controls.Add(textBox1);
+            Controls.Add(txtName);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "Signin";
+            Name = "SignUpForm";
             Text = "Signin";
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            Load += SignUpForm_Load;
+            ((System.ComponentModel.ISupportInitialize)nudHeight).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudWeight).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown nudHeight;
         private Button button1;
-        private TextBox textBox10;
         private Label label11;
-        private TextBox textBox9;
+        private TextBox txtAgain;
         private Label label10;
         private Label label8;
-        private TextBox textBox8;
         private Label label9;
-        private TextBox textBox4;
+        private TextBox txtSpeAns;
         private Label label5;
-        private TextBox textBox5;
+        private TextBox txtSpe;
         private Label label6;
-        private TextBox textBox6;
+        private TextBox txtPassword;
         private Label label7;
-        private TextBox textBox3;
+        private TextBox txtMail;
         private Label label4;
-        private TextBox textBox2;
+        private TextBox txtSurname;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox txtName;
         private Label label2;
         private Label label1;
+        private DateTimePicker dtBirth;
+        private NumericUpDown nudWeight;
+        private RadioButton rdFemale;
+        private RadioButton rdMale;
+        private Label label12;
+        private ComboBox cboxLifeStyle;
+        private Label label13;
     }
 }

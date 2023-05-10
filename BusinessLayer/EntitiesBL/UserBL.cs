@@ -44,5 +44,23 @@ namespace BusinessLayer.EntitiesBL
             db.Users.Update(entity);
             return db.SaveChanges() > 0;
         }
+        public int Login(string userName, string password)
+        {
+            User user = db.Users.Where(x=> x.Email == userName && x.Password== password).SingleOrDefault();
+            if ( user != null)
+            {
+                return user.Id;
+            }
+            else
+            {
+                return -1;
+            }
+        }
+
+        public User FindByEmail(string userName)
+        {
+            User user = db.Users.Where(a=> a.Email== userName).FirstOrDefault();
+            return user;
+        }
     }
 }
