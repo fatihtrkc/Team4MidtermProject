@@ -16,5 +16,38 @@ namespace UI_Layer
         {
             InitializeComponent();
         }
+
+        private void btnCategories_Click(object sender, EventArgs e)
+        {
+            AdminCategoriesForm form = new();
+            form.ShowDialog();
+        }
+
+        private void btnFoods_Click(object sender, EventArgs e)
+        {
+            AdminFoodsForm form = new();
+            form.ShowDialog();
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            AdminUsersForm form = new();
+            form.ShowDialog();
+        }
+
+        private void pctrbxExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pctrbxExit_MouseHover(object sender, EventArgs e)
+        {
+            pctrbxExit.BackColor = Color.LightCoral;
+        }
+
+        private void pctrbxExit_MouseLeave(object sender, EventArgs e)
+        {
+            pctrbxExit.BackColor = default;
+        }
     }
 }
