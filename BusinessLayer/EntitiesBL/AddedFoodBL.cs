@@ -50,15 +50,20 @@ namespace BusinessLayer.EntitiesBL
             return db.AddedFoods.Where(u => u.UserId == userId && u.CreationDate == date).ToList();
         }
 
-        public List<AddedFood> GetMealByUserId(int userId, MealType meal, DateTime date)
+        public List<AddedFood> GetAllByUserIdAndDayAndMeal(int userId, DateTime date, MealType type)
         {
-            return db.AddedFoods.Where(u => u.UserId == userId && u.MealId==meal && u.CreationDate==date).ToList();
+            return db.AddedFoods.Where(u => u.UserId == userId && u.CreationDate == date && u.MealId==type).ToList();
         }
 
         public bool Update(AddedFood entity)
         {
             db.AddedFoods.Update(entity);
             return db.SaveChanges() > 0;
+        }
+        public double GetSumColory(int id, DateTime dateTime, MealType type)
+        {
+            double sum =db.AddedFoods.Where(a => a.UserId == id && a.CreationDate==dateTime && a.MealId == type).Sum(a=> a.TotalCalory);
+            return sum;
         }
     }
 }
