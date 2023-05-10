@@ -45,11 +45,13 @@
             btnDownDay = new Button();
             btnUpDay = new Button();
             btnToday = new Button();
+            lblTotalCalory = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // lblAdSoyad
             // 
-            lblAdSoyad.Location = new Point(169, 63);
+            lblAdSoyad.Location = new Point(198, 51);
             lblAdSoyad.Name = "lblAdSoyad";
             lblAdSoyad.Size = new Size(143, 20);
             lblAdSoyad.TabIndex = 67;
@@ -59,7 +61,7 @@
             // lblKilo
             // 
             lblKilo.AutoSize = true;
-            lblKilo.Location = new Point(282, 103);
+            lblKilo.Location = new Point(346, 100);
             lblKilo.Name = "lblKilo";
             lblKilo.Size = new Size(39, 15);
             lblKilo.TabIndex = 66;
@@ -68,7 +70,7 @@
             // lblBoy
             // 
             lblBoy.AutoSize = true;
-            lblBoy.Location = new Point(169, 104);
+            lblBoy.Location = new Point(198, 100);
             lblBoy.Name = "lblBoy";
             lblBoy.Size = new Size(45, 15);
             lblBoy.TabIndex = 65;
@@ -77,7 +79,7 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(234, 104);
+            label19.Location = new Point(298, 100);
             label19.Name = "label19";
             label19.Size = new Size(30, 15);
             label19.TabIndex = 64;
@@ -86,7 +88,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(130, 103);
+            label18.Location = new Point(159, 100);
             label18.Name = "label18";
             label18.Size = new Size(33, 15);
             label18.TabIndex = 63;
@@ -125,42 +127,54 @@
             // chboxKahvalti
             // 
             chboxKahvalti.AutoSize = true;
+            chboxKahvalti.Checked = true;
+            chboxKahvalti.CheckState = CheckState.Checked;
             chboxKahvalti.Location = new Point(80, 184);
             chboxKahvalti.Name = "chboxKahvalti";
             chboxKahvalti.Size = new Size(68, 19);
             chboxKahvalti.TabIndex = 69;
             chboxKahvalti.Text = "Kahvaltı";
             chboxKahvalti.UseVisualStyleBackColor = true;
+            chboxKahvalti.CheckedChanged += chboxKahvalti_CheckedChanged;
             // 
             // chboxOgle
             // 
             chboxOgle.AutoSize = true;
+            chboxOgle.Checked = true;
+            chboxOgle.CheckState = CheckState.Checked;
             chboxOgle.Location = new Point(154, 184);
             chboxOgle.Name = "chboxOgle";
             chboxOgle.Size = new Size(93, 19);
             chboxOgle.TabIndex = 70;
             chboxOgle.Text = "Öğle Yemeği";
             chboxOgle.UseVisualStyleBackColor = true;
+            chboxOgle.CheckedChanged += chboxOgle_CheckedChanged;
             // 
             // chboxAksam
             // 
             chboxAksam.AutoSize = true;
+            chboxAksam.Checked = true;
+            chboxAksam.CheckState = CheckState.Checked;
             chboxAksam.Location = new Point(253, 184);
             chboxAksam.Name = "chboxAksam";
             chboxAksam.Size = new Size(104, 19);
             chboxAksam.TabIndex = 71;
             chboxAksam.Text = "Akşam Yemeği";
             chboxAksam.UseVisualStyleBackColor = true;
+            chboxAksam.CheckedChanged += chboxAksam_CheckedChanged;
             // 
             // chboxAraOgun
             // 
             chboxAraOgun.AutoSize = true;
+            chboxAraOgun.Checked = true;
+            chboxAraOgun.CheckState = CheckState.Checked;
             chboxAraOgun.Location = new Point(363, 184);
             chboxAraOgun.Name = "chboxAraOgun";
             chboxAraOgun.Size = new Size(77, 19);
             chboxAraOgun.TabIndex = 72;
             chboxAraOgun.Text = "Ara Öğün";
             chboxAraOgun.UseVisualStyleBackColor = true;
+            chboxAraOgun.CheckedChanged += chboxAraOgun_CheckedChanged;
             // 
             // btnDownDay
             // 
@@ -194,11 +208,31 @@
             btnToday.UseVisualStyleBackColor = true;
             btnToday.Click += btnToday_Click;
             // 
+            // lblTotalCalory
+            // 
+            lblTotalCalory.AutoSize = true;
+            lblTotalCalory.Location = new Point(314, 141);
+            lblTotalCalory.Name = "lblTotalCalory";
+            lblTotalCalory.Size = new Size(45, 15);
+            lblTotalCalory.TabIndex = 77;
+            lblTotalCalory.Text = "180 cm";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(189, 141);
+            label2.Name = "label2";
+            label2.Size = new Size(119, 15);
+            label2.TabIndex = 76;
+            label2.Text = "Toplam Alınan Kalori:";
+            // 
             // UserPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(526, 495);
+            ClientSize = new Size(539, 495);
+            Controls.Add(lblTotalCalory);
+            Controls.Add(label2);
             Controls.Add(btnToday);
             Controls.Add(btnUpDay);
             Controls.Add(btnDownDay);
@@ -239,5 +273,7 @@
         private Button btnDownDay;
         private Button btnUpDay;
         private Button btnToday;
+        private Label lblTotalCalory;
+        private Label label2;
     }
 }

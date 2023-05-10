@@ -103,7 +103,7 @@ namespace UI_Layer
         private void FillList()
         {
             lviewMeal.Items.Clear();
-            List<AddedFood> addeds = db.AddedFoodBL.GetMealByUserId(userId, mealType, DateTime.Today);
+            List<AddedFood> addeds = db.AddedFoodBL.GetAllByUserIdAndDayAndMeal(userId, DateTime.Today, mealType);
             foreach (AddedFood item in addeds)
             {
                 ListViewItem lv = new ListViewItem();
