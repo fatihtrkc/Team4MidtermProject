@@ -2,6 +2,7 @@
 using BusinessLayer.Interfaces;
 using DataAccessLayer.Context;
 using EntityLayer.Entities;
+using EntityLayer.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,11 +32,15 @@ namespace BusinessLayer.EntitiesBL
             return db.SaveChanges() > 0;
         }
 
-        public Meal Find(int entityId)
+        public Meal FindByMeal(MealType entityId)
         {
             return db.Meals.Find(entityId);
         }
 
+        public Meal Find(int entityId)
+        {
+            return db.Meals.Find(entityId);
+        }
         public List<Meal> GetAll()
         {
             return db.Meals.ToList();

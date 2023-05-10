@@ -100,14 +100,14 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(34, 401);
+            comboBox1.Location = new Point(39, 325);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(214, 23);
             comboBox1.TabIndex = 63;
             // 
             // lblAdSoyad
             // 
-            lblAdSoyad.Location = new Point(71, 41);
+            lblAdSoyad.Location = new Point(1087, 550);
             lblAdSoyad.Name = "lblAdSoyad";
             lblAdSoyad.Size = new Size(143, 20);
             lblAdSoyad.TabIndex = 62;
@@ -117,7 +117,7 @@
             // lblKilo
             // 
             lblKilo.AutoSize = true;
-            lblKilo.Location = new Point(202, 81);
+            lblKilo.Location = new Point(1218, 590);
             lblKilo.Name = "lblKilo";
             lblKilo.Size = new Size(39, 15);
             lblKilo.TabIndex = 61;
@@ -126,7 +126,7 @@
             // lblBoy
             // 
             lblBoy.AutoSize = true;
-            lblBoy.Location = new Point(89, 82);
+            lblBoy.Location = new Point(1105, 591);
             lblBoy.Name = "lblBoy";
             lblBoy.Size = new Size(45, 15);
             lblBoy.TabIndex = 60;
@@ -135,7 +135,7 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(154, 82);
+            label19.Location = new Point(1170, 591);
             label19.Name = "label19";
             label19.Size = new Size(30, 15);
             label19.TabIndex = 59;
@@ -144,7 +144,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(50, 81);
+            label18.Location = new Point(1066, 590);
             label18.Name = "label18";
             label18.Size = new Size(33, 15);
             label18.TabIndex = 58;
@@ -330,7 +330,7 @@
             // 
             // dtimeTakvim
             // 
-            dtimeTakvim.Location = new Point(34, 106);
+            dtimeTakvim.Location = new Point(39, 30);
             dtimeTakvim.Name = "dtimeTakvim";
             dtimeTakvim.Size = new Size(214, 23);
             dtimeTakvim.TabIndex = 40;
@@ -530,7 +530,7 @@
             // 
             // btnKaydet
             // 
-            btnKaydet.Location = new Point(94, 493);
+            btnKaydet.Location = new Point(99, 417);
             btnKaydet.Name = "btnKaydet";
             btnKaydet.Size = new Size(120, 30);
             btnKaydet.TabIndex = 38;
@@ -539,7 +539,7 @@
             // 
             // label1
             // 
-            label1.Location = new Point(34, 459);
+            label1.Location = new Point(39, 383);
             label1.Name = "label1";
             label1.Size = new Size(100, 23);
             label1.TabIndex = 37;
@@ -548,7 +548,7 @@
             // 
             // nudPorsiyon
             // 
-            nudPorsiyon.Location = new Point(177, 459);
+            nudPorsiyon.Location = new Point(182, 383);
             nudPorsiyon.Name = "nudPorsiyon";
             nudPorsiyon.Size = new Size(71, 23);
             nudPorsiyon.TabIndex = 36;
@@ -556,7 +556,7 @@
             // cboxYemekler
             // 
             cboxYemekler.FormattingEnabled = true;
-            cboxYemekler.Location = new Point(34, 430);
+            cboxYemekler.Location = new Point(39, 354);
             cboxYemekler.Name = "cboxYemekler";
             cboxYemekler.Size = new Size(214, 23);
             cboxYemekler.TabIndex = 35;
@@ -567,7 +567,7 @@
             groupBox1.Controls.Add(rdbOgle);
             groupBox1.Controls.Add(rdbAksam);
             groupBox1.Controls.Add(rdbKahvalti);
-            groupBox1.Location = new Point(34, 299);
+            groupBox1.Location = new Point(39, 223);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(214, 91);
             groupBox1.TabIndex = 34;
@@ -620,13 +620,13 @@
             // 
             // pboxYemekFoto
             // 
-            pboxYemekFoto.Location = new Point(34, 139);
+            pboxYemekFoto.Location = new Point(39, 63);
             pboxYemekFoto.Name = "pboxYemekFoto";
             pboxYemekFoto.Size = new Size(214, 154);
             pboxYemekFoto.TabIndex = 33;
             pboxYemekFoto.TabStop = false;
             // 
-            // DataScreen
+            // DataScreenForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -662,7 +662,7 @@
             Controls.Add(cboxYemekler);
             Controls.Add(groupBox1);
             Controls.Add(pboxYemekFoto);
-            Name = "DataScreen";
+            Name = "DataScreenForm";
             Text = "DataScreen";
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();

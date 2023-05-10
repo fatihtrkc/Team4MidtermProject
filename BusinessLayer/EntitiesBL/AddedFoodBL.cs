@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Interfaces;
 using DataAccessLayer.Context;
 using EntitiyLayer.Entities;
+using EntityLayer.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +43,16 @@ namespace BusinessLayer.EntitiesBL
         public List<AddedFood> GetAllByUserId(int userId)
         {
             return db.AddedFoods.Where(u => u.UserId == userId).ToList();
+        }
+
+        public List<AddedFood> GetAllByUserIdAndDay(int userId, DateTime date)
+        {
+            return db.AddedFoods.Where(u => u.UserId == userId && u.CreationDate == date).ToList();
+        }
+
+        public List<AddedFood> GetMealByUserId(int userId, MealType meal, DateTime date)
+        {
+            return db.AddedFoods.Where(u => u.UserId == userId && u.MealId==meal && u.CreationDate==date).ToList();
         }
 
         public bool Update(AddedFood entity)
