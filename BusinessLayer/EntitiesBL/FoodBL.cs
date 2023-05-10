@@ -39,10 +39,21 @@ namespace BusinessLayer.EntitiesBL
             return db.Foods.ToList();
         }
 
+        public List<Food> GetByCategory(int id)
+        {
+            return db.Foods.Where(a=> a.CategoryId==id).ToList();
+        }
+
         public bool Update(Food entity)
         {
             db.Foods.Update(entity);
             return db.SaveChanges() > 0;
         }
+
+        //public int GetCalory(int id)
+        //{
+        //    int calory = db.Foods.Where(a => a.Id == id)
+        //    return calory;
+        //}
     }
 }

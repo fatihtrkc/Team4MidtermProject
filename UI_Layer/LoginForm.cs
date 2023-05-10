@@ -29,9 +29,9 @@ namespace UI_Layer
                 int userid = dbbll.UserBL.Login(txtMail.Text, txtPassword.Text);
                 if (userid > 0)
                 {
-                    DataScreenForm data = new DataScreenForm();
+                    HomePage homePage = new HomePage(userid);
                     this.Hide();
-                    data.ShowDialog();
+                    homePage.ShowDialog();
                 }
                 else
                 {
