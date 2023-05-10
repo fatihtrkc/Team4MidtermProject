@@ -24,6 +24,9 @@ namespace UI_Layer
         {
             dtgridCategory.DataSource = categorybl.GetAll().Select(ctgry => new { ctgry.Id, ctgry.Name }).OrderBy(ctgry => ctgry.Id).ToList();
             dtgridCategory.ClearSelection();
+            btnAdd.Enabled = false;
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
         }
         private void txtName_TextChanged(object sender, EventArgs e)
         {
@@ -133,6 +136,8 @@ namespace UI_Layer
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             dtgridCategory.ClearSelection();
+            txtId.Clear();
+            txtName.Clear();
         }
 
         private void pctrbxExit_Click(object sender, EventArgs e)
