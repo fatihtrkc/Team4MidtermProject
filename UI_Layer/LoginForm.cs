@@ -1,4 +1,5 @@
-﻿using DataAccessLayer.Context;
+﻿using BusinessLayer.ContextBL;
+using DataAccessLayer.Context;
 using EntitiyLayer.Entities;
 using System;
 using System.Collections.Generic;
@@ -17,22 +18,53 @@ namespace UI_Layer
         public LoginForm()
         {
             InitializeComponent();
-            db = new Team4Context();
+            dbbll = new();
         }
-        Team4Context db;
-        User user;
+        Team4ContextBL dbbll;
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            if(!string.IsNullOrWhiteSpace(txtMail.Text) || !string.IsNullOrWhiteSpace(txtPassword.Text))
+            if (!string.IsNullOrWhiteSpace(txtMail.Text) || !string.IsNullOrWhiteSpace(txtPassword.Text))
             {
-                user = new User();
-                if (user.Email == txtMail.Text) ;
+                int userid = dbbll.UserBL.Login(txtMail.Text, txtPassword.Text);
+                if (userid > 0)
+                {
+                    DataScreenForm data = new DataScreenForm();
+                    this.Hide();
+                    data.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Giriş başarısız oldu", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
             }
             else
             {
-                MessageBox.Show("Kullanıcı bulunamadı");
+                MessageBox.Show("Alanları doldurun");
             }
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            txtMail.Clear();
+            txtPassword.Clear();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PasswordQuestionForm form = new ();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SignUpForm form = new SignUpForm();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
         }
     }
 }

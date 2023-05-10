@@ -30,15 +30,15 @@
         {
             label1 = new Label();
             button1 = new Button();
-            textBox9 = new TextBox();
+            txtAgain = new TextBox();
             label10 = new Label();
-            textBox6 = new TextBox();
+            txtPassword = new TextBox();
             label7 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
-            label1.Location = new Point(116, 80);
+            label1.Location = new Point(105, 80);
             label1.Name = "label1";
             label1.Size = new Size(141, 26);
             label1.TabIndex = 30;
@@ -53,13 +53,14 @@
             button1.TabIndex = 29;
             button1.Text = "Yeni Şifre Oluştur";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
-            // textBox9
+            // txtAgain
             // 
-            textBox9.Location = new Point(149, 161);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(120, 23);
-            textBox9.TabIndex = 28;
+            txtAgain.Location = new Point(149, 161);
+            txtAgain.Name = "txtAgain";
+            txtAgain.Size = new Size(120, 23);
+            txtAgain.TabIndex = 28;
             // 
             // label10
             // 
@@ -70,12 +71,12 @@
             label10.Text = "Şifre Tekrarı";
             label10.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // textBox6
+            // txtPassword
             // 
-            textBox6.Location = new Point(149, 132);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(120, 23);
-            textBox6.TabIndex = 26;
+            txtPassword.Location = new Point(149, 132);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(120, 23);
+            txtPassword.TabIndex = 26;
             // 
             // label7
             // 
@@ -86,19 +87,20 @@
             label7.Text = "Şifre";
             label7.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // ResetPassword
+            // ResetPasswordForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(313, 373);
             Controls.Add(label1);
             Controls.Add(button1);
-            Controls.Add(textBox9);
+            Controls.Add(txtAgain);
             Controls.Add(label10);
-            Controls.Add(textBox6);
+            Controls.Add(txtPassword);
             Controls.Add(label7);
-            Name = "ResetPassword";
+            Name = "ResetPasswordForm";
             Text = "ResetPassword";
+            Load += ResetPasswordForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -107,9 +109,9 @@
 
         private Label label1;
         private Button button1;
-        private TextBox textBox9;
+        private TextBox txtAgain;
         private Label label10;
-        private TextBox textBox6;
+        private TextBox txtPassword;
         private Label label7;
     }
 }
