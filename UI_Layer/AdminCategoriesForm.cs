@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI_Layer.Utilities;
 
 namespace UI_Layer
 {
@@ -24,31 +25,29 @@ namespace UI_Layer
         {
             dtgridCategory.DataSource = categorybl.GetAll().Select(ctgry => new { ctgry.Id, ctgry.Name }).OrderBy(ctgry => ctgry.Id).ToList();
             dtgridCategory.ClearSelection();
-            btnAdd.Enabled = false;
-            btnDelete.Enabled = false;
-            btnUpdate.Enabled = false;
+            Helper.ButtonSituation(this.Controls, false, false);
         }
+
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtId.Text) && !string.IsNullOrWhiteSpace(txtName.Text))
+            if (!string.IsNullOrWhiteSpace(txtId.Text) && !string.IsNullOrWhiteSpace(txtName.Text))
             {
-                btnAdd.Enabled = true;
-                btnDelete.Enabled = false;
-                btnUpdate.Enabled = false;
+                Helper.ButtonSituation(this.Controls, true, true);
             }
-            else if (!string.IsNullOrWhiteSpace(txtId.Text) && !string.IsNullOrWhiteSpace(txtName.Text))
+            else if (string.IsNullOrWhiteSpace(txtId.Text) && !string.IsNullOrWhiteSpace(txtName.Text))
             {
-                btnAdd.Enabled = false;
-                btnDelete.Enabled = true;
-                btnUpdate.Enabled = true;
+                Helper.ButtonSituation(this.Controls, false, true);
             }
-            else
+            else if (!string.IsNullOrWhiteSpace(txtId.Text) && string.IsNullOrWhiteSpace(txtName.Text))
             {
-                btnAdd.Enabled = false;
-                btnDelete.Enabled = false;
-                btnUpdate.Enabled = false;
+                Helper.ButtonSituation(this.Controls, true, false);
+            }
+            else if (string.IsNullOrWhiteSpace(txtId.Text) && string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                Helper.ButtonSituation(this.Controls, false, false);
             }
         }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtId.Text) && !string.IsNullOrWhiteSpace(txtName.Text))
@@ -56,21 +55,18 @@ namespace UI_Layer
                 category = new();
                 category.Name = txtName.Text;
 
-                if (category is not null)
+                DialogResult dr = MessageBox.Show($"{txtName.Text} adında yeni bir kategori oluşturma işlemini onaylıyor musunuz?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr == DialogResult.Yes)
                 {
-                    DialogResult dr = MessageBox.Show($"{txtName.Text} adında yeni bir kategori oluşturma işlemini onaylıyor musunuz?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                    if (dr == DialogResult.OK)
+                    bool IsAdded = categorybl.Add(category);
+                    if (IsAdded)
                     {
-                        bool IsAdded = categorybl.Add(category);
-                        if (IsAdded)
-                        {
-                            MessageBox.Show("Ekleme işlemi başarılı !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            dtgridCategory.DataSource = categorybl.GetAll().Select(ctgry => new { ctgry.Id, ctgry.Name }).OrderBy(ctgry => ctgry.Id).ToList();
-                            dtgridCategory.ClearSelection();
-                            txtName.Clear();
-                        }
-                        else MessageBox.Show("Silme işlemi tamamlanamadı, lütfen daha sonra tekrar deneyiniz !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Ekleme işlemi başarılı !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        dtgridCategory.DataSource = categorybl.GetAll().Select(ctgry => new { ctgry.Id, ctgry.Name }).OrderBy(ctgry => ctgry.Id).ToList();
+                        Helper.WriteSelectClear(this.Controls);
                     }
+                    else MessageBox.Show("Ekleme işlemi tamamlanamadı, lütfen daha sonra tekrar deneyiniz !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -95,17 +91,16 @@ namespace UI_Layer
         {
             if (category is not null)
             {
-                DialogResult dr = MessageBox.Show($"{category.Id} Id' ye sahip {category.Name} kategorisini silmek istiyor musunuz?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult dr = MessageBox.Show($"{category.Id} nolu Id' ye sahip {category.Name} adlı kategoriyi silmek istiyor musunuz?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (dr == DialogResult.OK)
                 {
                     bool IsDeleted = categorybl.Delete(categoryId);
                     if (IsDeleted)
                     {
                         MessageBox.Show("Silme işlemi başarılı !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         dtgridCategory.DataSource = categorybl.GetAll().Select(ctgry => new { ctgry.Id, ctgry.Name }).OrderBy(ctgry => ctgry.Id).ToList();
-                        dtgridCategory.ClearSelection();
-                        txtId.Clear();
-                        txtName.Clear();
+                        Helper.WriteSelectClear(this.Controls);
                     }
                     else MessageBox.Show("Silme işlemi tamamlanamadı, lütfen daha sonra tekrar deneyiniz !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -115,41 +110,39 @@ namespace UI_Layer
         {
             if (category is not null)
             {
-                DialogResult dr = MessageBox.Show($"{category.Id} Id ve {category.Name} adlı kategorinin adını {txtName.Text} olarak değiştirme işlemini onaylıyor musunuz?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult dr = MessageBox.Show($"{category.Id} nolu Id ve {category.Name} adlı kategorinin adını {txtName.Text} olarak değiştirme işlemini onaylıyor musunuz?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (dr == DialogResult.OK)
                 {
                     category = categorybl.Find(categoryId);
                     category.Name = txtName.Text;
+
                     bool IsUpdated = categorybl.Update(category);
                     if (IsUpdated)
                     {
                         MessageBox.Show("Güncelleme işlemi başarılı !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        dtgridCategory.DataSource = categorybl.GetAll().Select(ctgry => new { ctgry.Id, ctgry.Name }).ToList();
-                        dtgridCategory.ClearSelection();
-                        txtId.Clear();
-                        txtName.Clear();
+
+                        dtgridCategory.DataSource = categorybl.GetAll().Select(ctgry => new { ctgry.Id, ctgry.Name }).OrderBy(ctgry => ctgry.Id).ToList();
+                        Helper.WriteSelectClear(this.Controls);
                     }
-                    else MessageBox.Show("Silme işlemi tamamlanamadı, lütfen daha sonra tekrar deneyiniz !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else MessageBox.Show("Güncelleme işlemi tamamlanamadı, lütfen daha sonra tekrar deneyiniz !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
-        private void pictureBox1_Click(object sender, EventArgs e)
+
+        private void pctrbxForm_Click(object sender, EventArgs e)
         {
             dtgridCategory.ClearSelection();
             txtId.Clear();
             txtName.Clear();
         }
-
         private void pctrbxExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void pctrbxExit_MouseHover(object sender, EventArgs e)
         {
             pctrbxExit.BackColor = Color.LightCoral;
         }
-
         private void pctrbxExit_MouseLeave(object sender, EventArgs e)
         {
             pctrbxExit.BackColor = default;

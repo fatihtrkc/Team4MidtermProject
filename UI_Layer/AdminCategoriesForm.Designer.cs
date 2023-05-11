@@ -33,7 +33,7 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            pictureBox1 = new PictureBox();
+            pctrbxForm = new PictureBox();
             pictureBox2 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
@@ -44,30 +44,31 @@
             btnUpdate = new Button();
             txtName = new TextBox();
             pctrbxExit = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            label3 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pctrbxForm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgridCategory).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pctrbxExit).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // pctrbxForm
             // 
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(800, 1200);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
+            pctrbxForm.Dock = DockStyle.Fill;
+            pctrbxForm.Image = (Image)resources.GetObject("pctrbxForm.Image");
+            pctrbxForm.Location = new Point(0, 0);
+            pctrbxForm.Name = "pctrbxForm";
+            pctrbxForm.Size = new Size(800, 1200);
+            pctrbxForm.SizeMode = PictureBoxSizeMode.StretchImage;
+            pctrbxForm.TabIndex = 0;
+            pctrbxForm.TabStop = false;
+            pctrbxForm.Click += pctrbxForm_Click;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(76, 129);
+            pictureBox2.Location = new Point(76, 111);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(655, 205);
+            pictureBox2.Size = new Size(655, 223);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
@@ -99,7 +100,7 @@
             dataGridViewCellStyle1.BackColor = Color.White;
             dataGridViewCellStyle1.Font = new Font("Comic Sans MS", 10F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = Color.LightCoral;
-            dataGridViewCellStyle1.SelectionBackColor = Color.LightCoral;
+            dataGridViewCellStyle1.SelectionBackColor = Color.SkyBlue;
             dataGridViewCellStyle1.SelectionForeColor = Color.White;
             dtgridCategory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dtgridCategory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -109,7 +110,7 @@
             dataGridViewCellStyle2.BackColor = Color.White;
             dataGridViewCellStyle2.Font = new Font("Comic Sans MS", 14F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = Color.LightCoral;
-            dataGridViewCellStyle2.SelectionBackColor = Color.LightCoral;
+            dataGridViewCellStyle2.SelectionBackColor = Color.SkyBlue;
             dataGridViewCellStyle2.SelectionForeColor = Color.White;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dtgridCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -118,7 +119,7 @@
             dataGridViewCellStyle3.BackColor = Color.LightCoral;
             dataGridViewCellStyle3.Font = new Font("Comic Sans MS", 10F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = Color.LightCoral;
+            dataGridViewCellStyle3.SelectionBackColor = Color.SkyBlue;
             dataGridViewCellStyle3.SelectionForeColor = Color.White;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dtgridCategory.DefaultCellStyle = dataGridViewCellStyle3;
@@ -129,7 +130,7 @@
             dataGridViewCellStyle4.BackColor = Color.White;
             dataGridViewCellStyle4.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle4.ForeColor = Color.LightCoral;
-            dataGridViewCellStyle4.SelectionBackColor = Color.LightCoral;
+            dataGridViewCellStyle4.SelectionBackColor = Color.SkyBlue;
             dataGridViewCellStyle4.SelectionForeColor = Color.White;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
             dtgridCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
@@ -187,6 +188,7 @@
             txtName.Location = new Point(83, 547);
             txtName.MaxLength = 50;
             txtName.Name = "txtName";
+            txtName.PlaceholderText = "Kategori adını giriniz...";
             txtName.Size = new Size(643, 47);
             txtName.TabIndex = 7;
             txtName.TextChanged += txtName_TextChanged;
@@ -204,6 +206,18 @@
             pctrbxExit.MouseLeave += pctrbxExit_MouseLeave;
             pctrbxExit.MouseHover += pctrbxExit_MouseHover;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe Print", 22F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.LightCoral;
+            label3.Location = new Point(173, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(424, 77);
+            label3.TabIndex = 18;
+            label3.Text = "Kategori İşlemleri";
+            // 
             // AdminCategoriesForm
             // 
             AcceptButton = btnAdd;
@@ -211,6 +225,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(800, 1200);
+            Controls.Add(label3);
             Controls.Add(pctrbxExit);
             Controls.Add(txtName);
             Controls.Add(txtId);
@@ -221,7 +236,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
+            Controls.Add(pctrbxForm);
             Font = new Font("Comic Sans MS", 14F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = Color.White;
             FormBorderStyle = FormBorderStyle.None;
@@ -231,7 +246,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AdminCategoriesForm";
             Load += AdminCategoriesForm_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pctrbxForm).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgridCategory).EndInit();
             ((System.ComponentModel.ISupportInitialize)pctrbxExit).EndInit();
@@ -241,7 +256,7 @@
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox pctrbxForm;
         private PictureBox pictureBox2;
         private Label label1;
         private Label label2;
@@ -252,5 +267,6 @@
         private Button btnUpdate;
         private TextBox txtName;
         private PictureBox pctrbxExit;
+        private Label label3;
     }
 }
