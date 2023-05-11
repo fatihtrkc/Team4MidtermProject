@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminCategoriesForm));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
@@ -36,7 +37,7 @@
             pctrbxForm = new PictureBox();
             pictureBox2 = new PictureBox();
             label1 = new Label();
-            label2 = new Label();
+            lblCategoryName = new Label();
             dtgridCategory = new DataGridView();
             btnAdd = new Button();
             txtId = new TextBox();
@@ -45,10 +46,13 @@
             txtName = new TextBox();
             pctrbxExit = new PictureBox();
             label3 = new Label();
+            timer = new System.Windows.Forms.Timer(components);
+            pctrbxAlert = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pctrbxForm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgridCategory).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pctrbxExit).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pctrbxAlert).BeginInit();
             SuspendLayout();
             // 
             // pctrbxForm
@@ -78,22 +82,22 @@
             label1.AutoSize = true;
             label1.BackColor = Color.White;
             label1.ForeColor = Color.LightCoral;
-            label1.Location = new Point(323, 379);
+            label1.Location = new Point(322, 379);
             label1.Name = "label1";
             label1.Size = new Size(166, 39);
             label1.TabIndex = 2;
             label1.Text = "Kategori Id";
             // 
-            // label2
+            // lblCategoryName
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.White;
-            label2.ForeColor = Color.LightCoral;
-            label2.Location = new Point(316, 494);
-            label2.Name = "label2";
-            label2.Size = new Size(179, 39);
-            label2.TabIndex = 3;
-            label2.Text = "Kategori Adı";
+            lblCategoryName.AutoSize = true;
+            lblCategoryName.BackColor = Color.White;
+            lblCategoryName.ForeColor = Color.LightCoral;
+            lblCategoryName.Location = new Point(316, 494);
+            lblCategoryName.Name = "lblCategoryName";
+            lblCategoryName.Size = new Size(179, 39);
+            lblCategoryName.TabIndex = 3;
+            lblCategoryName.Text = "Kategori Adı";
             // 
             // dtgridCategory
             // 
@@ -218,6 +222,22 @@
             label3.TabIndex = 18;
             label3.Text = "Kategori İşlemleri";
             // 
+            // timer
+            // 
+            timer.Tick += timer_Tick;
+            // 
+            // pctrbxAlert
+            // 
+            pctrbxAlert.BackColor = Color.DarkOrange;
+            pctrbxAlert.Image = (Image)resources.GetObject("pctrbxAlert.Image");
+            pctrbxAlert.Location = new Point(732, 547);
+            pctrbxAlert.Name = "pctrbxAlert";
+            pctrbxAlert.Size = new Size(54, 47);
+            pctrbxAlert.SizeMode = PictureBoxSizeMode.StretchImage;
+            pctrbxAlert.TabIndex = 19;
+            pctrbxAlert.TabStop = false;
+            pctrbxAlert.Visible = false;
+            // 
             // AdminCategoriesForm
             // 
             AcceptButton = btnAdd;
@@ -225,6 +245,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(800, 1200);
+            Controls.Add(pctrbxAlert);
             Controls.Add(label3);
             Controls.Add(pctrbxExit);
             Controls.Add(txtName);
@@ -233,7 +254,7 @@
             Controls.Add(btnDelete);
             Controls.Add(btnAdd);
             Controls.Add(dtgridCategory);
-            Controls.Add(label2);
+            Controls.Add(lblCategoryName);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
             Controls.Add(pctrbxForm);
@@ -250,6 +271,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgridCategory).EndInit();
             ((System.ComponentModel.ISupportInitialize)pctrbxExit).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pctrbxAlert).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -259,7 +281,7 @@
         private PictureBox pctrbxForm;
         private PictureBox pictureBox2;
         private Label label1;
-        private Label label2;
+        private Label lblCategoryName;
         private DataGridView dtgridCategory;
         private Button btnAdd;
         private TextBox txtId;
@@ -268,5 +290,7 @@
         private TextBox txtName;
         private PictureBox pctrbxExit;
         private Label label3;
+        private System.Windows.Forms.Timer timer;
+        private PictureBox pctrbxAlert;
     }
 }

@@ -30,6 +30,13 @@ namespace UI_Layer
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {
+            if (txtName.Text.Length > 1)
+                lblCategoryName.Text = $"Kategori Adı :  ( {txtName.Text.Length} characters used )";
+            else if (txtName.Text.Length == 50)
+                lblCategoryName.Text = $"Kategori Adı :  ( {txtName.Text.Length} characters used is max )";
+            else lblCategoryName.Text = $"Kategori Adı :  ( {txtName.Text.Length} character used )";
+            lblCategoryName.Location = new Point(160, 494);
+
             if (!string.IsNullOrWhiteSpace(txtId.Text) && !string.IsNullOrWhiteSpace(txtName.Text))
             {
                 Helper.ButtonSituation(this.Controls, true, true);
@@ -42,12 +49,16 @@ namespace UI_Layer
             {
                 Helper.ButtonSituation(this.Controls, true, false);
             }
-            else if (string.IsNullOrWhiteSpace(txtId.Text) && string.IsNullOrWhiteSpace(txtName.Text))
+            else
             {
                 Helper.ButtonSituation(this.Controls, false, false);
             }
+
+            TextChangeAlert();
         }
 
+        Category category;
+        int categoryId;
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtId.Text) && !string.IsNullOrWhiteSpace(txtName.Text))
@@ -70,9 +81,6 @@ namespace UI_Layer
                 }
             }
         }
-
-        Category category;
-        int categoryId;
         private void dtgridCategory_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex != -1)
@@ -128,6 +136,29 @@ namespace UI_Layer
                 }
             }
         }
+
+        int counter = 0;
+        void TextChangeAlert()
+        {
+            if (txtName.Text.Length == 50)
+            {
+                timer.Start();
+                pctrbxAlert.Visible = true;
+            }
+            else
+            {
+                timer.Stop();
+                counter = 0;
+                pctrbxAlert.Visible = false;
+            }
+        }
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            counter++;
+            if (counter % 3 != 0) pctrbxAlert.Visible = true;
+            else pctrbxAlert.Visible = false;
+        }
+
 
         private void pctrbxForm_Click(object sender, EventArgs e)
         {
