@@ -34,38 +34,24 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            pctrbxForm = new PictureBox();
             pictureBox2 = new PictureBox();
             label1 = new Label();
             lblCategoryName = new Label();
             dtgridCategory = new DataGridView();
-            btnAdd = new Button();
             txtId = new TextBox();
-            btnDelete = new Button();
-            btnUpdate = new Button();
             txtName = new TextBox();
             pctrbxExit = new PictureBox();
             label3 = new Label();
             timer = new System.Windows.Forms.Timer(components);
             pctrbxAlert = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pctrbxForm).BeginInit();
+            btnUpdate = new Button();
+            btnAdd = new Button();
+            btnDelete = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgridCategory).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pctrbxExit).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pctrbxAlert).BeginInit();
             SuspendLayout();
-            // 
-            // pctrbxForm
-            // 
-            pctrbxForm.Dock = DockStyle.Fill;
-            pctrbxForm.Image = (Image)resources.GetObject("pctrbxForm.Image");
-            pctrbxForm.Location = new Point(0, 0);
-            pctrbxForm.Name = "pctrbxForm";
-            pctrbxForm.Size = new Size(800, 1200);
-            pctrbxForm.SizeMode = PictureBoxSizeMode.StretchImage;
-            pctrbxForm.TabIndex = 0;
-            pctrbxForm.TabStop = false;
-            pctrbxForm.Click += pctrbxForm_Click;
             // 
             // pictureBox2
             // 
@@ -145,50 +131,19 @@
             dtgridCategory.TabIndex = 4;
             dtgridCategory.CellClick += dtgridCategory_CellClick;
             // 
-            // btnAdd
-            // 
-            btnAdd.ForeColor = Color.LightCoral;
-            btnAdd.Location = new Point(83, 625);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(215, 83);
-            btnAdd.TabIndex = 5;
-            btnAdd.Text = "Ekle";
-            btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += btnAdd_Click;
-            // 
             // txtId
             // 
             txtId.Enabled = false;
+            txtId.ForeColor = Color.LightCoral;
             txtId.Location = new Point(83, 433);
             txtId.MaxLength = 5;
             txtId.Name = "txtId";
             txtId.Size = new Size(643, 47);
             txtId.TabIndex = 6;
             // 
-            // btnDelete
-            // 
-            btnDelete.ForeColor = Color.LightCoral;
-            btnDelete.Location = new Point(298, 625);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(215, 83);
-            btnDelete.TabIndex = 5;
-            btnDelete.Text = "Sil";
-            btnDelete.UseVisualStyleBackColor = true;
-            btnDelete.Click += btnDelete_Click;
-            // 
-            // btnUpdate
-            // 
-            btnUpdate.ForeColor = Color.LightCoral;
-            btnUpdate.Location = new Point(513, 625);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(215, 83);
-            btnUpdate.TabIndex = 5;
-            btnUpdate.Text = "Güncelle";
-            btnUpdate.UseVisualStyleBackColor = true;
-            btnUpdate.Click += btnUpdate_Click;
-            // 
             // txtName
             // 
+            txtName.ForeColor = Color.LightCoral;
             txtName.Location = new Point(83, 547);
             txtName.MaxLength = 50;
             txtName.Name = "txtName";
@@ -215,7 +170,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe Print", 22F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.LightCoral;
+            label3.ForeColor = Color.White;
             label3.Location = new Point(173, 0);
             label3.Name = "label3";
             label3.Size = new Size(424, 77);
@@ -238,26 +193,63 @@
             pctrbxAlert.TabStop = false;
             pctrbxAlert.Visible = false;
             // 
+            // btnUpdate
+            // 
+            btnUpdate.BackColor = Color.LightCoral;
+            btnUpdate.ForeColor = Color.White;
+            btnUpdate.Location = new Point(513, 625);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(215, 83);
+            btnUpdate.TabIndex = 21;
+            btnUpdate.Text = "Güncelle";
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
+            // btnAdd
+            // 
+            btnAdd.BackColor = Color.LightCoral;
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Location = new Point(83, 625);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(215, 83);
+            btnAdd.TabIndex = 23;
+            btnAdd.Text = "Ekle";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.BackColor = Color.LightCoral;
+            btnDelete.ForeColor = Color.White;
+            btnDelete.Location = new Point(298, 625);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(215, 83);
+            btnDelete.TabIndex = 22;
+            btnDelete.Text = "Sil";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
+            // 
             // AdminCategoriesForm
             // 
-            AcceptButton = btnAdd;
             AutoScaleDimensions = new SizeF(17F, 39F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 1200);
+            Controls.Add(btnUpdate);
+            Controls.Add(btnAdd);
             Controls.Add(pctrbxAlert);
+            Controls.Add(btnDelete);
             Controls.Add(label3);
             Controls.Add(pctrbxExit);
             Controls.Add(txtName);
             Controls.Add(txtId);
-            Controls.Add(btnUpdate);
-            Controls.Add(btnDelete);
-            Controls.Add(btnAdd);
             Controls.Add(dtgridCategory);
             Controls.Add(lblCategoryName);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
-            Controls.Add(pctrbxForm);
+            DoubleBuffered = true;
             Font = new Font("Comic Sans MS", 14F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = Color.White;
             FormBorderStyle = FormBorderStyle.None;
@@ -267,7 +259,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AdminCategoriesForm";
             Load += AdminCategoriesForm_Load;
-            ((System.ComponentModel.ISupportInitialize)pctrbxForm).EndInit();
+            Click += AdminCategoriesForm_Click;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgridCategory).EndInit();
             ((System.ComponentModel.ISupportInitialize)pctrbxExit).EndInit();
@@ -277,20 +269,18 @@
         }
 
         #endregion
-
-        private PictureBox pctrbxForm;
         private PictureBox pictureBox2;
         private Label label1;
         private Label lblCategoryName;
         private DataGridView dtgridCategory;
-        private Button btnAdd;
         private TextBox txtId;
-        private Button btnDelete;
-        private Button btnUpdate;
         private TextBox txtName;
         private PictureBox pctrbxExit;
         private Label label3;
         private System.Windows.Forms.Timer timer;
         private PictureBox pctrbxAlert;
+        private Button btnUpdate;
+        private Button btnAdd;
+        private Button btnDelete;
     }
 }

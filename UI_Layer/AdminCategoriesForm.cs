@@ -30,7 +30,7 @@ namespace UI_Layer
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            if (txtName.Text.Length > 1)
+            if (txtName.Text.Length > 1 && txtName.Text.Length != 50)
                 lblCategoryName.Text = $"Kategori Adı :  ( {txtName.Text.Length} characters used )";
             else if (txtName.Text.Length == 50)
                 lblCategoryName.Text = $"Kategori Adı :  ( {txtName.Text.Length} characters used is max )";
@@ -59,6 +59,20 @@ namespace UI_Layer
 
         Category category;
         int categoryId;
+        private void dtgridCategory_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                categoryId = (int)(dtgridCategory.Rows[e.RowIndex].Cells[0].Value);
+
+                category = categorybl.Find(categoryId);
+                if (category is not null)
+                {
+                    txtId.Text = category.Id.ToString();
+                    txtName.Text = category.Name;
+                }
+            }
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtId.Text) && !string.IsNullOrWhiteSpace(txtName.Text))
@@ -78,20 +92,6 @@ namespace UI_Layer
                         Helper.WriteSelectClear(this.Controls);
                     }
                     else MessageBox.Show("Ekleme işlemi tamamlanamadı, lütfen daha sonra tekrar deneyiniz !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-        private void dtgridCategory_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex != -1)
-            {
-                categoryId = (int)(dtgridCategory.Rows[e.RowIndex].Cells[0].Value);
-
-                category = categorybl.Find(categoryId);
-                if (category is not null)
-                {
-                    txtId.Text = category.Id.ToString();
-                    txtName.Text = category.Name;
                 }
             }
         }
@@ -159,12 +159,9 @@ namespace UI_Layer
             else pctrbxAlert.Visible = false;
         }
 
-
-        private void pctrbxForm_Click(object sender, EventArgs e)
+        private void AdminCategoriesForm_Click(object sender, EventArgs e)
         {
-            dtgridCategory.ClearSelection();
-            txtId.Clear();
-            txtName.Clear();
+            Helper.WriteSelectClear(this.Controls);
         }
         private void pctrbxExit_Click(object sender, EventArgs e)
         {
@@ -178,6 +175,5 @@ namespace UI_Layer
         {
             pctrbxExit.BackColor = default;
         }
-
     }
 }

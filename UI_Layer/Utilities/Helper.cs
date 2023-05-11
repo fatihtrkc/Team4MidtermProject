@@ -64,6 +64,14 @@ namespace UI_Layer.Utilities
                 {
                     ((DataGridView)control).ClearSelection();
                 }
+                else if (control is ComboBox)
+                {
+                    ((ComboBox)control).SelectedIndex = 0;
+                }
+                else if (control is NumericUpDown)
+                {
+                    ((NumericUpDown)control).Value = default;
+                }
             }
         }
     }
