@@ -49,6 +49,8 @@ namespace UI_Layer
         {
             txtMail.Clear();
             txtPassword.Clear();
+            txtMail.Text = "ahmetyilmaz@yilmaz.com";
+            txtPassword.Text = "123";
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

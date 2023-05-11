@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             cboxCategories = new ComboBox();
             btnAdd = new Button();
             label1 = new Label();
@@ -39,8 +40,11 @@
             columnHeader7 = new ColumnHeader();
             columnHeader3 = new ColumnHeader();
             lblMeal = new Label();
+            Sil = new ContextMenuStrip(components);
+            silToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)nudPorsiyon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboxYemekFoto).BeginInit();
+            Sil.SuspendLayout();
             SuspendLayout();
             // 
             // cboxCategories
@@ -48,7 +52,7 @@
             cboxCategories.FormattingEnabled = true;
             cboxCategories.Location = new Point(147, 224);
             cboxCategories.Name = "cboxCategories";
-            cboxCategories.Size = new Size(215, 23);
+            cboxCategories.Size = new Size(240, 23);
             cboxCategories.TabIndex = 71;
             cboxCategories.SelectedIndexChanged += cboxCategories_SelectedIndexChanged;
             // 
@@ -73,7 +77,7 @@
             // 
             // nudPorsiyon
             // 
-            nudPorsiyon.Location = new Point(291, 287);
+            nudPorsiyon.Location = new Point(316, 287);
             nudPorsiyon.Name = "nudPorsiyon";
             nudPorsiyon.Size = new Size(71, 23);
             nudPorsiyon.TabIndex = 67;
@@ -83,28 +87,29 @@
             cboxYemekler.FormattingEnabled = true;
             cboxYemekler.Location = new Point(147, 253);
             cboxYemekler.Name = "cboxYemekler";
-            cboxYemekler.Size = new Size(215, 23);
+            cboxYemekler.Size = new Size(240, 23);
             cboxYemekler.TabIndex = 66;
             // 
             // pboxYemekFoto
             // 
             pboxYemekFoto.Location = new Point(146, 64);
             pboxYemekFoto.Name = "pboxYemekFoto";
-            pboxYemekFoto.Size = new Size(214, 154);
+            pboxYemekFoto.Size = new Size(241, 154);
             pboxYemekFoto.TabIndex = 64;
             pboxYemekFoto.TabStop = false;
             // 
             // lviewMeal
             // 
             lviewMeal.Columns.AddRange(new ColumnHeader[] { columnHeader6, columnHeader7, columnHeader3 });
+            lviewMeal.ContextMenuStrip = Sil;
             lviewMeal.GridLines = true;
-            lviewMeal.Location = new Point(147, 410);
+            lviewMeal.Location = new Point(146, 394);
             lviewMeal.Name = "lviewMeal";
-            lviewMeal.Size = new Size(224, 196);
+            lviewMeal.Size = new Size(241, 196);
             lviewMeal.TabIndex = 72;
             lviewMeal.UseCompatibleStateImageBehavior = false;
             lviewMeal.View = View.Details;
-            lviewMeal.SelectedIndexChanged += lviewKahvalti_SelectedIndexChanged;
+            lviewMeal.SelectedIndexChanged += lviewMeal_SelectedIndexChanged;
             // 
             // columnHeader6
             // 
@@ -129,6 +134,19 @@
             lblMeal.TabIndex = 73;
             lblMeal.Text = "Öğün";
             // 
+            // Sil
+            // 
+            Sil.Items.AddRange(new ToolStripItem[] { silToolStripMenuItem });
+            Sil.Name = "Sil";
+            Sil.Size = new Size(181, 48);
+            // 
+            // silToolStripMenuItem
+            // 
+            silToolStripMenuItem.Name = "silToolStripMenuItem";
+            silToolStripMenuItem.Size = new Size(180, 22);
+            silToolStripMenuItem.Text = "Sil";
+            silToolStripMenuItem.Click += silToolStripMenuItem_Click;
+            // 
             // UserAddMeal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -146,8 +164,10 @@
             Name = "UserAddMeal";
             Text = "UserAddMeal";
             Load += UserAddMeal_Load;
+            Click += UserAddMeal_Click;
             ((System.ComponentModel.ISupportInitialize)nudPorsiyon).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboxYemekFoto).EndInit();
+            Sil.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -165,5 +185,7 @@
         private ColumnHeader columnHeader7;
         private ColumnHeader columnHeader3;
         private Label lblMeal;
+        private ContextMenuStrip Sil;
+        private ToolStripMenuItem silToolStripMenuItem;
     }
 }

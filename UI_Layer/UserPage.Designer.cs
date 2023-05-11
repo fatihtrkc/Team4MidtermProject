@@ -98,9 +98,9 @@
             // 
             lviewGunluk.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
             lviewGunluk.GridLines = true;
-            lviewGunluk.Location = new Point(80, 220);
+            lviewGunluk.Location = new Point(93, 220);
             lviewGunluk.Name = "lviewGunluk";
-            lviewGunluk.Size = new Size(378, 210);
+            lviewGunluk.Size = new Size(338, 210);
             lviewGunluk.TabIndex = 68;
             lviewGunluk.UseCompatibleStateImageBehavior = false;
             lviewGunluk.View = View.Details;
@@ -190,7 +190,7 @@
             // btnUpDay
             // 
             btnUpDay.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            btnUpDay.Location = new Point(464, 270);
+            btnUpDay.Location = new Point(453, 270);
             btnUpDay.Name = "btnUpDay";
             btnUpDay.Size = new Size(50, 133);
             btnUpDay.TabIndex = 74;

@@ -39,7 +39,6 @@
             raporlarToolStripMenuItem = new ToolStripMenuItem();
             günlükToolStripMenuItem = new ToolStripMenuItem();
             haftalıkToolStripMenuItem = new ToolStripMenuItem();
-            aylıkToolStripMenuItem = new ToolStripMenuItem();
             menus.SuspendLayout();
             SuspendLayout();
             // 
@@ -102,7 +101,7 @@
             // 
             // raporlarToolStripMenuItem
             // 
-            raporlarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { günlükToolStripMenuItem, haftalıkToolStripMenuItem, aylıkToolStripMenuItem });
+            raporlarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { günlükToolStripMenuItem, haftalıkToolStripMenuItem });
             raporlarToolStripMenuItem.Name = "raporlarToolStripMenuItem";
             raporlarToolStripMenuItem.Size = new Size(63, 20);
             raporlarToolStripMenuItem.Text = "Raporlar";
@@ -110,20 +109,16 @@
             // günlükToolStripMenuItem
             // 
             günlükToolStripMenuItem.Name = "günlükToolStripMenuItem";
-            günlükToolStripMenuItem.Size = new Size(115, 22);
-            günlükToolStripMenuItem.Text = "Günlük";
+            günlükToolStripMenuItem.Size = new Size(182, 22);
+            günlükToolStripMenuItem.Text = "Aylık ve Haftalık";
+            günlükToolStripMenuItem.Click += günlükToolStripMenuItem_Click;
             // 
             // haftalıkToolStripMenuItem
             // 
             haftalıkToolStripMenuItem.Name = "haftalıkToolStripMenuItem";
-            haftalıkToolStripMenuItem.Size = new Size(115, 22);
-            haftalıkToolStripMenuItem.Text = "Haftalık";
-            // 
-            // aylıkToolStripMenuItem
-            // 
-            aylıkToolStripMenuItem.Name = "aylıkToolStripMenuItem";
-            aylıkToolStripMenuItem.Size = new Size(115, 22);
-            aylıkToolStripMenuItem.Text = "Aylık";
+            haftalıkToolStripMenuItem.Size = new Size(182, 22);
+            haftalıkToolStripMenuItem.Text = "Yemek İstatistiklerim";
+            haftalıkToolStripMenuItem.Click += haftalıkToolStripMenuItem_Click;
             // 
             // HomePage
             // 
@@ -154,6 +149,5 @@
         private ToolStripMenuItem raporlarToolStripMenuItem;
         private ToolStripMenuItem günlükToolStripMenuItem;
         private ToolStripMenuItem haftalıkToolStripMenuItem;
-        private ToolStripMenuItem aylıkToolStripMenuItem;
     }
 }

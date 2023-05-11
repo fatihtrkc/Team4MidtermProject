@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Interfaces;
 using DataAccessLayer.Context;
+using EntitiyLayer.Entities;
 using EntityLayer.Entities;
 using System;
 using System.Collections.Generic;
@@ -49,11 +50,9 @@ namespace BusinessLayer.EntitiesBL
             db.Foods.Update(entity);
             return db.SaveChanges() > 0;
         }
-
-        //public int GetCalory(int id)
-        //{
-        //    int calory = db.Foods.Where(a => a.Id == id)
-        //    return calory;
-        //}
+        public List<Food> GetByText(string name)
+        {
+            return db.Foods.Where(a => a.Name.Contains(name)).ToList();
+        }
     }
 }
