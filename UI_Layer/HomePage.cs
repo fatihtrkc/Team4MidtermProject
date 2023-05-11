@@ -67,5 +67,15 @@ namespace UI_Layer
             YeniFormEkle(new UserPage(userId));
 
         }
+
+        private void günlükToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YeniFormEkle(new ReportForm(userId));
+        }
+
+        private void haftalıkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YeniFormEkle(new FoodStatisticsForm(userId));
+        }
     }
 }

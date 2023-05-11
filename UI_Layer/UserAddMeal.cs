@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace UI_Layer
 {
@@ -56,37 +57,85 @@ namespace UI_Layer
                 FillList();
             }
         }
-
-        private void lviewKahvalti_SelectedIndexChanged(object sender, EventArgs e)
+        private void lviewMeal_SelectedIndexChanged(object sender, EventArgs e)
         {
             btnAdd.Text = "Güncelle";
+            if (lviewMeal.SelectedItems.Count > 0)
+            {
+                AddedFood added = (AddedFood)lviewMeal.SelectedItems[0].Tag;
+                Food food = db.FoodBL.Find(added.FoodId);
+                Category category = db.CategoryBL.Find(food.CategoryId);
+
+                cboxCategories.SelectedValue = category.Id;
+                cboxYemekler.SelectedValue = food.Id;
+                nudPorsiyon.Value = (int)added.Quantity;
+
+
+            }
         }
+
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddedFood ad = new();
-            ad.UserId = userId;
-            ad.FoodId = (int)cboxYemekler.SelectedValue;
-            ad.Quantity = (int)nudPorsiyon.Value;
-
-            Food food = db.FoodBL.Find(ad.FoodId);
-            double calory = food.CaloryPerUnit;
-            ad.TotalCalory = (double)(ad.Quantity * calory);
-
-            ad.CreationDate = DateTime.Today;
-            ad.TargetCaloryPerDay = 100;
-            ad.MealId = mealType;
-
-
-            bool isAdded = db.AddedFoodBL.Add(ad);
-            if (isAdded)
+            if (lviewMeal.SelectedItems.Count > 0)
             {
-                MessageBox.Show("Yemek başarıyla eklendi");
-                FillList();
+                AddedFood added = (AddedFood)lviewMeal.FocusedItem.Tag;
+                added.UserId = userId;
+                added.FoodId = (int)cboxYemekler.SelectedValue;
+                added.Quantity = (int)nudPorsiyon.Value;
+
+                Food food = db.FoodBL.Find(added.FoodId);
+                double calory = food.CaloryPerUnit;
+                added.TotalCalory = (double)(added.Quantity * calory);
+
+                added.CreationDate = DateTime.Today;
+                added.TargetCaloryPerDay = 100;
+                added.MealId = mealType;
+
+                bool isUpdated = db.AddedFoodBL.Update(added);
+                if (isUpdated)
+                {
+                    MessageBox.Show("Yemek bilgisi güncellendi");
+                    FillList();
+                    foreach (ListViewItem item in lviewMeal.SelectedItems)
+                    {
+                        item.Selected = false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Yemek bilgisi güncellenemedi");
+                }
+                btnAdd.Text = "Kaydet";
+
             }
             else
             {
-                MessageBox.Show("Yemek eklenemedi");
+                AddedFood ad = new();
+                ad.UserId = userId;
+                ad.FoodId = (int)cboxYemekler.SelectedValue;
+                ad.Quantity = (int)nudPorsiyon.Value;
+
+                Food food = db.FoodBL.Find(ad.FoodId);
+                double calory = food.CaloryPerUnit;
+                ad.TotalCalory = (double)(ad.Quantity * calory);
+
+                ad.CreationDate = DateTime.Today;
+                ad.TargetCaloryPerDay = 100;
+                ad.MealId = mealType;
+
+
+                bool isAdded = db.AddedFoodBL.Add(ad);
+                if (isAdded)
+                {
+                    MessageBox.Show("Yemek başarıyla eklendi");
+                    FillList();
+                }
+                else
+                {
+                    MessageBox.Show("Yemek eklenemedi");
+                }
+
             }
 
         }
@@ -111,6 +160,7 @@ namespace UI_Layer
                 lv.Text = food.Name;
                 lv.SubItems.Add(item.Quantity.ToString());
                 lv.SubItems.Add(item.TotalCalory.ToString());
+                lv.Tag = item;
                 lviewMeal.Items.Add(lv);
             }
         }
@@ -127,6 +177,34 @@ namespace UI_Layer
             cboxYemekler.DisplayMember = "Name";
             cboxYemekler.ValueMember = "Id";
             cboxYemekler.DataSource = foods;
+        }
+
+        private void UserAddMeal_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in lviewMeal.SelectedItems)
+            {
+                item.Selected = false;
+            }
+            btnAdd.Text = "Kaydet";
+        }
+
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lviewMeal.SelectedItems.Count > 0)
+            {
+
+                AddedFood added = (AddedFood)lviewMeal.SelectedItems[0].Tag;
+                bool isDeleted = db.AddedFoodBL.Delete(added.Id);
+                if (isDeleted)
+                {
+                    MessageBox.Show("Yemek silindi");
+                }
+                else
+                {
+                    MessageBox.Show("Yemek silinemedi");
+                }
+                FillList();
+            }
         }
     }
 }
