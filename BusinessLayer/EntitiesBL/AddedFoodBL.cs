@@ -42,10 +42,10 @@ namespace BusinessLayer.EntitiesBL
             return db.AddedFoods.ToList();
         }
 
-        public IQueryable GetAllByUserId(int userId)
+        public List<AddedFood> GetAllByUserId(int userId)
         {
-            var table = db.AddedFoods.Where(u => u.UserId == userId).GroupBy(a=> a.FoodId).Select(grp=> new {FoodId =grp.Key, YemekSayisi = grp.Count()});
-            return table;
+            return db.AddedFoods.Where(u => u.UserId == userId).ToList();
+            
         }
 
         public List<AddedFood> GetAllByUserIdAndDay(int userId, DateTime date)
