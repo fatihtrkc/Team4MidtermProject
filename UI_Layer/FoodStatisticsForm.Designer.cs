@@ -39,8 +39,8 @@
             label2 = new Label();
             label3 = new Label();
             lviewTop = new ListView();
-            columnHeader6 = new ColumnHeader();
             columnHeader7 = new ColumnHeader();
+            columnHeader6 = new ColumnHeader();
             SuspendLayout();
             // 
             // lviewFoods
@@ -129,21 +129,22 @@
             lviewTop.GridLines = true;
             lviewTop.Location = new Point(260, 421);
             lviewTop.Name = "lviewTop";
-            lviewTop.Size = new Size(225, 139);
+            lviewTop.Size = new Size(236, 155);
+            lviewTop.Sorting = SortOrder.Ascending;
             lviewTop.TabIndex = 8;
             lviewTop.UseCompatibleStateImageBehavior = false;
             lviewTop.View = View.Details;
-            // 
-            // columnHeader6
-            // 
-            columnHeader6.Text = "Yemek Adı";
-            columnHeader6.Width = 120;
             // 
             // columnHeader7
             // 
             columnHeader7.Text = "Kaç Defa Yedim";
             columnHeader7.TextAlign = HorizontalAlignment.Center;
             columnHeader7.Width = 100;
+            // 
+            // columnHeader6
+            // 
+            columnHeader6.Text = "Yemek Adı";
+            columnHeader6.Width = 120;
             // 
             // FoodStatisticsForm
             // 
