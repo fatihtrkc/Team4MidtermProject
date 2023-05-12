@@ -70,7 +70,7 @@ namespace UI_Layer
 
         private void btnSifre_Click(object sender, EventArgs e)
         {
-            if (user.QuestionAnswer == txtCevap.Text && user.Name == txtName.Text && user.Surname == txtSurname.Text)
+            if (user.QuestionAnswer == txtCevap.Text.ToUpper() && user.Name == txtName.Text.ToUpper() && user.Surname == txtSurname.Text.ToUpper())
             {
                 ResetPasswordForm form = new ResetPasswordForm(user.Id);
                 this.Hide();
