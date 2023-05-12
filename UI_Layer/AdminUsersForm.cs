@@ -22,7 +22,7 @@ namespace UI_Layer
         UserBL userbl;
         private void AdminUsersForm_Load(object sender, EventArgs e)
         {
-            //dtgridPassiveUsers.DataSource = userbl
+            dtgridPassiveUsers.DataSource = userbl.GetAllByUserSituation();
         }
     }
 }

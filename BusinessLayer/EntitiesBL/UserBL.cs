@@ -39,11 +39,17 @@ namespace BusinessLayer.EntitiesBL
             return db.Users.ToList();
         }
 
+        public List<User> GetAllByUserSituation() 
+        {
+            return db.Users.Where(user => user.ActivePassiveSituation == false).ToList();
+        }
+
         public bool Update(User entity)
         {
             db.Users.Update(entity);
             return db.SaveChanges() > 0;
         }
+
         public int Login(string userName, string password)
         {
             User user = db.Users.Where(x=> x.Email == userName && x.Password== password).SingleOrDefault();
