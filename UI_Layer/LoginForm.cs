@@ -22,33 +22,21 @@ namespace UI_Layer
         }
         Team4ContextBL dbbll;
 
-      
+
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
             txtMail.Clear();
             txtPassword.Clear();
+            txtPassword.UseSystemPasswordChar = true;
+
+
+            //Proje bitince sil
             txtMail.Text = "ahmetyilmaz@yilmaz.com";
-            txtPassword.Text = "123";
+            txtPassword.Text = "AaBb12.,";
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            PasswordQuestionForm form = new();
-            this.Hide();
-            form.ShowDialog();
-            this.Show();
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            SignUpForm form = new SignUpForm();
-            this.Hide();
-            form.ShowDialog();
-            this.Show();
-        }
-
-        private void Button1_Click_1(object sender, EventArgs e)
+        private void btnGiris_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtMail.Text) || !string.IsNullOrWhiteSpace(txtPassword.Text))
             {
@@ -68,6 +56,33 @@ namespace UI_Layer
             else
             {
                 MessageBox.Show("Alanları doldurun");
+            }
+        }
+
+        private void lblSifre_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PasswordQuestionForm form = new();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void lblKayit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SignUpForm form = new SignUpForm();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
+        }
+        private void ToggleSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ToggleSwitch.Checked)
+            {
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true;
             }
         }
     }
