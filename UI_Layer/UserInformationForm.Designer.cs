@@ -29,106 +29,158 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            linkLabel2 = new LinkLabel();
             linkLabel1 = new LinkLabel();
-            button1 = new Button();
-            numericUpDown1 = new NumericUpDown();
-            textBox10 = new TextBox();
             label11 = new Label();
             label8 = new Label();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            nudWeight = new NumericUpDown();
+            nudHeight = new NumericUpDown();
+            label2 = new Label();
+            cboxLifeStyle = new ComboBox();
+            cboxGoal = new ComboBox();
+            label3 = new Label();
+            btnUpdate = new Button();
+            llabelUpdPass = new LinkLabel();
+            ((System.ComponentModel.ISupportInitialize)nudWeight).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudHeight).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
-            label1.Location = new Point(56, 81);
+            label1.Location = new Point(108, 52);
             label1.Name = "label1";
             label1.Size = new Size(169, 23);
             label1.TabIndex = 41;
             label1.Text = "Adı soyadı hoş geldin";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // linkLabel2
-            // 
-            linkLabel2.AutoSize = true;
-            linkLabel2.Location = new Point(148, 298);
-            linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(79, 15);
-            linkLabel2.TabIndex = 40;
-            linkLabel2.TabStop = true;
-            linkLabel2.Text = "Şifre Güncelle";
-            // 
             // linkLabel1
             // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(57, 298);
+            linkLabel1.Location = new Point(22, 417);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(78, 15);
+            linkLabel1.Size = new Size(86, 43);
             linkLabel1.TabIndex = 39;
             linkLabel1.TabStop = true;
-            linkLabel1.Text = "Kişisel Bilgiler";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(84, 212);
-            button1.Name = "button1";
-            button1.Size = new Size(123, 45);
-            button1.TabIndex = 38;
-            button1.Text = "Kaydet";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown1
-            // 
-            numericUpDown1.DecimalPlaces = 1;
-            numericUpDown1.Location = new Point(135, 140);
-            numericUpDown1.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
-            numericUpDown1.Minimum = new decimal(new int[] { 130, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(92, 23);
-            numericUpDown1.TabIndex = 37;
-            numericUpDown1.Value = new decimal(new int[] { 130, 0, 0, 0 });
-            // 
-            // textBox10
-            // 
-            textBox10.Location = new Point(135, 169);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(92, 23);
-            textBox10.TabIndex = 36;
+            linkLabel1.Text = "Kişisel Bilgileri Güncelle";
+            linkLabel1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
-            label11.Location = new Point(58, 169);
+            label11.Location = new Point(60, 152);
             label11.Name = "label11";
-            label11.Size = new Size(62, 23);
+            label11.Size = new Size(101, 23);
             label11.TabIndex = 35;
             label11.Text = "Kilo";
             label11.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label8
             // 
-            label8.Location = new Point(58, 140);
+            label8.Location = new Point(60, 123);
             label8.Name = "label8";
-            label8.Size = new Size(62, 23);
+            label8.Size = new Size(101, 23);
             label8.TabIndex = 34;
             label8.Text = "Boy";
             label8.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // UserInformation
+            // nudWeight
+            // 
+            nudWeight.DecimalPlaces = 1;
+            nudWeight.Location = new Point(185, 153);
+            nudWeight.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
+            nudWeight.Minimum = new decimal(new int[] { 35, 0, 0, 0 });
+            nudWeight.Name = "nudWeight";
+            nudWeight.Size = new Size(121, 23);
+            nudWeight.TabIndex = 61;
+            nudWeight.Value = new decimal(new int[] { 35, 0, 0, 0 });
+            // 
+            // nudHeight
+            // 
+            nudHeight.DecimalPlaces = 1;
+            nudHeight.Location = new Point(185, 122);
+            nudHeight.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
+            nudHeight.Minimum = new decimal(new int[] { 130, 0, 0, 0 });
+            nudHeight.Name = "nudHeight";
+            nudHeight.Size = new Size(121, 23);
+            nudHeight.TabIndex = 62;
+            nudHeight.Value = new decimal(new int[] { 130, 0, 0, 0 });
+            // 
+            // label2
+            // 
+            label2.Location = new Point(108, 204);
+            label2.Name = "label2";
+            label2.Size = new Size(169, 23);
+            label2.TabIndex = 63;
+            label2.Text = "Günlük Egzersiz Sıklığı:";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // cboxLifeStyle
+            // 
+            cboxLifeStyle.FormattingEnabled = true;
+            cboxLifeStyle.Location = new Point(108, 239);
+            cboxLifeStyle.Name = "cboxLifeStyle";
+            cboxLifeStyle.Size = new Size(169, 23);
+            cboxLifeStyle.TabIndex = 64;
+            // 
+            // cboxGoal
+            // 
+            cboxGoal.FormattingEnabled = true;
+            cboxGoal.Location = new Point(108, 307);
+            cboxGoal.Name = "cboxGoal";
+            cboxGoal.Size = new Size(169, 23);
+            cboxGoal.TabIndex = 66;
+            // 
+            // label3
+            // 
+            label3.Location = new Point(108, 281);
+            label3.Name = "label3";
+            label3.Size = new Size(169, 23);
+            label3.TabIndex = 65;
+            label3.Text = "Uygulamayı Kullanım Amacı:";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.Location = new Point(108, 351);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(169, 46);
+            btnUpdate.TabIndex = 67;
+            btnUpdate.Text = "Güncelle";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
+            // llabelUpdPass
+            // 
+            llabelUpdPass.AutoSize = true;
+            llabelUpdPass.Location = new Point(258, 431);
+            llabelUpdPass.Name = "llabelUpdPass";
+            llabelUpdPass.Size = new Size(79, 15);
+            llabelUpdPass.TabIndex = 68;
+            llabelUpdPass.TabStop = true;
+            llabelUpdPass.Text = "Şifre Güncelle";
+            llabelUpdPass.LinkClicked += llabelUpdPass_LinkClicked;
+            // 
+            // UserInformationForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(279, 469);
+            ClientSize = new Size(349, 469);
+            Controls.Add(llabelUpdPass);
+            Controls.Add(btnUpdate);
+            Controls.Add(cboxGoal);
+            Controls.Add(label3);
+            Controls.Add(cboxLifeStyle);
+            Controls.Add(label2);
+            Controls.Add(nudHeight);
+            Controls.Add(nudWeight);
             Controls.Add(label1);
-            Controls.Add(linkLabel2);
             Controls.Add(linkLabel1);
-            Controls.Add(button1);
-            Controls.Add(numericUpDown1);
-            Controls.Add(textBox10);
             Controls.Add(label11);
             Controls.Add(label8);
-            Name = "UserInformation";
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "UserInformationForm";
             Text = "UserInformation";
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            Load += UserInformationForm_Load;
+            ((System.ComponentModel.ISupportInitialize)nudWeight).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudHeight).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -136,12 +188,16 @@
         #endregion
 
         private Label label1;
-        private LinkLabel linkLabel2;
         private LinkLabel linkLabel1;
-        private Button button1;
-        private NumericUpDown numericUpDown1;
-        private TextBox textBox10;
         private Label label11;
         private Label label8;
+        private NumericUpDown nudWeight;
+        private NumericUpDown nudHeight;
+        private Label label2;
+        private ComboBox cboxLifeStyle;
+        private ComboBox cboxGoal;
+        private Label label3;
+        private Button btnUpdate;
+        private LinkLabel llabelUpdPass;
     }
 }

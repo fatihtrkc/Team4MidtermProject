@@ -47,7 +47,7 @@
             // 
             // label13
             // 
-            label13.Location = new Point(95, 111);
+            label13.Location = new Point(39, 96);
             label13.Name = "label13";
             label13.Size = new Size(109, 23);
             label13.TabIndex = 56;
@@ -57,7 +57,7 @@
             // cboxLifeStyle
             // 
             cboxLifeStyle.FormattingEnabled = true;
-            cboxLifeStyle.Location = new Point(231, 111);
+            cboxLifeStyle.Location = new Point(175, 96);
             cboxLifeStyle.Name = "cboxLifeStyle";
             cboxLifeStyle.Size = new Size(120, 23);
             cboxLifeStyle.TabIndex = 55;
@@ -65,7 +65,7 @@
             // rdMale
             // 
             rdMale.AutoSize = true;
-            rdMale.Location = new Point(296, 86);
+            rdMale.Location = new Point(240, 71);
             rdMale.Name = "rdMale";
             rdMale.Size = new Size(53, 19);
             rdMale.TabIndex = 54;
@@ -76,7 +76,7 @@
             // 
             rdFemale.AutoSize = true;
             rdFemale.Checked = true;
-            rdFemale.Location = new Point(231, 86);
+            rdFemale.Location = new Point(175, 71);
             rdFemale.Name = "rdFemale";
             rdFemale.Size = new Size(55, 19);
             rdFemale.TabIndex = 53;
@@ -86,7 +86,7 @@
             // 
             // label12
             // 
-            label12.Location = new Point(95, 84);
+            label12.Location = new Point(39, 69);
             label12.Name = "label12";
             label12.Size = new Size(109, 23);
             label12.TabIndex = 52;
@@ -96,7 +96,7 @@
             // nudWeight
             // 
             nudWeight.DecimalPlaces = 1;
-            nudWeight.Location = new Point(231, 176);
+            nudWeight.Location = new Point(175, 161);
             nudWeight.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
             nudWeight.Minimum = new decimal(new int[] { 35, 0, 0, 0 });
             nudWeight.Name = "nudWeight";
@@ -107,7 +107,7 @@
             // nudHeight
             // 
             nudHeight.DecimalPlaces = 1;
-            nudHeight.Location = new Point(231, 147);
+            nudHeight.Location = new Point(175, 132);
             nudHeight.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
             nudHeight.Minimum = new decimal(new int[] { 130, 0, 0, 0 });
             nudHeight.Name = "nudHeight";
@@ -117,7 +117,7 @@
             // 
             // label11
             // 
-            label11.Location = new Point(95, 176);
+            label11.Location = new Point(39, 161);
             label11.Name = "label11";
             label11.Size = new Size(109, 23);
             label11.TabIndex = 58;
@@ -126,7 +126,7 @@
             // 
             // label8
             // 
-            label8.Location = new Point(95, 147);
+            label8.Location = new Point(39, 132);
             label8.Name = "label8";
             label8.Size = new Size(109, 23);
             label8.TabIndex = 57;
@@ -135,7 +135,7 @@
             // 
             // label1
             // 
-            label1.Location = new Point(98, 225);
+            label1.Location = new Point(42, 210);
             label1.Name = "label1";
             label1.Size = new Size(254, 50);
             label1.TabIndex = 62;
@@ -145,14 +145,14 @@
             // cboxGoal
             // 
             cboxGoal.FormattingEnabled = true;
-            cboxGoal.Location = new Point(98, 278);
+            cboxGoal.Location = new Point(42, 263);
             cboxGoal.Name = "cboxGoal";
             cboxGoal.Size = new Size(256, 23);
             cboxGoal.TabIndex = 61;
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(256, 333);
+            btnSave.Location = new Point(200, 318);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(75, 23);
             btnSave.TabIndex = 63;
@@ -162,7 +162,7 @@
             // 
             // btnBack
             // 
-            btnBack.Location = new Point(98, 333);
+            btnBack.Location = new Point(42, 318);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(75, 23);
             btnBack.TabIndex = 64;
@@ -174,7 +174,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(408, 459);
+            ClientSize = new Size(333, 413);
             Controls.Add(btnBack);
             Controls.Add(btnSave);
             Controls.Add(label1);

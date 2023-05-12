@@ -40,7 +40,7 @@ namespace UI_Layer
                     Location();
 
                     lblOzelSoru.Text = user.SpecificQuestion;
-                    
+
                 }
                 else if (user != null && user.ActivePassiveSituation == false)
                 {

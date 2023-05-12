@@ -77,5 +77,10 @@ namespace UI_Layer
         {
             YeniFormEkle(new FoodStatisticsForm(userId));
         }
+
+        private void kisiselBilgiler_Click(object sender, EventArgs e)
+        {
+            YeniFormEkle(new UserInformationForm(userId));
+        }
     }
 }

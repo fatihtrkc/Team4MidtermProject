@@ -70,7 +70,7 @@ namespace UI_Layer
             user.BirthDate = dateTime;
 
             user.GoalTypeId = goalType;
-            user.Gender = rdMale.Checked ? EntityLayer.Enums.Gender.Male : EntityLayer.Enums.Gender.Female;
+            user.Gender = rdMale.Checked ? Gender.Male : Gender.Female;
             user.LifeStyleId = lifeId;
             user.Height = (double)nudHeight.Value;
             user.Weight = (double)nudWeight.Value;
