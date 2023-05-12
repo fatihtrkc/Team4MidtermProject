@@ -21,8 +21,34 @@ namespace UI_Layer
             dbbll = new();
         }
         Team4ContextBL dbbll;
-        
-        private void button1_Click(object sender, EventArgs e)
+
+      
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            txtMail.Clear();
+            txtPassword.Clear();
+            txtMail.Text = "ahmetyilmaz@yilmaz.com";
+            txtPassword.Text = "123";
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            PasswordQuestionForm form = new();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            SignUpForm form = new SignUpForm();
+            this.Hide();
+            form.ShowDialog();
+            this.Show();
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtMail.Text) || !string.IsNullOrWhiteSpace(txtPassword.Text))
             {
@@ -43,30 +69,6 @@ namespace UI_Layer
             {
                 MessageBox.Show("Alanları doldurun");
             }
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-            txtMail.Clear();
-            txtPassword.Clear();
-            txtMail.Text = "ahmetyilmaz@yilmaz.com";
-            txtPassword.Text = "123";
-        }
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            PasswordQuestionForm form = new ();
-            this.Hide();
-            form.ShowDialog();
-            this.Show();
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            SignUpForm form = new SignUpForm();
-            this.Hide();
-            form.ShowDialog();
-            this.Show();
         }
     }
 }
