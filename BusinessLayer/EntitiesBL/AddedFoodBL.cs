@@ -45,7 +45,7 @@ namespace BusinessLayer.EntitiesBL
         public List<AddedFood> GetAllByUserId(int userId)
         {
             return db.AddedFoods.Where(u => u.UserId == userId).ToList();
-            
+
         }
 
         public List<AddedFood> GetAllByUserIdAndDay(int userId, DateTime date)
@@ -92,7 +92,7 @@ namespace BusinessLayer.EntitiesBL
 
         public int GetCountFood(int userId, int foodId, MealType type)
         {
-            return db.AddedFoods.Where(a => a.UserId == userId && a.FoodId == foodId && a.MealId==type).Count();
+            return db.AddedFoods.Where(a => a.UserId == userId && a.FoodId == foodId && a.MealId == type).Count();
         }
 
         public int GetCountFoodTop(int userId, int foodId)

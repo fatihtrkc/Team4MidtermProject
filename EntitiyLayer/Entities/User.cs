@@ -25,7 +25,6 @@ namespace EntitiyLayer.Entities
         [ForeignKey("LifeStyle")]
         public LifeStyleType LifeStyleId { get; set; }
         public LifeStyle LifeStyle { get; set; }
-
         [ForeignKey("Goal")]
         public GoalType GoalTypeId { get; set; }
         public Goal Goal { get; set; }
