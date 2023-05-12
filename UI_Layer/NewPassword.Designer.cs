@@ -28,101 +28,128 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtOldPassword = new TextBox();
-            txtNewPassowrd = new TextBox();
-            txtNewAgain = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            btnGuncelle = new Button();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            txtNewAgain = new Guna.UI2.WinForms.Guna2TextBox();
+            txtNewPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            txtOldPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            btnSifre = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
-            // 
-            // txtOldPassword
-            // 
-            txtOldPassword.Location = new Point(177, 63);
-            txtOldPassword.Name = "txtOldPassword";
-            txtOldPassword.Size = new Size(163, 23);
-            txtOldPassword.TabIndex = 0;
-            // 
-            // txtNewPassowrd
-            // 
-            txtNewPassowrd.Location = new Point(177, 114);
-            txtNewPassowrd.Name = "txtNewPassowrd";
-            txtNewPassowrd.Size = new Size(163, 23);
-            txtNewPassowrd.TabIndex = 1;
             // 
             // txtNewAgain
             // 
-            txtNewAgain.Location = new Point(177, 167);
+            txtNewAgain.BorderRadius = 10;
+            txtNewAgain.BorderThickness = 3;
+            txtNewAgain.CustomizableEdges = customizableEdges1;
+            txtNewAgain.DefaultText = "";
+            txtNewAgain.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtNewAgain.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtNewAgain.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtNewAgain.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtNewAgain.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNewAgain.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNewAgain.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNewAgain.Location = new Point(95, 200);
             txtNewAgain.Name = "txtNewAgain";
-            txtNewAgain.Size = new Size(163, 23);
-            txtNewAgain.TabIndex = 2;
+            txtNewAgain.PasswordChar = '\0';
+            txtNewAgain.PlaceholderText = "Yeni Şifrenizi Tekrar Giriniz";
+            txtNewAgain.SelectedText = "";
+            txtNewAgain.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtNewAgain.Size = new Size(243, 36);
+            txtNewAgain.TabIndex = 6;
             // 
-            // label1
+            // txtNewPassword
             // 
-            label1.Location = new Point(66, 64);
-            label1.Name = "label1";
-            label1.Size = new Size(105, 23);
-            label1.TabIndex = 3;
-            label1.Text = "Eski Şifreniz:";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
+            txtNewPassword.BorderRadius = 10;
+            txtNewPassword.BorderThickness = 3;
+            txtNewPassword.CustomizableEdges = customizableEdges3;
+            txtNewPassword.DefaultText = "";
+            txtNewPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtNewPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtNewPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtNewPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtNewPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNewPassword.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNewPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtNewPassword.Location = new Point(95, 119);
+            txtNewPassword.Name = "txtNewPassword";
+            txtNewPassword.PasswordChar = '\0';
+            txtNewPassword.PlaceholderText = "Yeni Oluşturduğunuz Şifreyi Giriniz";
+            txtNewPassword.SelectedText = "";
+            txtNewPassword.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtNewPassword.Size = new Size(243, 36);
+            txtNewPassword.TabIndex = 5;
             // 
-            // label2
+            // txtOldPassword
             // 
-            label2.Location = new Point(66, 115);
-            label2.Name = "label2";
-            label2.Size = new Size(105, 23);
-            label2.TabIndex = 4;
-            label2.Text = "Yeni Şifreniz:";
-            label2.TextAlign = ContentAlignment.MiddleLeft;
+            txtOldPassword.BorderRadius = 10;
+            txtOldPassword.BorderThickness = 2;
+            txtOldPassword.CustomizableEdges = customizableEdges5;
+            txtOldPassword.DefaultText = "";
+            txtOldPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtOldPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtOldPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtOldPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtOldPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtOldPassword.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtOldPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtOldPassword.Location = new Point(95, 34);
+            txtOldPassword.Name = "txtOldPassword";
+            txtOldPassword.PasswordChar = '\0';
+            txtOldPassword.PlaceholderText = "Eski Şifrenizi Giriniz";
+            txtOldPassword.SelectedText = "";
+            txtOldPassword.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtOldPassword.Size = new Size(243, 36);
+            txtOldPassword.TabIndex = 4;
             // 
-            // label3
+            // btnSifre
             // 
-            label3.Location = new Point(66, 167);
-            label3.Name = "label3";
-            label3.Size = new Size(105, 23);
-            label3.TabIndex = 5;
-            label3.Text = "Yeni Şifreyi Tekrar:";
-            label3.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // btnGuncelle
-            // 
-            btnGuncelle.Location = new Point(127, 218);
-            btnGuncelle.Name = "btnGuncelle";
-            btnGuncelle.Size = new Size(170, 41);
-            btnGuncelle.TabIndex = 6;
-            btnGuncelle.Text = "Güncelle";
-            btnGuncelle.UseVisualStyleBackColor = true;
-            btnGuncelle.Click += btnGuncelle_Click;
+            btnSifre.BorderColor = Color.White;
+            btnSifre.BorderRadius = 5;
+            btnSifre.BorderThickness = 2;
+            btnSifre.CustomizableEdges = customizableEdges7;
+            btnSifre.DisabledState.BorderColor = Color.DarkGray;
+            btnSifre.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSifre.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSifre.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSifre.FillColor = Color.Transparent;
+            btnSifre.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSifre.ForeColor = Color.White;
+            btnSifre.Location = new Point(155, 261);
+            btnSifre.Name = "btnSifre";
+            btnSifre.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnSifre.Size = new Size(106, 26);
+            btnSifre.TabIndex = 12;
+            btnSifre.Text = "Şifreyi Sıfırla";
+            btnSifre.Click += btnSifre_Click;
             // 
             // NewPassword
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.PaleVioletRed;
             ClientSize = new Size(425, 321);
-            Controls.Add(btnGuncelle);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(btnSifre);
             Controls.Add(txtNewAgain);
-            Controls.Add(txtNewPassowrd);
+            Controls.Add(txtNewPassword);
             Controls.Add(txtOldPassword);
             FormBorderStyle = FormBorderStyle.None;
             Name = "NewPassword";
             Text = "NewPassword";
             Load += NewPassword_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private TextBox txtOldPassword;
-        private TextBox txtNewPassowrd;
-        private TextBox txtNewAgain;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Button btnGuncelle;
+        private Guna.UI2.WinForms.Guna2TextBox txtNewAgain;
+        private Guna.UI2.WinForms.Guna2TextBox txtNewPassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtOldPassword;
+        private Guna.UI2.WinForms.Guna2Button btnSifre;
     }
 }

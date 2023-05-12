@@ -26,8 +26,7 @@ namespace UI_Layer
         {
 
         }
-
-        private void btnGuncelle_Click(object sender, EventArgs e)
+        private void btnSifre_Click(object sender, EventArgs e)
         {
             foreach (Control item in Controls)
             {
@@ -48,13 +47,13 @@ namespace UI_Layer
             }
             else
             {
-                if(txtNewPassowrd.Text !=txtNewAgain.Text)
+                if (txtNewPassword.Text != txtNewAgain.Text)
                 {
                     MessageBox.Show("Yeni girdiğiniz şifre birbiriyle uyuşmuyor!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    user.Password=txtNewAgain.Text;
+                    user.Password = txtNewAgain.Text;
 
                     bool isUpdated = dbbl.UserBL.Update(user);
                     if (isUpdated)
