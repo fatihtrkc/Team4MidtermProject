@@ -30,10 +30,10 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminUsersForm));
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             timer = new System.Windows.Forms.Timer(components);
             label3 = new Label();
             pctrbxExit = new PictureBox();
@@ -69,6 +69,9 @@
             pctrbxExit.SizeMode = PictureBoxSizeMode.StretchImage;
             pctrbxExit.TabIndex = 46;
             pctrbxExit.TabStop = false;
+            pctrbxExit.ClientSizeChanged += pctrbxExit_ClientSizeChanged;
+            pctrbxExit.Click += pctrbxExit_Click;
+            pctrbxExit.MouseHover += pctrbxExit_MouseHover;
             // 
             // txtUsername
             // 
@@ -85,48 +88,49 @@
             // 
             // dtgridPassiveUsers
             // 
-            dataGridViewCellStyle5.BackColor = Color.White;
-            dataGridViewCellStyle5.Font = new Font("Comic Sans MS", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle5.ForeColor = Color.LightCoral;
-            dataGridViewCellStyle5.SelectionBackColor = Color.SkyBlue;
-            dataGridViewCellStyle5.SelectionForeColor = Color.White;
-            dtgridPassiveUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dataGridViewCellStyle1.Font = new Font("Comic Sans MS", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.LightCoral;
+            dataGridViewCellStyle1.SelectionBackColor = Color.SkyBlue;
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dtgridPassiveUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dtgridPassiveUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgridPassiveUsers.BackgroundColor = Color.White;
             dtgridPassiveUsers.BorderStyle = BorderStyle.Fixed3D;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Comic Sans MS", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle6.ForeColor = Color.LightCoral;
-            dataGridViewCellStyle6.SelectionBackColor = Color.SkyBlue;
-            dataGridViewCellStyle6.SelectionForeColor = Color.White;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dtgridPassiveUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Comic Sans MS", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = Color.LightCoral;
+            dataGridViewCellStyle2.SelectionBackColor = Color.SkyBlue;
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dtgridPassiveUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dtgridPassiveUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.LightCoral;
-            dataGridViewCellStyle7.Font = new Font("Comic Sans MS", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = Color.SkyBlue;
-            dataGridViewCellStyle7.SelectionForeColor = Color.White;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
-            dtgridPassiveUsers.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.LightCoral;
+            dataGridViewCellStyle3.Font = new Font("Comic Sans MS", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.SkyBlue;
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dtgridPassiveUsers.DefaultCellStyle = dataGridViewCellStyle3;
             dtgridPassiveUsers.Location = new Point(83, 618);
             dtgridPassiveUsers.MultiSelect = false;
             dtgridPassiveUsers.Name = "dtgridPassiveUsers";
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.White;
-            dataGridViewCellStyle8.Font = new Font("Comic Sans MS", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = Color.LightCoral;
-            dataGridViewCellStyle8.SelectionBackColor = Color.SkyBlue;
-            dataGridViewCellStyle8.SelectionForeColor = Color.White;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
-            dtgridPassiveUsers.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dataGridViewCellStyle4.Font = new Font("Comic Sans MS", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = Color.LightCoral;
+            dataGridViewCellStyle4.SelectionBackColor = Color.SkyBlue;
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dtgridPassiveUsers.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dtgridPassiveUsers.RowHeadersWidth = 100;
             dtgridPassiveUsers.RowTemplate.Height = 33;
             dtgridPassiveUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dtgridPassiveUsers.Size = new Size(643, 482);
             dtgridPassiveUsers.TabIndex = 44;
+            dtgridPassiveUsers.CellClick += dtgridPassiveUsers_CellClick;
             // 
             // pictureBox2
             // 
@@ -148,6 +152,7 @@
             btnUpdate.TabIndex = 49;
             btnUpdate.Text = "Güncelle";
             btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // txtActivePassiveSituation
             // 
@@ -199,6 +204,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AdminUsersForm";
             Load += AdminUsersForm_Load;
+            Click += AdminUsersForm_Click;
             ((System.ComponentModel.ISupportInitialize)pctrbxExit).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgridPassiveUsers).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

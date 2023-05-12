@@ -9,7 +9,7 @@ namespace BusinessLayer.ContextBL
 {
     public class Team4ContextBL
     {
-        public Team4ContextBL() 
+        public Team4ContextBL()
         {
             AddedFoodBL = new AddedFoodBL();
             CategoryBL = new CategoryBL();
@@ -27,7 +27,7 @@ namespace BusinessLayer.ContextBL
         public LifeStyleBL LifeStyleBL { get; set; }
         public MealBL MealBL { get; set; }
         public UnitBL UnitBL { get; set; }
-        public UserBL UserBL  { get; set; }
+        public UserBL UserBL { get; set; }
         public GoalBL GoalBL { get; set; }
     }
 }

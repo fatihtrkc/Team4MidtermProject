@@ -33,7 +33,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<DateTime>("CreationDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 12, 18, 22, 8, 487, DateTimeKind.Local).AddTicks(6918));
+                        .HasDefaultValue(new DateTime(2023, 5, 13, 1, 29, 4, 581, DateTimeKind.Local).AddTicks(2486));
 
                     b.Property<int>("FoodId")
                         .HasColumnType("int");
@@ -92,7 +92,7 @@ namespace DataAccessLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreationDate = new DateTime(2023, 5, 12, 18, 22, 8, 487, DateTimeKind.Local).AddTicks(7815),
+                            CreationDate = new DateTime(2023, 5, 13, 1, 29, 4, 581, DateTimeKind.Local).AddTicks(4963),
                             Email = "admin@admin.com",
                             Password = "Admin1234"
                         });
@@ -204,7 +204,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<DateTime>("CreationDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 12, 18, 22, 8, 488, DateTimeKind.Local).AddTicks(842));
+                        .HasDefaultValue(new DateTime(2023, 5, 13, 1, 29, 4, 582, DateTimeKind.Local).AddTicks(1346));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -267,7 +267,7 @@ namespace DataAccessLayer.Migrations
                             Id = 1,
                             ActivePassiveSituation = false,
                             BirthDate = new DateTime(2000, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreationDate = new DateTime(2023, 5, 12, 18, 22, 8, 488, DateTimeKind.Local).AddTicks(949),
+                            CreationDate = new DateTime(2023, 5, 13, 1, 29, 4, 582, DateTimeKind.Local).AddTicks(1683),
                             Email = "ahmetyilmaz@yilmaz.com",
                             Gender = 2,
                             GoalTypeId = 1,
@@ -285,7 +285,7 @@ namespace DataAccessLayer.Migrations
                             Id = 2,
                             ActivePassiveSituation = false,
                             BirthDate = new DateTime(1997, 7, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreationDate = new DateTime(2023, 5, 12, 18, 22, 8, 488, DateTimeKind.Local).AddTicks(1016),
+                            CreationDate = new DateTime(2023, 5, 13, 1, 29, 4, 582, DateTimeKind.Local).AddTicks(1816),
                             Email = "ayşesevgi@sevgi.com",
                             Gender = 1,
                             GoalTypeId = 3,
@@ -297,6 +297,42 @@ namespace DataAccessLayer.Migrations
                             SpecificQuestion = "En Sevdiğin Programlama Dili?",
                             Surname = "SEVGİ",
                             Weight = 55.0
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ActivePassiveSituation = false,
+                            BirthDate = new DateTime(1998, 7, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreationDate = new DateTime(2023, 5, 13, 1, 29, 4, 582, DateTimeKind.Local).AddTicks(1828),
+                            Email = "mehmetotur@bilgeadam.com",
+                            Gender = 2,
+                            GoalTypeId = 3,
+                            Height = 180.0,
+                            LifeStyleId = 3,
+                            Name = "MEHMET",
+                            Password = "AaBb12.,",
+                            QuestionAnswer = "JAVA",
+                            SpecificQuestion = "En Sevdiğin Programlama Dili?",
+                            Surname = "OTUR",
+                            Weight = 85.0
+                        },
+                        new
+                        {
+                            Id = 4,
+                            ActivePassiveSituation = false,
+                            BirthDate = new DateTime(1999, 7, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreationDate = new DateTime(2023, 5, 13, 1, 29, 4, 582, DateTimeKind.Local).AddTicks(1833),
+                            Email = "auyaran@bilge.com",
+                            Gender = 2,
+                            GoalTypeId = 3,
+                            Height = 170.0,
+                            LifeStyleId = 4,
+                            Name = "ASLI",
+                            Password = "AaBb12.,",
+                            QuestionAnswer = "JAVA",
+                            SpecificQuestion = "En Sevdiğin Programlama Dili?",
+                            Surname = "UYARAN",
+                            Weight = 65.0
                         });
                 });
 

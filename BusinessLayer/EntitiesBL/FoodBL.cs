@@ -42,7 +42,7 @@ namespace BusinessLayer.EntitiesBL
 
         public List<Food> GetByCategory(int id)
         {
-            return db.Foods.Where(a=> a.CategoryId==id).ToList();
+            return db.Foods.Where(a => a.CategoryId == id).ToList();
         }
 
         public bool Update(Food entity)

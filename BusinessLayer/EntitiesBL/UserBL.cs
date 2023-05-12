@@ -39,7 +39,7 @@ namespace BusinessLayer.EntitiesBL
             return db.Users.ToList();
         }
 
-        public List<User> GetAllByUserSituation() 
+        public List<User> GetAllByUserSituation()
         {
             return db.Users.Where(user => user.ActivePassiveSituation == false).ToList();
         }
@@ -52,8 +52,8 @@ namespace BusinessLayer.EntitiesBL
 
         public int Login(string userName, string password)
         {
-            User user = db.Users.Where(x=> x.Email == userName && x.Password== password).SingleOrDefault();
-            if ( user != null)
+            User user = db.Users.Where(x => x.Email == userName && x.Password == password).SingleOrDefault();
+            if (user != null)
             {
                 return user.Id;
             }
@@ -65,7 +65,7 @@ namespace BusinessLayer.EntitiesBL
 
         public User FindByEmail(string userName)
         {
-            User user = db.Users.Where(a=> a.Email== userName).FirstOrDefault();
+            User user = db.Users.Where(a => a.Email == userName).FirstOrDefault();
             return user;
         }
     }
