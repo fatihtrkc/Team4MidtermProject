@@ -27,8 +27,7 @@ namespace UI_Layer
         int userId;
         MealType mealType;
         Team4ContextBL db;
-        User user;
-        DateTime DateTime;
+
         int categoryId;
         private void UserAddMeal_Load(object sender, EventArgs e)
         {
@@ -89,7 +88,6 @@ namespace UI_Layer
                 added.TotalCalory = (double)(added.Quantity * calory);
 
                 added.CreationDate = DateTime.Today;
-                added.TargetCaloryPerDay = 100;
                 added.MealId = mealType;
 
                 bool isUpdated = db.AddedFoodBL.Update(added);
@@ -121,7 +119,6 @@ namespace UI_Layer
                 ad.TotalCalory = (double)(ad.Quantity * calory);
 
                 ad.CreationDate = DateTime.Today;
-                ad.TargetCaloryPerDay = 100;
                 ad.MealId = mealType;
 
 

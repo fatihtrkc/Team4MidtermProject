@@ -18,7 +18,6 @@ namespace EntitiyLayer.Entities
         public int Id { get; set; }
         public double Quantity { get; set; }
         public double TotalCalory { get; set; }
-        public double TargetCaloryPerDay { get; set; }
         public DateTime CreationDate { get; set; }
 
         //Relations
