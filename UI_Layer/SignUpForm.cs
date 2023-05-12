@@ -1,11 +1,13 @@
 ﻿using BusinessLayer.ContextBL;
 using EntitiyLayer.Entities;
 using EntityLayer.Enums;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,8 +38,30 @@ namespace UI_Layer
         Team4ContextBL dbbll;
         User user;
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void SignUpForm_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private bool alreadyMail(string mail)
+        {
+            mail = txtMail.Text;
+            user = dbbll.UserBL.FindByEmail(mail);
+            if (user != null)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private void btnGiris_Click(object sender, EventArgs e)
+        {
+
 
             foreach (Control item in Controls)
             {
@@ -88,10 +112,8 @@ namespace UI_Layer
                 }
 
             }
-
-
         }
-        private bool IsOverFifteen(DateTimePicker birthdatePicker)
+        private bool IsOverFifteen(Guna2DateTimePicker birthdatePicker)
         {
             DateTime birthdate = birthdatePicker.Value;
             DateTime today = DateTime.Now.AddYears(-15); ;
@@ -102,26 +124,5 @@ namespace UI_Layer
             else
                 return false;
         }
-
-        private void SignUpForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private bool alreadyMail(string mail)
-        {
-            mail = txtMail.Text;
-            user = dbbll.UserBL.FindByEmail(mail);
-            if (user != null)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
-
     }
 }
