@@ -33,7 +33,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<DateTime>("CreationDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 12, 11, 17, 42, 283, DateTimeKind.Local).AddTicks(280));
+                        .HasDefaultValue(new DateTime(2023, 5, 12, 12, 55, 11, 856, DateTimeKind.Local).AddTicks(6731));
 
                     b.Property<int>("FoodId")
                         .HasColumnType("int");
@@ -92,7 +92,7 @@ namespace DataAccessLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreationDate = new DateTime(2023, 5, 12, 11, 17, 42, 283, DateTimeKind.Local).AddTicks(1399),
+                            CreationDate = new DateTime(2023, 5, 12, 12, 55, 11, 856, DateTimeKind.Local).AddTicks(9331),
                             Email = "admin@admin.com",
                             Password = "Admin1234"
                         });
@@ -204,7 +204,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<DateTime>("CreationDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 12, 11, 17, 42, 283, DateTimeKind.Local).AddTicks(4850));
+                        .HasDefaultValue(new DateTime(2023, 5, 12, 12, 55, 11, 857, DateTimeKind.Local).AddTicks(6334));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -267,7 +267,7 @@ namespace DataAccessLayer.Migrations
                             Id = 1,
                             ActivePassiveSituation = false,
                             BirthDate = new DateTime(2000, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreationDate = new DateTime(2023, 5, 12, 11, 17, 42, 283, DateTimeKind.Local).AddTicks(4955),
+                            CreationDate = new DateTime(2023, 5, 12, 12, 55, 11, 857, DateTimeKind.Local).AddTicks(6627),
                             Email = "ahmetyilmaz@yilmaz.com",
                             Gender = 2,
                             GoalTypeId = 1,
@@ -285,7 +285,7 @@ namespace DataAccessLayer.Migrations
                             Id = 2,
                             ActivePassiveSituation = false,
                             BirthDate = new DateTime(1997, 7, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreationDate = new DateTime(2023, 5, 12, 11, 17, 42, 283, DateTimeKind.Local).AddTicks(5024),
+                            CreationDate = new DateTime(2023, 5, 12, 12, 55, 11, 857, DateTimeKind.Local).AddTicks(6713),
                             Email = "ayşesevgi@sevgi.com",
                             Gender = 1,
                             GoalTypeId = 3,

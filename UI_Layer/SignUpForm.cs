@@ -20,8 +20,22 @@ namespace UI_Layer
             InitializeComponent();
             dbbll = new();
         }
+        public SignUpForm(string Name, string Surname, string Mail, string Password, string Speque, string Answer, DateTime DateTime)
+        {
+            InitializeComponent();
+            txtName.Text = Name;
+            txtSurname.Text = Surname;
+            txtMail.Text = Mail;
+            txtPassword.Text = Password;
+            txtAgain.Text = Password;
+            txtSpe.Text = Speque;
+            txtSpeAns.Text = Answer;
+            dtBirth.Value = DateTime;
+        }
+
         Team4ContextBL dbbll;
         User user;
+
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -37,7 +51,7 @@ namespace UI_Layer
                     }
                 }
             }
-            
+
             if (!alreadyMail(txtMail.Text))
             {
                 MessageBox.Show("Bu mail adresi zaten kullanılıyor!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -46,36 +60,22 @@ namespace UI_Layer
             {
                 if (IsOverFifteen(dtBirth))
                 {
-                    LifeStyleType lifeId = (LifeStyleType)cboxLifeStyle.SelectedValue;
-
 
                     if (txtPassword.Text == txtAgain.Text)
                     {
-                        user = new User();
-                        user.Name = txtName.Text;
-                        user.Surname = txtSurname.Text;
-                        user.Email = txtMail.Text;
-                        user.Gender = rdMale.Checked ? EntityLayer.Enums.Gender.Male : EntityLayer.Enums.Gender.Female;
-                        user.LifeStyleId = lifeId;
-                        user.Password = txtPassword.Text;
-                        user.SpecificQuestion = txtSpe.Text;
-                        user.QuestionAnswer = txtSpeAns.Text;
-                        user.BirthDate = dtBirth.Value;
-                        user.Height = (double)nudHeight.Value;
-                        user.Weight = (double)nudWeight.Value;
-                        bool isAdded = dbbll.UserBL.Add(user);
 
+                        string name = txtName.Text;
+                        string surname = txtSurname.Text;
+                        string email = txtMail.Text;
+                        string password = txtPassword.Text;
+                        string speque = txtSpe.Text;
+                        string answer = txtSpeAns.Text;
+                        DateTime dateTime = dtBirth.Value;
 
-                        if (isAdded)
-                        {
-                            MessageBox.Show("Kullanıcı başarıyla oluşturuldu", "İŞLEM ONAYLANDI", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
+                        this.Hide();
+                        SingUpSecond singUpSecond = new SingUpSecond(name, surname, email, password, speque, answer, dateTime);
+                        singUpSecond.ShowDialog();
 
-                        }
-                        else
-                        {
-                            MessageBox.Show("Bir hata oldu. Kullanıcı eklenemedi", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
                     }
                     else
                     {
@@ -105,10 +105,7 @@ namespace UI_Layer
 
         private void SignUpForm_Load(object sender, EventArgs e)
         {
-            List<LifeStyle> lifeStyles = dbbll.LifeStyleBL.GetAll();
-            cboxLifeStyle.DisplayMember = "Description";
-            cboxLifeStyle.ValueMember = "Type";
-            cboxLifeStyle.DataSource = lifeStyles;
+
         }
 
         private bool alreadyMail(string mail)
@@ -125,6 +122,6 @@ namespace UI_Layer
             }
         }
 
-        
+
     }
 }
