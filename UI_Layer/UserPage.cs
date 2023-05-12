@@ -26,13 +26,15 @@ namespace UI_Layer
         Team4ContextBL dbbl;
         int count = 0;
         double totalCalory;
+        User user;
         private void UserPage_Load(object sender, EventArgs e)
         {
-            User user = dbbl.UserBL.Find(userId);
+            user = dbbl.UserBL.Find(userId);
             lblAdSoyad.Text = "Hoşgeldin " + user.Name + " " + user.Surname;
             lblBoy.Text = user.Height.ToString();
             lblKilo.Text = user.Weight.ToString();
-
+            TargetCalory(user);
+            FillTargetCalory(user);
             FillList(DateTime.Today);
             lblTotalCalory.Text = totalCalory.ToString("N2");
         }
@@ -141,6 +143,96 @@ namespace UI_Layer
                 totalCalory += dbbl.AddedFoodBL.GetSumColory(userId, time, type);
             }
             lblTotalCalory.Text = totalCalory.ToString("N2");
+        }
+
+        public void FillTargetCalory(User user)
+        {
+            double target = TargetCalory(user);
+            lblTargetCalory.Text = target.ToString("N2");
+        }
+
+        /// <summary>
+        /// Kullanıcının aktivite biçimi ve uygulamayı kullanım amacına göre günlük alması gereken kalori hesabının yapıldığı metot.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        private double TargetCalory(User user)
+        {
+            double bmr;
+            double activity;
+            double goal;
+            if (user.Gender == Gender.Male)
+            {
+                bmr = 66 + (13.75 * user.Weight) + (5 * user.Height * 100) - (6.75 * (DateTime.Now.Year - user.BirthDate.Year));
+                activity = ActivityFactor(user, bmr);
+                goal = GoalFactor(user, activity);
+            }
+            else
+            {
+                bmr = 655 + (9.56 * user.Weight) + (1.85 * user.Height * 100) - (4.68 * (DateTime.Now.Year - user.BirthDate.Year));
+                activity = ActivityFactor(user, bmr);
+                goal = GoalFactor(user, activity);
+            }
+            return goal;
+        }
+        /// <summary>
+        /// Aktivite yoğunluğuna göre günlük alınması gereken kalori miktarı.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="bmr"></param>
+        /// <returns></returns>
+        private double ActivityFactor(User user, double bmr)
+        {
+
+            if (user.LifeStyleId == LifeStyleType.Never)
+            {
+                bmr = bmr * 1.2;
+
+            }
+            else if (user.LifeStyleId == LifeStyleType.Low)
+            {
+                bmr = bmr * 1.375;
+            }
+            else if (user.LifeStyleId == LifeStyleType.Middle)
+            {
+                bmr = bmr * 1.55;
+            }
+            else if (user.LifeStyleId == LifeStyleType.High)
+            {
+                bmr = bmr * 1.725;
+            }
+            else if (user.LifeStyleId == LifeStyleType.More)
+            {
+                bmr = bmr * 1.9;
+            }
+            return bmr;
+        }
+        /// <summary>
+        /// Uygulamayı kullanım amacına göre kalori hesabı yapılması.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="bmr"></param>
+        /// <returns></returns>
+        private double GoalFactor(User user, double bmr)
+        {
+            double goalCalory = 0;
+            if (user.GoalTypeId == GoalType.Zayıflamak)
+            {
+                goalCalory = bmr - 500;
+            }
+            else if (user.GoalTypeId == GoalType.KiloAlmak)
+            {
+                goalCalory = bmr + 500;
+            }
+            else if (user.GoalTypeId == GoalType.HızlıKiloAlmak)
+            {
+                goalCalory = bmr + 2000;
+            }
+            else if (user.GoalTypeId == GoalType.KiloyuKorumak)
+            {
+                goalCalory = bmr;
+            }
+            return goalCalory;
         }
 
     }

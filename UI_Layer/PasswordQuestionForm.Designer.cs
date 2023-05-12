@@ -28,147 +28,199 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            txtCevap = new TextBox();
-            lblAnswer = new Label();
-            lblOzelSoru = new Label();
-            txtEmail = new TextBox();
-            lblMail = new Label();
-            button2 = new Button();
-            txtSurname = new TextBox();
-            lblSurname = new Label();
-            txtName = new TextBox();
-            lblName = new Label();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            btnSifre = new Guna.UI2.WinForms.Guna2Button();
+            txtCevap = new Guna.UI2.WinForms.Guna2TextBox();
+            txtSurname = new Guna.UI2.WinForms.Guna2TextBox();
+            txtName = new Guna.UI2.WinForms.Guna2TextBox();
+            btnMail = new Guna.UI2.WinForms.Guna2Button();
+            txtEMail = new Guna.UI2.WinForms.Guna2TextBox();
+            lblSoru = new Label();
             SuspendLayout();
             // 
-            // button1
+            // btnSifre
             // 
-            button1.Location = new Point(152, 481);
-            button1.Name = "button1";
-            button1.Size = new Size(118, 30);
-            button1.TabIndex = 21;
-            button1.Text = "Şifreyi Sıfırla";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnSifre.BorderColor = Color.White;
+            btnSifre.BorderRadius = 5;
+            btnSifre.BorderThickness = 2;
+            btnSifre.CustomizableEdges = customizableEdges1;
+            btnSifre.DisabledState.BorderColor = Color.DarkGray;
+            btnSifre.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSifre.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSifre.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSifre.FillColor = Color.Transparent;
+            btnSifre.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSifre.ForeColor = Color.White;
+            btnSifre.Location = new Point(143, 358);
+            btnSifre.Name = "btnSifre";
+            btnSifre.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnSifre.Size = new Size(106, 26);
+            btnSifre.TabIndex = 11;
+            btnSifre.Text = "Şifreyi Sıfırla";
+            btnSifre.Click += btnSifre_Click;
             // 
             // txtCevap
             // 
-            txtCevap.Location = new Point(173, 443);
+            txtCevap.BorderRadius = 10;
+            txtCevap.BorderThickness = 2;
+            txtCevap.CustomizableEdges = customizableEdges3;
+            txtCevap.DefaultText = "";
+            txtCevap.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtCevap.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtCevap.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtCevap.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtCevap.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCevap.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCevap.ForeColor = Color.Black;
+            txtCevap.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCevap.Location = new Point(89, 303);
             txtCevap.Name = "txtCevap";
-            txtCevap.Size = new Size(128, 23);
-            txtCevap.TabIndex = 20;
-            // 
-            // lblAnswer
-            // 
-            lblAnswer.Location = new Point(61, 442);
-            lblAnswer.Name = "lblAnswer";
-            lblAnswer.Size = new Size(100, 23);
-            lblAnswer.TabIndex = 19;
-            lblAnswer.Text = "Özel Soru Cevabı";
-            lblAnswer.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // lblOzelSoru
-            // 
-            lblOzelSoru.Location = new Point(75, 406);
-            lblOzelSoru.Name = "lblOzelSoru";
-            lblOzelSoru.Size = new Size(226, 23);
-            lblOzelSoru.TabIndex = 18;
-            lblOzelSoru.Text = "Özel Soru";
-            lblOzelSoru.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // txtEmail
-            // 
-            txtEmail.Location = new Point(125, 129);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(163, 23);
-            txtEmail.TabIndex = 22;
-            // 
-            // lblMail
-            // 
-            lblMail.AutoSize = true;
-            lblMail.Location = new Point(42, 134);
-            lblMail.Name = "lblMail";
-            lblMail.Size = new Size(69, 15);
-            lblMail.TabIndex = 23;
-            lblMail.Text = "Mail Adresi:";
-            // 
-            // button2
-            // 
-            button2.Location = new Point(139, 158);
-            button2.Name = "button2";
-            button2.Size = new Size(126, 23);
-            button2.TabIndex = 24;
-            button2.Text = "Devam";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            txtCevap.PasswordChar = '\0';
+            txtCevap.PlaceholderText = "Özel Sorunuzun Cevabını Giriniz";
+            txtCevap.SelectedText = "";
+            txtCevap.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtCevap.Size = new Size(200, 36);
+            txtCevap.TabIndex = 10;
             // 
             // txtSurname
             // 
-            txtSurname.Location = new Point(138, 366);
+            txtSurname.BorderRadius = 10;
+            txtSurname.BorderThickness = 2;
+            txtSurname.CustomizableEdges = customizableEdges5;
+            txtSurname.DefaultText = "";
+            txtSurname.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSurname.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSurname.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSurname.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSurname.FillColor = Color.WhiteSmoke;
+            txtSurname.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSurname.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSurname.ForeColor = Color.Black;
+            txtSurname.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSurname.Location = new Point(89, 226);
             txtSurname.Name = "txtSurname";
-            txtSurname.Size = new Size(163, 23);
-            txtSurname.TabIndex = 36;
-            // 
-            // lblSurname
-            // 
-            lblSurname.Location = new Point(61, 366);
-            lblSurname.Name = "lblSurname";
-            lblSurname.Size = new Size(76, 23);
-            lblSurname.TabIndex = 35;
-            lblSurname.Text = "Soyisim";
-            lblSurname.TextAlign = ContentAlignment.MiddleLeft;
+            txtSurname.PasswordChar = '\0';
+            txtSurname.PlaceholderText = "Soyadınızı Giriniz";
+            txtSurname.SelectedText = "";
+            txtSurname.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtSurname.Size = new Size(200, 36);
+            txtSurname.TabIndex = 9;
             // 
             // txtName
             // 
-            txtName.Location = new Point(138, 338);
+            txtName.BorderRadius = 10;
+            txtName.BorderThickness = 2;
+            txtName.CustomizableEdges = customizableEdges7;
+            txtName.DefaultText = "";
+            txtName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtName.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtName.FillColor = Color.WhiteSmoke;
+            txtName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtName.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtName.ForeColor = Color.Black;
+            txtName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtName.Location = new Point(89, 175);
             txtName.Name = "txtName";
-            txtName.Size = new Size(163, 23);
-            txtName.TabIndex = 34;
+            txtName.PasswordChar = '\0';
+            txtName.PlaceholderText = "İsminizi Giriniz";
+            txtName.SelectedText = "";
+            txtName.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtName.Size = new Size(200, 36);
+            txtName.TabIndex = 8;
             // 
-            // lblName
+            // btnMail
             // 
-            lblName.Location = new Point(61, 337);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(76, 23);
-            lblName.TabIndex = 33;
-            lblName.Text = "İsim";
-            lblName.TextAlign = ContentAlignment.MiddleLeft;
+            btnMail.BorderColor = Color.White;
+            btnMail.BorderRadius = 5;
+            btnMail.BorderThickness = 2;
+            btnMail.CustomizableEdges = customizableEdges9;
+            btnMail.DisabledState.BorderColor = Color.DarkGray;
+            btnMail.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnMail.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnMail.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnMail.FillColor = Color.Transparent;
+            btnMail.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnMail.ForeColor = Color.White;
+            btnMail.Location = new Point(143, 128);
+            btnMail.Name = "btnMail";
+            btnMail.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnMail.Size = new Size(106, 24);
+            btnMail.TabIndex = 7;
+            btnMail.Text = "Devam";
+            btnMail.Click += btnMail_Click;
+            // 
+            // txtEMail
+            // 
+            txtEMail.BorderRadius = 10;
+            txtEMail.BorderThickness = 2;
+            txtEMail.CustomizableEdges = customizableEdges11;
+            txtEMail.DefaultText = "";
+            txtEMail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtEMail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtEMail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtEMail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtEMail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEMail.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEMail.ForeColor = Color.Black;
+            txtEMail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEMail.Location = new Point(89, 73);
+            txtEMail.Name = "txtEMail";
+            txtEMail.PasswordChar = '\0';
+            txtEMail.PlaceholderText = "Mail Adresi Giriniz";
+            txtEMail.SelectedText = "";
+            txtEMail.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtEMail.Size = new Size(200, 36);
+            txtEMail.TabIndex = 6;
+            // 
+            // lblSoru
+            // 
+            lblSoru.Location = new Point(89, 275);
+            lblSoru.Name = "lblSoru";
+            lblSoru.Size = new Size(200, 25);
+            lblSoru.TabIndex = 12;
+            lblSoru.Text = "Özel Soru";
+            lblSoru.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // PasswordQuestionForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(341, 316);
-            Controls.Add(txtSurname);
-            Controls.Add(lblSurname);
-            Controls.Add(txtName);
-            Controls.Add(lblName);
-            Controls.Add(button2);
-            Controls.Add(lblMail);
-            Controls.Add(txtEmail);
-            Controls.Add(button1);
+            BackColor = Color.PaleVioletRed;
+            ClientSize = new Size(386, 416);
+            Controls.Add(lblSoru);
+            Controls.Add(btnSifre);
             Controls.Add(txtCevap);
-            Controls.Add(lblAnswer);
-            Controls.Add(lblOzelSoru);
+            Controls.Add(txtSurname);
+            Controls.Add(txtName);
+            Controls.Add(btnMail);
+            Controls.Add(txtEMail);
             Name = "PasswordQuestionForm";
             Text = "PasswordQuestion";
             Load += PasswordQuestionForm_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private TextBox txtCevap;
-        private Label lblAnswer;
-        private Label lblOzelSoru;
-        private TextBox txtEmail;
-        private Label lblMail;
-        private Button button2;
-        private TextBox txtSurname;
-        private Label lblSurname;
-        private TextBox txtName;
-        private Label lblName;
+        private Guna.UI2.WinForms.Guna2Button btnSifre;
+        private Guna.UI2.WinForms.Guna2TextBox txtCevap;
+        private Guna.UI2.WinForms.Guna2TextBox txtSurname;
+        private Guna.UI2.WinForms.Guna2TextBox txtName;
+        private Guna.UI2.WinForms.Guna2Button btnMail;
+        private Guna.UI2.WinForms.Guna2TextBox txtEMail;
+        private Label lblSoru;
     }
 }

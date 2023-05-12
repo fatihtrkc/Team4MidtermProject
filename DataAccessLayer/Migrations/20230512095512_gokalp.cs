@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DataAccessLayer.Migrations
 {
-    public partial class mig1 : Migration
+    public partial class gokalp : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -35,6 +35,18 @@ namespace DataAccessLayer.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Categories", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Goals",
+                columns: table => new
+                {
+                    GoalType = table.Column<int>(type: "int", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Goals", x => x.GoalType);
                 });
 
             migrationBuilder.CreateTable(
@@ -89,13 +101,20 @@ namespace DataAccessLayer.Migrations
                     QuestionAnswer = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
                     ActivePassiveSituation = table.Column<bool>(type: "bit", nullable: false, defaultValue: true),
                     LifeStyleId = table.Column<int>(type: "int", nullable: false),
+                    GoalTypeId = table.Column<int>(type: "int", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 5, 9, 19, 6, 7, 221, DateTimeKind.Local).AddTicks(5484))
+                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 5, 12, 12, 55, 11, 857, DateTimeKind.Local).AddTicks(6334))
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Users_Goals_GoalTypeId",
+                        column: x => x.GoalTypeId,
+                        principalTable: "Goals",
+                        principalColumn: "GoalType",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Users_LifeStyles_LifeStyleId",
                         column: x => x.LifeStyleId,
@@ -140,8 +159,7 @@ namespace DataAccessLayer.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Quantity = table.Column<double>(type: "float", nullable: false),
                     TotalCalory = table.Column<double>(type: "float", nullable: false),
-                    TargetCaloryPerDay = table.Column<double>(type: "float", nullable: false),
-                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 5, 9, 19, 6, 7, 220, DateTimeKind.Local).AddTicks(9382)),
+                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2023, 5, 12, 12, 55, 11, 856, DateTimeKind.Local).AddTicks(6731)),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     FoodId = table.Column<int>(type: "int", nullable: false),
                     MealId = table.Column<int>(type: "int", nullable: false)
@@ -172,7 +190,7 @@ namespace DataAccessLayer.Migrations
             migrationBuilder.InsertData(
                 table: "Admins",
                 columns: new[] { "Id", "CreationDate", "Email", "Password" },
-                values: new object[] { 1, new DateTime(2023, 5, 9, 19, 6, 7, 221, DateTimeKind.Local).AddTicks(1063), "admin@admin.com", "Admin1234" });
+                values: new object[] { 1, new DateTime(2023, 5, 12, 12, 55, 11, 856, DateTimeKind.Local).AddTicks(9331), "admin@admin.com", "Admin1234" });
 
             migrationBuilder.InsertData(
                 table: "Categories",
@@ -189,6 +207,17 @@ namespace DataAccessLayer.Migrations
                     { 8, "Fırın" },
                     { 9, "Atıştırmalık" },
                     { 10, "İçecekler" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Goals",
+                columns: new[] { "GoalType", "Description" },
+                values: new object[,]
+                {
+                    { 1, "Kilo vermek istiyorum." },
+                    { 2, "Dengeli bir şekilde kilo almak istiyorum." },
+                    { 3, "Hızlı ve sağlıklı bir şekilde kilo almalıyım." },
+                    { 4, "Mevcut kilomu korumak istiyorum" }
                 });
 
             migrationBuilder.InsertData(
@@ -299,11 +328,11 @@ namespace DataAccessLayer.Migrations
 
             migrationBuilder.InsertData(
                 table: "Users",
-                columns: new[] { "Id", "BirthDate", "CreationDate", "Email", "Gender", "Height", "LifeStyleId", "Name", "Password", "QuestionAnswer", "SpecificQuestion", "Surname", "Weight" },
+                columns: new[] { "Id", "BirthDate", "CreationDate", "Email", "Gender", "GoalTypeId", "Height", "LifeStyleId", "Name", "Password", "QuestionAnswer", "SpecificQuestion", "Surname", "Weight" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2000, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 5, 9, 19, 6, 7, 221, DateTimeKind.Local).AddTicks(5621), "ahmetyilmaz@yilmaz.com", 2, 1.8200000000000001, 2, "Ahmet", "AaBb12.,", "C#", "En Sevdiğin Programlama Dili?", "Yılmaz", 103.0 },
-                    { 2, new DateTime(1997, 7, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 5, 9, 19, 6, 7, 221, DateTimeKind.Local).AddTicks(5800), "ayşesevgi@sevgi.com", 1, 1.55, 3, "Ayşe", "AaBb12.,", "Java", "En Sevdiğin Programlama Dili?", "Sevgi", 55.0 }
+                    { 1, new DateTime(2000, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 5, 12, 12, 55, 11, 857, DateTimeKind.Local).AddTicks(6627), "ahmetyilmaz@yilmaz.com", 2, 1, 1.8200000000000001, 2, "Ahmet", "AaBb12.,", "C#", "En Sevdiğin Programlama Dili?", "Yılmaz", 113.0 },
+                    { 2, new DateTime(1997, 7, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2023, 5, 12, 12, 55, 11, 857, DateTimeKind.Local).AddTicks(6713), "ayşesevgi@sevgi.com", 1, 3, 1.8500000000000001, 3, "Ayşe", "AaBb12.,", "Java", "En Sevdiğin Programlama Dili?", "Sevgi", 55.0 }
                 });
 
             migrationBuilder.CreateIndex(
@@ -350,6 +379,11 @@ namespace DataAccessLayer.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Users_GoalTypeId",
+                table: "Users",
+                column: "GoalTypeId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Users_LifeStyleId",
                 table: "Users",
                 column: "LifeStyleId");
@@ -377,6 +411,9 @@ namespace DataAccessLayer.Migrations
 
             migrationBuilder.DropTable(
                 name: "Units");
+
+            migrationBuilder.DropTable(
+                name: "Goals");
 
             migrationBuilder.DropTable(
                 name: "LifeStyles");

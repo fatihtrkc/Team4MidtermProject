@@ -28,159 +28,168 @@
         /// </summary>
         private void InitializeComponent()
         {
-            groupBox1 = new GroupBox();
-            linkLabel2 = new LinkLabel();
-            linkLabel1 = new LinkLabel();
-            checkBox1 = new CheckBox();
-            button1 = new Button();
-            label3 = new Label();
-            label2 = new Label();
-            txtPassword = new TextBox();
-            txtMail = new TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
-            groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            txtMail = new Guna.UI2.WinForms.Guna2TextBox();
+            btnGiris = new Guna.UI2.WinForms.Guna2GradientButton();
+            lblKayit = new LinkLabel();
+            lblSifre = new LinkLabel();
+            ToggleSwitch = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(linkLabel2);
-            groupBox1.Controls.Add(linkLabel1);
-            groupBox1.Controls.Add(checkBox1);
-            groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(txtPassword);
-            groupBox1.Controls.Add(txtMail);
-            groupBox1.Location = new Point(12, 312);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(356, 230);
-            groupBox1.TabIndex = 5;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Giriş Ekranı";
-            // 
-            // linkLabel2
-            // 
-            linkLabel2.AutoSize = true;
-            linkLabel2.Location = new Point(204, 216);
-            linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(95, 15);
-            linkLabel2.TabIndex = 3;
-            linkLabel2.TabStop = true;
-            linkLabel2.Text = "Şifremi Unuttum";
-            linkLabel2.LinkClicked += linkLabel2_LinkClicked;
-            // 
-            // linkLabel1
-            // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(69, 216);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(46, 15);
-            linkLabel1.TabIndex = 6;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Kayıt ol";
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
-            // 
-            // checkBox1
-            // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(124, 125);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(95, 19);
-            checkBox1.TabIndex = 5;
-            checkBox1.Text = "Şifreyi Göster";
-            checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(144, 173);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 4;
-            button1.Text = "Giriş";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(29, 104);
-            label3.Name = "label3";
-            label3.Size = new Size(38, 15);
-            label3.TabIndex = 3;
-            label3.Text = "label3";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(29, 65);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 15);
-            label2.TabIndex = 2;
-            label2.Text = "label2";
-            // 
-            // txtPassword
-            // 
-            txtPassword.Location = new Point(114, 96);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(165, 23);
-            txtPassword.TabIndex = 1;
-            // 
-            // txtMail
-            // 
-            txtMail.Location = new Point(114, 52);
-            txtMail.Name = "txtMail";
-            txtMail.Size = new Size(165, 23);
-            txtMail.TabIndex = 0;
             // 
             // label1
             // 
-            label1.BackColor = SystemColors.AppWorkspace;
-            label1.Location = new Point(12, 165);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.Control;
+            label1.Location = new Point(5, 66);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(356, 128);
-            label1.TabIndex = 4;
-            label1.Text = "programla alakalı bilgiler";
+            label1.Size = new Size(403, 146);
+            label1.TabIndex = 22;
+            label1.Text = resources.GetString("label1.Text");
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // txtPassword
             // 
-            pictureBox1.Location = new Point(12, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(356, 133);
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
+            txtPassword.BorderRadius = 10;
+            txtPassword.CustomizableEdges = customizableEdges1;
+            txtPassword.DefaultText = "";
+            txtPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPassword.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPassword.ForeColor = Color.Black;
+            txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPassword.Location = new Point(105, 351);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '\0';
+            txtPassword.PlaceholderText = "Şifrenizi Giriniz";
+            txtPassword.SelectedText = "";
+            txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtPassword.Size = new Size(195, 36);
+            txtPassword.TabIndex = 17;
+            // 
+            // txtMail
+            // 
+            txtMail.BorderRadius = 10;
+            txtMail.CustomizableEdges = customizableEdges3;
+            txtMail.DefaultText = "";
+            txtMail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtMail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtMail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtMail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtMail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtMail.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtMail.ForeColor = Color.Black;
+            txtMail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtMail.Location = new Point(105, 252);
+            txtMail.Name = "txtMail";
+            txtMail.PasswordChar = '\0';
+            txtMail.PlaceholderText = "Mail Adresi Giriniz..";
+            txtMail.SelectedText = "";
+            txtMail.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtMail.Size = new Size(195, 36);
+            txtMail.TabIndex = 16;
+            // 
+            // btnGiris
+            // 
+            btnGiris.CustomizableEdges = customizableEdges5;
+            btnGiris.DisabledState.BorderColor = Color.DarkGray;
+            btnGiris.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnGiris.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnGiris.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            btnGiris.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnGiris.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnGiris.ForeColor = Color.White;
+            btnGiris.Location = new Point(105, 428);
+            btnGiris.Name = "btnGiris";
+            btnGiris.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnGiris.Size = new Size(195, 45);
+            btnGiris.TabIndex = 23;
+            btnGiris.Text = "Giriş Yap";
+            btnGiris.Click += btnGiris_Click;
+            // 
+            // lblKayit
+            // 
+            lblKayit.AutoSize = true;
+            lblKayit.LinkColor = Color.White;
+            lblKayit.Location = new Point(47, 511);
+            lblKayit.Name = "lblKayit";
+            lblKayit.Size = new Size(48, 15);
+            lblKayit.TabIndex = 25;
+            lblKayit.TabStop = true;
+            lblKayit.Text = "Kayıt Ol";
+            lblKayit.LinkClicked += lblKayit_LinkClicked;
+            // 
+            // lblSifre
+            // 
+            lblSifre.AutoSize = true;
+            lblSifre.LinkColor = Color.White;
+            lblSifre.Location = new Point(268, 511);
+            lblSifre.Name = "lblSifre";
+            lblSifre.Size = new Size(95, 15);
+            lblSifre.TabIndex = 24;
+            lblSifre.TabStop = true;
+            lblSifre.Text = "Şifremi Unuttum";
+            lblSifre.LinkClicked += lblSifre_LinkClicked;
+            // 
+            // ToggleSwitch
+            // 
+            ToggleSwitch.CheckedState.BorderColor = Color.FromArgb(94, 148, 255);
+            ToggleSwitch.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
+            ToggleSwitch.CheckedState.InnerBorderColor = Color.White;
+            ToggleSwitch.CheckedState.InnerColor = Color.White;
+            ToggleSwitch.CustomizableEdges = customizableEdges7;
+            ToggleSwitch.Location = new Point(188, 393);
+            ToggleSwitch.Name = "ToggleSwitch";
+            ToggleSwitch.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            ToggleSwitch.Size = new Size(35, 25);
+            ToggleSwitch.TabIndex = 26;
+            ToggleSwitch.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            ToggleSwitch.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
+            ToggleSwitch.UncheckedState.InnerBorderColor = Color.White;
+            ToggleSwitch.UncheckedState.InnerColor = Color.White;
+            ToggleSwitch.CheckedChanged += ToggleSwitch_CheckedChanged;
             // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.PaleVioletRed;
             ClientSize = new Size(412, 580);
-            Controls.Add(groupBox1);
+            Controls.Add(ToggleSwitch);
+            Controls.Add(lblKayit);
+            Controls.Add(lblSifre);
+            Controls.Add(btnGiris);
             Controls.Add(label1);
-            Controls.Add(pictureBox1);
+            Controls.Add(txtPassword);
+            Controls.Add(txtMail);
             Name = "LoginForm";
             Text = "Login";
             Load += LoginForm_Load;
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private GroupBox groupBox1;
-        private LinkLabel linkLabel2;
-        private LinkLabel linkLabel1;
-        private CheckBox checkBox1;
-        private Button button1;
-        private Label label3;
-        private Label label2;
-        private TextBox txtPassword;
-        private TextBox txtMail;
         private Label label1;
-        private PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtMail;
+        private Guna.UI2.WinForms.Guna2GradientButton btnGiris;
+        private LinkLabel lblKayit;
+        private LinkLabel lblSifre;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch ToggleSwitch;
     }
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Team4Context))]
-    [Migration("20230509160607_mig1")]
-    partial class mig1
+    [Migration("20230512152209_gokalp3")]
+    partial class gokalp3
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,7 +35,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<DateTime>("CreationDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 9, 19, 6, 7, 220, DateTimeKind.Local).AddTicks(9382));
+                        .HasDefaultValue(new DateTime(2023, 5, 12, 18, 22, 8, 487, DateTimeKind.Local).AddTicks(6918));
 
                     b.Property<int>("FoodId")
                         .HasColumnType("int");
@@ -44,9 +44,6 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("int");
 
                     b.Property<double>("Quantity")
-                        .HasColumnType("float");
-
-                    b.Property<double>("TargetCaloryPerDay")
                         .HasColumnType("float");
 
                     b.Property<double>("TotalCalory")
@@ -97,9 +94,46 @@ namespace DataAccessLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreationDate = new DateTime(2023, 5, 9, 19, 6, 7, 221, DateTimeKind.Local).AddTicks(1063),
+                            CreationDate = new DateTime(2023, 5, 12, 18, 22, 8, 487, DateTimeKind.Local).AddTicks(7815),
                             Email = "admin@admin.com",
                             Password = "Admin1234"
+                        });
+                });
+
+            modelBuilder.Entity("EntitiyLayer.Entities.Goal", b =>
+                {
+                    b.Property<int>("GoalType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("GoalType");
+
+                    b.ToTable("Goals");
+
+                    b.HasData(
+                        new
+                        {
+                            GoalType = 1,
+                            Description = "Kilo vermek istiyorum."
+                        },
+                        new
+                        {
+                            GoalType = 2,
+                            Description = "Dengeli bir şekilde kilo almak istiyorum."
+                        },
+                        new
+                        {
+                            GoalType = 3,
+                            Description = "Hızlı ve sağlıklı bir şekilde kilo almalıyım."
+                        },
+                        new
+                        {
+                            GoalType = 4,
+                            Description = "Mevcut kilomu korumak istiyorum"
                         });
                 });
 
@@ -172,7 +206,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<DateTime>("CreationDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 9, 19, 6, 7, 221, DateTimeKind.Local).AddTicks(5484));
+                        .HasDefaultValue(new DateTime(2023, 5, 12, 18, 22, 8, 488, DateTimeKind.Local).AddTicks(842));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -180,6 +214,9 @@ namespace DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("Gender")
+                        .HasColumnType("int");
+
+                    b.Property<int>("GoalTypeId")
                         .HasColumnType("int");
 
                     b.Property<double>("Height")
@@ -220,6 +257,8 @@ namespace DataAccessLayer.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
+                    b.HasIndex("GoalTypeId");
+
                     b.HasIndex("LifeStyleId");
 
                     b.ToTable("Users");
@@ -230,33 +269,35 @@ namespace DataAccessLayer.Migrations
                             Id = 1,
                             ActivePassiveSituation = false,
                             BirthDate = new DateTime(2000, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreationDate = new DateTime(2023, 5, 9, 19, 6, 7, 221, DateTimeKind.Local).AddTicks(5621),
+                            CreationDate = new DateTime(2023, 5, 12, 18, 22, 8, 488, DateTimeKind.Local).AddTicks(949),
                             Email = "ahmetyilmaz@yilmaz.com",
                             Gender = 2,
-                            Height = 1.8200000000000001,
+                            GoalTypeId = 1,
+                            Height = 182.0,
                             LifeStyleId = 2,
-                            Name = "Ahmet",
+                            Name = "AHMET",
                             Password = "AaBb12.,",
                             QuestionAnswer = "C#",
                             SpecificQuestion = "En Sevdiğin Programlama Dili?",
-                            Surname = "Yılmaz",
-                            Weight = 103.0
+                            Surname = "YILMAZ",
+                            Weight = 113.0
                         },
                         new
                         {
                             Id = 2,
                             ActivePassiveSituation = false,
                             BirthDate = new DateTime(1997, 7, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreationDate = new DateTime(2023, 5, 9, 19, 6, 7, 221, DateTimeKind.Local).AddTicks(5800),
+                            CreationDate = new DateTime(2023, 5, 12, 18, 22, 8, 488, DateTimeKind.Local).AddTicks(1016),
                             Email = "ayşesevgi@sevgi.com",
                             Gender = 1,
-                            Height = 1.55,
+                            GoalTypeId = 3,
+                            Height = 185.0,
                             LifeStyleId = 3,
-                            Name = "Ayşe",
+                            Name = "AYŞE",
                             Password = "AaBb12.,",
-                            QuestionAnswer = "Java",
+                            QuestionAnswer = "JAVA",
                             SpecificQuestion = "En Sevdiğin Programlama Dili?",
-                            Surname = "Sevgi",
+                            Surname = "SEVGİ",
                             Weight = 55.0
                         });
                 });
@@ -925,11 +966,19 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntitiyLayer.Entities.User", b =>
                 {
+                    b.HasOne("EntitiyLayer.Entities.Goal", "Goal")
+                        .WithMany()
+                        .HasForeignKey("GoalTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("EntitiyLayer.Entities.LifeStyle", "LifeStyle")
                         .WithMany()
                         .HasForeignKey("LifeStyleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Goal");
 
                     b.Navigation("LifeStyle");
                 });

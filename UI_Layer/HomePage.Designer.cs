@@ -63,6 +63,7 @@
             kisiselBilgiler.Name = "kisiselBilgiler";
             kisiselBilgiler.Size = new Size(90, 20);
             kisiselBilgiler.Text = "Kişisel Bilgiler";
+            kisiselBilgiler.Click += kisiselBilgiler_Click;
             // 
             // ogunler
             // 

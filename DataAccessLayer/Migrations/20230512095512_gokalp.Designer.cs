@@ -4,6 +4,7 @@ using DataAccessLayer.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(Team4Context))]
-    partial class Team4ContextModelSnapshot : ModelSnapshot
+    [Migration("20230512095512_gokalp")]
+    partial class gokalp
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -33,7 +35,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<DateTime>("CreationDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 12, 18, 22, 8, 487, DateTimeKind.Local).AddTicks(6918));
+                        .HasDefaultValue(new DateTime(2023, 5, 12, 12, 55, 11, 856, DateTimeKind.Local).AddTicks(6731));
 
                     b.Property<int>("FoodId")
                         .HasColumnType("int");
@@ -92,7 +94,7 @@ namespace DataAccessLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreationDate = new DateTime(2023, 5, 12, 18, 22, 8, 487, DateTimeKind.Local).AddTicks(7815),
+                            CreationDate = new DateTime(2023, 5, 12, 12, 55, 11, 856, DateTimeKind.Local).AddTicks(9331),
                             Email = "admin@admin.com",
                             Password = "Admin1234"
                         });
@@ -204,7 +206,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<DateTime>("CreationDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 12, 18, 22, 8, 488, DateTimeKind.Local).AddTicks(842));
+                        .HasDefaultValue(new DateTime(2023, 5, 12, 12, 55, 11, 857, DateTimeKind.Local).AddTicks(6334));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -267,17 +269,17 @@ namespace DataAccessLayer.Migrations
                             Id = 1,
                             ActivePassiveSituation = false,
                             BirthDate = new DateTime(2000, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreationDate = new DateTime(2023, 5, 12, 18, 22, 8, 488, DateTimeKind.Local).AddTicks(949),
+                            CreationDate = new DateTime(2023, 5, 12, 12, 55, 11, 857, DateTimeKind.Local).AddTicks(6627),
                             Email = "ahmetyilmaz@yilmaz.com",
                             Gender = 2,
                             GoalTypeId = 1,
-                            Height = 182.0,
+                            Height = 1.8200000000000001,
                             LifeStyleId = 2,
-                            Name = "AHMET",
+                            Name = "Ahmet",
                             Password = "AaBb12.,",
                             QuestionAnswer = "C#",
                             SpecificQuestion = "En Sevdiğin Programlama Dili?",
-                            Surname = "YILMAZ",
+                            Surname = "Yılmaz",
                             Weight = 113.0
                         },
                         new
@@ -285,17 +287,17 @@ namespace DataAccessLayer.Migrations
                             Id = 2,
                             ActivePassiveSituation = false,
                             BirthDate = new DateTime(1997, 7, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreationDate = new DateTime(2023, 5, 12, 18, 22, 8, 488, DateTimeKind.Local).AddTicks(1016),
+                            CreationDate = new DateTime(2023, 5, 12, 12, 55, 11, 857, DateTimeKind.Local).AddTicks(6713),
                             Email = "ayşesevgi@sevgi.com",
                             Gender = 1,
                             GoalTypeId = 3,
-                            Height = 185.0,
+                            Height = 1.8500000000000001,
                             LifeStyleId = 3,
-                            Name = "AYŞE",
+                            Name = "Ayşe",
                             Password = "AaBb12.,",
-                            QuestionAnswer = "JAVA",
+                            QuestionAnswer = "Java",
                             SpecificQuestion = "En Sevdiğin Programlama Dili?",
-                            Surname = "SEVGİ",
+                            Surname = "Sevgi",
                             Weight = 55.0
                         });
                 });

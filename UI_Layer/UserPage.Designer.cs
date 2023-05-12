@@ -47,6 +47,8 @@
             btnToday = new Button();
             lblTotalCalory = new Label();
             label2 = new Label();
+            label1 = new Label();
+            lblTargetCalory = new Label();
             SuspendLayout();
             // 
             // lblAdSoyad
@@ -211,7 +213,7 @@
             // lblTotalCalory
             // 
             lblTotalCalory.AutoSize = true;
-            lblTotalCalory.Location = new Point(314, 141);
+            lblTotalCalory.Location = new Point(312, 129);
             lblTotalCalory.Name = "lblTotalCalory";
             lblTotalCalory.Size = new Size(45, 15);
             lblTotalCalory.TabIndex = 77;
@@ -219,18 +221,37 @@
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(189, 141);
+            label2.Location = new Point(145, 129);
             label2.Name = "label2";
-            label2.Size = new Size(119, 15);
+            label2.Size = new Size(161, 15);
             label2.TabIndex = 76;
             label2.Text = "Toplam Alınan Kalori:";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(145, 155);
+            label1.Name = "label1";
+            label1.Size = new Size(161, 15);
+            label1.TabIndex = 78;
+            label1.Text = "Günlük İhtiyacım Olan Kalori:";
+            // 
+            // lblTargetCalory
+            // 
+            lblTargetCalory.AutoSize = true;
+            lblTargetCalory.Location = new Point(313, 155);
+            lblTargetCalory.Name = "lblTargetCalory";
+            lblTargetCalory.Size = new Size(45, 15);
+            lblTargetCalory.TabIndex = 79;
+            lblTargetCalory.Text = "180 cm";
             // 
             // UserPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(539, 495);
+            Controls.Add(lblTargetCalory);
+            Controls.Add(label1);
             Controls.Add(lblTotalCalory);
             Controls.Add(label2);
             Controls.Add(btnToday);
@@ -275,5 +296,7 @@
         private Button btnToday;
         private Label lblTotalCalory;
         private Label label2;
+        private Label label1;
+        private Label lblTargetCalory;
     }
 }

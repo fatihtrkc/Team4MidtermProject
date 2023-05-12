@@ -28,341 +28,265 @@
         /// </summary>
         private void InitializeComponent()
         {
-            nudHeight = new NumericUpDown();
-            button1 = new Button();
-            label11 = new Label();
-            txtAgain = new TextBox();
-            label10 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            txtSpeAns = new TextBox();
-            label5 = new Label();
-            txtSpe = new TextBox();
-            label6 = new Label();
-            txtPassword = new TextBox();
-            label7 = new Label();
-            txtMail = new TextBox();
-            label4 = new Label();
-            txtSurname = new TextBox();
-            label3 = new Label();
-            txtName = new TextBox();
-            label2 = new Label();
-            label1 = new Label();
-            dtBirth = new DateTimePicker();
-            nudWeight = new NumericUpDown();
-            rdFemale = new RadioButton();
-            rdMale = new RadioButton();
-            label12 = new Label();
-            cboxLifeStyle = new ComboBox();
-            label13 = new Label();
-            ((System.ComponentModel.ISupportInitialize)nudHeight).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nudWeight).BeginInit();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            lblBirthDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            btnGiris = new Guna.UI2.WinForms.Guna2GradientButton();
+            dtBirth = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            txtSpeAns = new Guna.UI2.WinForms.Guna2TextBox();
+            txtSpe = new Guna.UI2.WinForms.Guna2TextBox();
+            txtAgain = new Guna.UI2.WinForms.Guna2TextBox();
+            txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            txtMail = new Guna.UI2.WinForms.Guna2TextBox();
+            txtSurname = new Guna.UI2.WinForms.Guna2TextBox();
+            txtName = new Guna.UI2.WinForms.Guna2TextBox();
             SuspendLayout();
             // 
-            // nudHeight
+            // lblBirthDate
             // 
-            nudHeight.DecimalPlaces = 1;
-            nudHeight.Location = new Point(174, 355);
-            nudHeight.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
-            nudHeight.Minimum = new decimal(new int[] { 130, 0, 0, 0 });
-            nudHeight.Name = "nudHeight";
-            nudHeight.Size = new Size(120, 23);
-            nudHeight.TabIndex = 44;
-            nudHeight.Value = new decimal(new int[] { 130, 0, 0, 0 });
+            lblBirthDate.BackColor = Color.Transparent;
+            lblBirthDate.Location = new Point(150, 424);
+            lblBirthDate.Name = "lblBirthDate";
+            lblBirthDate.Size = new Size(86, 17);
+            lblBirthDate.TabIndex = 35;
+            lblBirthDate.Text = "DOĞUM TARİHİ ";
             // 
-            // button1
+            // btnGiris
             // 
-            button1.Location = new Point(149, 428);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 43;
-            button1.Text = "Kayıt Ol";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // label11
-            // 
-            label11.Location = new Point(68, 384);
-            label11.Name = "label11";
-            label11.Size = new Size(100, 23);
-            label11.TabIndex = 41;
-            label11.Text = "Kilo";
-            label11.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // txtAgain
-            // 
-            txtAgain.Location = new Point(174, 239);
-            txtAgain.Name = "txtAgain";
-            txtAgain.Size = new Size(120, 23);
-            txtAgain.TabIndex = 40;
-            // 
-            // label10
-            // 
-            label10.Location = new Point(68, 239);
-            label10.Name = "label10";
-            label10.Size = new Size(100, 23);
-            label10.TabIndex = 39;
-            label10.Text = "Şifre Tekrarı";
-            label10.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label8
-            // 
-            label8.Location = new Point(68, 355);
-            label8.Name = "label8";
-            label8.Size = new Size(100, 23);
-            label8.TabIndex = 38;
-            label8.Text = "Boy";
-            label8.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label9
-            // 
-            label9.Location = new Point(68, 326);
-            label9.Name = "label9";
-            label9.Size = new Size(100, 23);
-            label9.TabIndex = 36;
-            label9.Text = "Doğum Tarihi";
-            label9.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // txtSpeAns
-            // 
-            txtSpeAns.Location = new Point(174, 297);
-            txtSpeAns.Name = "txtSpeAns";
-            txtSpeAns.Size = new Size(120, 23);
-            txtSpeAns.TabIndex = 35;
-            // 
-            // label5
-            // 
-            label5.Location = new Point(68, 297);
-            label5.Name = "label5";
-            label5.Size = new Size(100, 23);
-            label5.TabIndex = 34;
-            label5.Text = "Özel Soru Cevabı";
-            label5.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // txtSpe
-            // 
-            txtSpe.Location = new Point(174, 268);
-            txtSpe.Name = "txtSpe";
-            txtSpe.Size = new Size(120, 23);
-            txtSpe.TabIndex = 33;
-            // 
-            // label6
-            // 
-            label6.Location = new Point(68, 268);
-            label6.Name = "label6";
-            label6.Size = new Size(100, 23);
-            label6.TabIndex = 32;
-            label6.Text = "Özel Soru";
-            label6.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // txtPassword
-            // 
-            txtPassword.Location = new Point(174, 210);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(120, 23);
-            txtPassword.TabIndex = 31;
-            // 
-            // label7
-            // 
-            label7.Location = new Point(68, 210);
-            label7.Name = "label7";
-            label7.Size = new Size(100, 23);
-            label7.TabIndex = 30;
-            label7.Text = "Şifre";
-            label7.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // txtMail
-            // 
-            txtMail.Location = new Point(174, 123);
-            txtMail.Name = "txtMail";
-            txtMail.Size = new Size(120, 23);
-            txtMail.TabIndex = 29;
-            // 
-            // label4
-            // 
-            label4.Location = new Point(68, 123);
-            label4.Name = "label4";
-            label4.Size = new Size(100, 23);
-            label4.TabIndex = 28;
-            label4.Text = "Mail adresi";
-            label4.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // txtSurname
-            // 
-            txtSurname.Location = new Point(174, 94);
-            txtSurname.Name = "txtSurname";
-            txtSurname.Size = new Size(120, 23);
-            txtSurname.TabIndex = 27;
-            // 
-            // label3
-            // 
-            label3.Location = new Point(68, 94);
-            label3.Name = "label3";
-            label3.Size = new Size(100, 23);
-            label3.TabIndex = 26;
-            label3.Text = "Soyisim";
-            label3.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // txtName
-            // 
-            txtName.Location = new Point(174, 65);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(120, 23);
-            txtName.TabIndex = 25;
-            // 
-            // label2
-            // 
-            label2.Location = new Point(68, 65);
-            label2.Name = "label2";
-            label2.Size = new Size(100, 23);
-            label2.TabIndex = 24;
-            label2.Text = "İsim";
-            label2.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(118, 28);
-            label1.Name = "label1";
-            label1.Size = new Size(116, 15);
-            label1.TabIndex = 23;
-            label1.Text = "Kullanıcı Kayıt Ekranı";
+            btnGiris.BorderColor = Color.White;
+            btnGiris.BorderRadius = 10;
+            btnGiris.BorderThickness = 2;
+            btnGiris.CustomizableEdges = customizableEdges1;
+            btnGiris.DisabledState.BorderColor = Color.DarkGray;
+            btnGiris.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnGiris.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnGiris.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            btnGiris.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnGiris.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnGiris.ForeColor = Color.White;
+            btnGiris.Location = new Point(90, 505);
+            btnGiris.Name = "btnGiris";
+            btnGiris.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnGiris.Size = new Size(200, 45);
+            btnGiris.TabIndex = 34;
+            btnGiris.Text = "Devam Et";
+            btnGiris.Click += btnGiris_Click;
             // 
             // dtBirth
             // 
-            dtBirth.Location = new Point(174, 326);
+            dtBirth.BorderColor = Color.White;
+            dtBirth.BorderRadius = 10;
+            dtBirth.BorderThickness = 2;
+            dtBirth.Checked = true;
+            dtBirth.CustomizableEdges = customizableEdges3;
+            dtBirth.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dtBirth.Format = DateTimePickerFormat.Long;
+            dtBirth.Location = new Point(90, 447);
+            dtBirth.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtBirth.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtBirth.Name = "dtBirth";
-            dtBirth.Size = new Size(120, 23);
-            dtBirth.TabIndex = 45;
+            dtBirth.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            dtBirth.Size = new Size(200, 36);
+            dtBirth.TabIndex = 33;
+            dtBirth.Value = new DateTime(2023, 5, 12, 17, 24, 31, 362);
             // 
-            // nudWeight
+            // txtSpeAns
             // 
-            nudWeight.DecimalPlaces = 1;
-            nudWeight.Location = new Point(174, 384);
-            nudWeight.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
-            nudWeight.Minimum = new decimal(new int[] { 35, 0, 0, 0 });
-            nudWeight.Name = "nudWeight";
-            nudWeight.Size = new Size(120, 23);
-            nudWeight.TabIndex = 46;
-            nudWeight.Value = new decimal(new int[] { 35, 0, 0, 0 });
+            txtSpeAns.BorderRadius = 10;
+            txtSpeAns.CustomizableEdges = customizableEdges5;
+            txtSpeAns.DefaultText = "";
+            txtSpeAns.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSpeAns.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSpeAns.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSpeAns.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSpeAns.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSpeAns.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSpeAns.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSpeAns.Location = new Point(90, 370);
+            txtSpeAns.Name = "txtSpeAns";
+            txtSpeAns.PasswordChar = '\0';
+            txtSpeAns.PlaceholderText = "Özel Sorunuzun Cevabını Giriniz";
+            txtSpeAns.SelectedText = "";
+            txtSpeAns.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtSpeAns.Size = new Size(200, 36);
+            txtSpeAns.TabIndex = 32;
             // 
-            // rdFemale
+            // txtSpe
             // 
-            rdFemale.AutoSize = true;
-            rdFemale.Checked = true;
-            rdFemale.Location = new Point(174, 156);
-            rdFemale.Name = "rdFemale";
-            rdFemale.Size = new Size(55, 19);
-            rdFemale.TabIndex = 48;
-            rdFemale.TabStop = true;
-            rdFemale.Text = "Kadın";
-            rdFemale.UseVisualStyleBackColor = true;
+            txtSpe.BorderRadius = 10;
+            txtSpe.CustomizableEdges = customizableEdges7;
+            txtSpe.DefaultText = "";
+            txtSpe.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSpe.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSpe.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSpe.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSpe.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSpe.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSpe.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSpe.Location = new Point(90, 313);
+            txtSpe.Name = "txtSpe";
+            txtSpe.PasswordChar = '\0';
+            txtSpe.PlaceholderText = "Size Öel Bir Soru Giriniz";
+            txtSpe.SelectedText = "";
+            txtSpe.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtSpe.Size = new Size(200, 36);
+            txtSpe.TabIndex = 31;
             // 
-            // rdMale
+            // txtAgain
             // 
-            rdMale.AutoSize = true;
-            rdMale.Location = new Point(239, 156);
-            rdMale.Name = "rdMale";
-            rdMale.Size = new Size(53, 19);
-            rdMale.TabIndex = 49;
-            rdMale.Text = "Erkek";
-            rdMale.UseVisualStyleBackColor = true;
+            txtAgain.BorderRadius = 10;
+            txtAgain.CustomizableEdges = customizableEdges9;
+            txtAgain.DefaultText = "";
+            txtAgain.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtAgain.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtAgain.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtAgain.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtAgain.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtAgain.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtAgain.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtAgain.Location = new Point(90, 254);
+            txtAgain.Name = "txtAgain";
+            txtAgain.PasswordChar = '\0';
+            txtAgain.PlaceholderText = "Şifrenizi Tekrar Giriniz";
+            txtAgain.SelectedText = "";
+            txtAgain.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtAgain.Size = new Size(200, 36);
+            txtAgain.TabIndex = 30;
             // 
-            // label12
+            // txtPassword
             // 
-            label12.Location = new Point(68, 154);
-            label12.Name = "label12";
-            label12.Size = new Size(100, 23);
-            label12.TabIndex = 47;
-            label12.Text = "Cinsiyet";
-            label12.TextAlign = ContentAlignment.MiddleLeft;
+            txtPassword.BorderRadius = 10;
+            txtPassword.CustomizableEdges = customizableEdges11;
+            txtPassword.DefaultText = "";
+            txtPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPassword.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtPassword.Location = new Point(90, 193);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '\0';
+            txtPassword.PlaceholderText = "Şifre";
+            txtPassword.SelectedText = "";
+            txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtPassword.Size = new Size(200, 36);
+            txtPassword.TabIndex = 29;
             // 
-            // cboxLifeStyle
+            // txtMail
             // 
-            cboxLifeStyle.FormattingEnabled = true;
-            cboxLifeStyle.Location = new Point(174, 181);
-            cboxLifeStyle.Name = "cboxLifeStyle";
-            cboxLifeStyle.Size = new Size(120, 23);
-            cboxLifeStyle.TabIndex = 50;
+            txtMail.BorderRadius = 10;
+            txtMail.CustomizableEdges = customizableEdges13;
+            txtMail.DefaultText = "";
+            txtMail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtMail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtMail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtMail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtMail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtMail.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtMail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtMail.Location = new Point(90, 134);
+            txtMail.Name = "txtMail";
+            txtMail.PasswordChar = '\0';
+            txtMail.PlaceholderText = "Mail Adresi";
+            txtMail.SelectedText = "";
+            txtMail.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtMail.Size = new Size(200, 36);
+            txtMail.TabIndex = 28;
             // 
-            // label13
+            // txtSurname
             // 
-            label13.Location = new Point(68, 181);
-            label13.Name = "label13";
-            label13.Size = new Size(100, 23);
-            label13.TabIndex = 51;
-            label13.Text = "Hayat Biçimi";
-            label13.TextAlign = ContentAlignment.MiddleLeft;
+            txtSurname.BorderRadius = 10;
+            txtSurname.CustomizableEdges = customizableEdges15;
+            txtSurname.DefaultText = "";
+            txtSurname.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSurname.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSurname.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSurname.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSurname.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSurname.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSurname.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSurname.Location = new Point(90, 78);
+            txtSurname.Name = "txtSurname";
+            txtSurname.PasswordChar = '\0';
+            txtSurname.PlaceholderText = "Soyisim";
+            txtSurname.SelectedText = "";
+            txtSurname.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtSurname.Size = new Size(200, 36);
+            txtSurname.TabIndex = 27;
+            // 
+            // txtName
+            // 
+            txtName.BorderRadius = 10;
+            txtName.CustomizableEdges = customizableEdges17;
+            txtName.DefaultText = "";
+            txtName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtName.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtName.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtName.Location = new Point(90, 19);
+            txtName.Name = "txtName";
+            txtName.PasswordChar = '\0';
+            txtName.PlaceholderText = "İsim";
+            txtName.SelectedText = "";
+            txtName.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtName.Size = new Size(200, 36);
+            txtName.TabIndex = 26;
             // 
             // SignUpForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(351, 461);
-            Controls.Add(label13);
-            Controls.Add(cboxLifeStyle);
-            Controls.Add(rdMale);
-            Controls.Add(rdFemale);
-            Controls.Add(label12);
-            Controls.Add(nudWeight);
+            BackColor = Color.PaleVioletRed;
+            ClientSize = new Size(374, 567);
+            Controls.Add(lblBirthDate);
+            Controls.Add(btnGiris);
             Controls.Add(dtBirth);
-            Controls.Add(nudHeight);
-            Controls.Add(button1);
-            Controls.Add(label11);
-            Controls.Add(txtAgain);
-            Controls.Add(label10);
-            Controls.Add(label8);
-            Controls.Add(label9);
             Controls.Add(txtSpeAns);
-            Controls.Add(label5);
             Controls.Add(txtSpe);
-            Controls.Add(label6);
+            Controls.Add(txtAgain);
             Controls.Add(txtPassword);
-            Controls.Add(label7);
             Controls.Add(txtMail);
-            Controls.Add(label4);
             Controls.Add(txtSurname);
-            Controls.Add(label3);
             Controls.Add(txtName);
-            Controls.Add(label2);
-            Controls.Add(label1);
             Name = "SignUpForm";
-            Text = "Signin";
+            Text = "SignUp";
             Load += SignUpForm_Load;
-            ((System.ComponentModel.ISupportInitialize)nudHeight).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nudWeight).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private NumericUpDown nudHeight;
-        private Button button1;
-        private Label label11;
-        private TextBox txtAgain;
-        private Label label10;
-        private Label label8;
-        private Label label9;
-        private TextBox txtSpeAns;
-        private Label label5;
-        private TextBox txtSpe;
-        private Label label6;
-        private TextBox txtPassword;
-        private Label label7;
-        private TextBox txtMail;
-        private Label label4;
-        private TextBox txtSurname;
-        private Label label3;
-        private TextBox txtName;
-        private Label label2;
-        private Label label1;
-        private DateTimePicker dtBirth;
-        private NumericUpDown nudWeight;
-        private RadioButton rdFemale;
-        private RadioButton rdMale;
-        private Label label12;
-        private ComboBox cboxLifeStyle;
-        private Label label13;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblBirthDate;
+        private Guna.UI2.WinForms.Guna2GradientButton btnGiris;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtBirth;
+        private Guna.UI2.WinForms.Guna2TextBox txtSpeAns;
+        private Guna.UI2.WinForms.Guna2TextBox txtSpe;
+        private Guna.UI2.WinForms.Guna2TextBox txtAgain;
+        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private Guna.UI2.WinForms.Guna2TextBox txtMail;
+        private Guna.UI2.WinForms.Guna2TextBox txtSurname;
+        private Guna.UI2.WinForms.Guna2TextBox txtName;
     }
 }

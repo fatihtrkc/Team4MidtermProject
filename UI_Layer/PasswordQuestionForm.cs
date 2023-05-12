@@ -22,25 +22,34 @@ namespace UI_Layer
         private void PasswordQuestionForm_Load(object sender, EventArgs e)
         {
             dbbl = new();
+            txtName.Enabled = false;
+            txtSurname.Enabled = false;
+            txtCevap.Enabled = false;
+            lblSoru.Visible = false;
+            btnSifre.Visible = false;
         }
 
         Team4ContextBL dbbl;
         User user;
         int counter = 3;
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnMail_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(txtEmail.Text))
+            if (!string.IsNullOrWhiteSpace(txtEMail.ToString()))
             {
-                user = dbbl.UserBL.FindByEmail(txtEmail.Text);
+                user = dbbl.UserBL.FindByEmail(txtEMail.Text);
                 if (user != null && user.ActivePassiveSituation)
                 {
-                    txtEmail.Enabled = false;
-                    button2.Enabled = false;
-                    Location();
+                    txtEMail.Enabled = false;
+                    btnSifre.Visible = true;
+                    txtName.Enabled = true;
+                    txtSurname.Enabled = true;
+                    txtCevap.Enabled = true;
+                    lblSoru.Visible = true;
 
-                    lblOzelSoru.Text = user.SpecificQuestion;
-                    
+
+                    lblSoru.Text = user.SpecificQuestion;
+
                 }
                 else if (user != null && user.ActivePassiveSituation == false)
                 {
@@ -59,10 +68,9 @@ namespace UI_Layer
             }
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSifre_Click(object sender, EventArgs e)
         {
-            if (user.QuestionAnswer == txtCevap.Text && user.Name == txtName.Text && user.Surname == txtSurname.Text)
+            if (user.QuestionAnswer == txtCevap.Text.ToUpper() && user.Name == txtName.Text.ToUpper() && user.Surname == txtSurname.Text.ToUpper())
             {
                 ResetPasswordForm form = new ResetPasswordForm(user.Id);
                 this.Hide();
@@ -81,20 +89,6 @@ namespace UI_Layer
                     user.ActivePassiveSituation = false;
                 }
             }
-        }
-        private void Location()
-        {
-            lblMail.Location = new Point(41, 29);
-            txtEmail.Location = new Point(124, 24);
-            button2.Location = new Point(138, 53);
-            lblOzelSoru.Location = new Point(61, 179);
-            lblAnswer.Location = new Point(47, 215);
-            txtCevap.Location = new Point(159, 216);
-            button1.Location = new Point(138, 254);
-            lblName.Location = new Point(47, 110);
-            lblSurname.Location = new Point(47, 139);
-            txtName.Location = new Point(124, 111);
-            txtSurname.Location = new Point(124, 139);
         }
     }
 }
