@@ -56,7 +56,6 @@
             txtMail = new Guna.UI2.WinForms.Guna2TextBox();
             txtSurname = new Guna.UI2.WinForms.Guna2TextBox();
             txtName = new Guna.UI2.WinForms.Guna2TextBox();
-            dateTimePicker1 = new DateTimePicker();
             SuspendLayout();
             // 
             // lblBirthDate
@@ -254,20 +253,12 @@
             txtName.Size = new Size(200, 36);
             txtName.TabIndex = 26;
             // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(296, 447);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 36;
-            // 
             // SignUpForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.PaleVioletRed;
             ClientSize = new Size(374, 567);
-            Controls.Add(dateTimePicker1);
             Controls.Add(lblBirthDate);
             Controls.Add(btnGiris);
             Controls.Add(dtBirth);
@@ -297,6 +288,5 @@
         private Guna.UI2.WinForms.Guna2TextBox txtMail;
         private Guna.UI2.WinForms.Guna2TextBox txtSurname;
         private Guna.UI2.WinForms.Guna2TextBox txtName;
-        private DateTimePicker dateTimePicker1;
     }
 }
