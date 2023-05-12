@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer.EntitiesBL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace UI_Layer
         public AdminUsersForm()
         {
             InitializeComponent();
+            userbl = new();
+        }
+
+        UserBL userbl;
+        private void AdminUsersForm_Load(object sender, EventArgs e)
+        {
+            //dtgridPassiveUsers.DataSource = userbl
         }
     }
 }

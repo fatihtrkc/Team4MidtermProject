@@ -126,7 +126,7 @@
             dataGridViewCellStyle3.SelectionForeColor = Color.White;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dtgridFoods.DefaultCellStyle = dataGridViewCellStyle3;
-            dtgridFoods.Location = new Point(83, 731);
+            dtgridFoods.Location = new Point(83, 730);
             dtgridFoods.MultiSelect = false;
             dtgridFoods.Name = "dtgridFoods";
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -140,7 +140,7 @@
             dtgridFoods.RowHeadersWidth = 100;
             dtgridFoods.RowTemplate.Height = 33;
             dtgridFoods.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtgridFoods.Size = new Size(643, 321);
+            dtgridFoods.Size = new Size(643, 370);
             dtgridFoods.TabIndex = 27;
             dtgridFoods.CellClick += dtgridFoods_CellClick;
             // 

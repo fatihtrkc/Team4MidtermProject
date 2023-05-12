@@ -113,7 +113,7 @@
             dataGridViewCellStyle3.SelectionForeColor = Color.White;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dtgridCategory.DefaultCellStyle = dataGridViewCellStyle3;
-            dtgridCategory.Location = new Point(83, 731);
+            dtgridCategory.Location = new Point(83, 730);
             dtgridCategory.MultiSelect = false;
             dtgridCategory.Name = "dtgridCategory";
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -127,7 +127,7 @@
             dtgridCategory.RowHeadersWidth = 62;
             dtgridCategory.RowTemplate.Height = 33;
             dtgridCategory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtgridCategory.Size = new Size(643, 321);
+            dtgridCategory.Size = new Size(643, 370);
             dtgridCategory.TabIndex = 4;
             dtgridCategory.CellClick += dtgridCategory_CellClick;
             // 
