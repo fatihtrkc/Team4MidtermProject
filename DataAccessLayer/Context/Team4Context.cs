@@ -19,6 +19,7 @@ namespace DataAccessLayer.Context
         public DbSet<Category> Categories { get; set; }
         public DbSet<Unit> Units { get; set; }
         public DbSet<LifeStyle> LifeStyles { get; set; }
+        public DbSet<Goal> Goals { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
