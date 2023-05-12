@@ -61,12 +61,12 @@ namespace UI_Layer
             user = new User();
             LifeStyleType lifeId = (LifeStyleType)cboxLifeStyle.SelectedValue;
             GoalType goalType = (GoalType)cboxGoal.SelectedValue;
-            user.Name = name;
-            user.Surname = surname;
+            user.Name = name.ToUpper();
+            user.Surname = surname.ToUpper();
             user.Email = email;
             user.Password = password;
             user.SpecificQuestion = speque;
-            user.QuestionAnswer = answer;
+            user.QuestionAnswer = answer.ToUpper();
             user.BirthDate = dateTime;
 
             user.GoalTypeId = goalType;
