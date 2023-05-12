@@ -138,6 +138,8 @@
             txtId.Location = new Point(83, 433);
             txtId.MaxLength = 5;
             txtId.Name = "txtId";
+            txtId.PlaceholderText = "Bu alan veri girişine kapalıdır...";
+            txtId.ReadOnly = true;
             txtId.Size = new Size(643, 47);
             txtId.TabIndex = 6;
             // 

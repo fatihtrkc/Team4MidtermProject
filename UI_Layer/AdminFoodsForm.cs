@@ -42,8 +42,8 @@ namespace UI_Layer
             if (txtName.Text.Length > 1 && txtName.Text.Length != 50)
                 lblNameCharacter.Text = $"{txtName.Text.Length} characters used )";
             else if (txtName.Text.Length == 50)
-                lblCategoryName.Text = $"{txtName.Text.Length} characters used is max )";
-            else lblCategoryName.Text = $"{txtName.Text.Length} character used )";
+                lblNameCharacter.Text = $"{txtName.Text.Length} characters used is max )";
+            else lblNameCharacter.Text = $"{txtName.Text.Length} character used )";
 
             if (foodIndex > -1 && !string.IsNullOrWhiteSpace(txtName.Text))
             {
@@ -179,6 +179,7 @@ namespace UI_Layer
         private void AdminFoodsForm_Click(object sender, EventArgs e)
         {
             Helper.WriteSelectClear(this.Controls);
+            foodIndex = -1;
         }
 
         private void pctrbxExit_Click(object sender, EventArgs e)

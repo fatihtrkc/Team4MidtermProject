@@ -221,20 +221,23 @@
             // 
             cmbUnit.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbUnit.Font = new Font("Comic Sans MS", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbUnit.ForeColor = Color.LightCoral;
             cmbUnit.FormattingEnabled = true;
             cmbUnit.Location = new Point(276, 543);
+            cmbUnit.MaxDropDownItems = 5;
             cmbUnit.Name = "cmbUnit";
             cmbUnit.Size = new Size(450, 53);
             cmbUnit.TabIndex = 37;
             // 
             // cmbCategory
             // 
-            cmbCategory.BackColor = Color.LightCoral;
+            cmbCategory.BackColor = Color.White;
             cmbCategory.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCategory.Font = new Font("Comic Sans MS", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            cmbCategory.ForeColor = Color.White;
+            cmbCategory.ForeColor = Color.LightCoral;
             cmbCategory.FormattingEnabled = true;
             cmbCategory.Location = new Point(276, 428);
+            cmbCategory.MaxDropDownItems = 5;
             cmbCategory.Name = "cmbCategory";
             cmbCategory.Size = new Size(450, 53);
             cmbCategory.TabIndex = 38;

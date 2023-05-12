@@ -37,7 +37,8 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(1178, 744);
             Font = new Font("Comic Sans MS", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            Margin = new Padding(5, 5, 5, 5);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(5);
             Name = "AdminUsersForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AdminUsersForm";

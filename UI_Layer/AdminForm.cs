@@ -19,20 +19,26 @@ namespace UI_Layer
 
         private void btnCategories_Click(object sender, EventArgs e)
         {
+            this.Hide();
             AdminCategoriesForm form = new();
             form.ShowDialog();
+            this.Show();
         }
 
         private void btnFoods_Click(object sender, EventArgs e)
         {
+            this.Hide();
             AdminFoodsForm form = new();
             form.ShowDialog();
+            this.Show();
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
+            this.Hide();
             AdminUsersForm form = new();
             form.ShowDialog();
+            this.Show();
         }
 
         private void pctrbxExit_Click(object sender, EventArgs e)
