@@ -1,5 +1,4 @@
 ﻿using BusinessLayer.ContextBL;
-using DataAccessLayer.Context;
 using EntitiyLayer.Entities;
 using EntityLayer.Enums;
 using System;
@@ -14,9 +13,9 @@ using System.Windows.Forms;
 
 namespace UI_Layer
 {
-    public partial class UserInformationForm : Form
+    public partial class UserInformation : Form
     {
-        public UserInformationForm(int id)
+        public UserInformation(int id)
         {
             InitializeComponent();
             userId = id;
@@ -24,16 +23,39 @@ namespace UI_Layer
         }
         int userId;
         Team4ContextBL dbbl;
-        private void UserInformationForm_Load(object sender, EventArgs e)
+
+
+        private void UserInformation_Load(object sender, EventArgs e)
         {
+
             User user = dbbl.UserBL.Find(userId);
+
+            lblWelcome.Text = "Hoşgeldin " + user.Name + " " + user.Surname;
+
             nudHeight.Value = (decimal)user.Height;
             nudWeight.Value = (decimal)user.Weight;
 
             FillCbox();
+            cboxGoal.SelectedValue = user.GoalTypeId;
+            cboxLifeStyle.SelectedValue = user.LifeStyleId;
 
-            cboxGoal.SelectedItem = user.GoalTypeId;
-            cboxLifeStyle.SelectedItem = user.LifeStyleId;
+        }
+
+
+        private void llabelUpdPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            NewPassword newPassword = new NewPassword(userId);
+            this.Hide();
+            newPassword.ShowDialog();
+            
+        }
+
+
+        private void llabelUserDetails_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UserDetails userDetails = new(userId);
+            userDetails.ShowDialog();
+            this.Hide();
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -48,7 +70,7 @@ namespace UI_Layer
             user.LifeStyleId = lifeId;
 
             bool isUpdated = dbbl.UserBL.Update(user);
-            if(isUpdated)
+            if (isUpdated)
             {
                 MessageBox.Show("Bilgileriniz güncellendi");
             }
@@ -56,6 +78,7 @@ namespace UI_Layer
             {
                 MessageBox.Show("Bilgiler güncellenirken bir hata oluştu");
             }
+
         }
 
         private void FillCbox()
@@ -71,12 +94,6 @@ namespace UI_Layer
             cboxGoal.DataSource = goals;
         }
 
-        private void llabelUpdPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            NewPassword newPassword = new NewPassword(userId);
-            this.Hide();
-            newPassword.ShowDialog();
 
-        }
     }
 }

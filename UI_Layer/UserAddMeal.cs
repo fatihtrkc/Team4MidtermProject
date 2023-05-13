@@ -56,25 +56,66 @@ namespace UI_Layer
                 FillList();
             }
         }
-        private void lviewMeal_SelectedIndexChanged(object sender, EventArgs e)
+
+        private void FillList()
         {
-            btnAdd.Text = "Güncelle";
-            if (lviewMeal.SelectedItems.Count > 0)
+            lviewMeal.Items.Clear();
+            List<AddedFood> addeds = db.AddedFoodBL.GetAllByUserIdAndDayAndMeal(userId, DateTime.Today, mealType);
+            foreach (AddedFood item in addeds)
             {
-                AddedFood added = (AddedFood)lviewMeal.SelectedItems[0].Tag;
-                Food food = db.FoodBL.Find(added.FoodId);
-                Category category = db.CategoryBL.Find(food.CategoryId);
-
-                cboxCategories.SelectedValue = category.Id;
-                cboxYemekler.SelectedValue = food.Id;
-                nudPorsiyon.Value = (int)added.Quantity;
-
-
+                ListViewItem lv = new ListViewItem();
+                Food food = db.FoodBL.Find(item.FoodId);
+                lv.Text = food.Name;
+                lv.SubItems.Add(item.Quantity.ToString());
+                lv.SubItems.Add(item.TotalCalory.ToString());
+                lv.Tag = item;
+                lviewMeal.Items.Add(lv);
             }
         }
 
+        private void FillComboBox()
+        {
+            List<Category> categories = db.CategoryBL.GetAll();
+            cboxCategories.DisplayMember = "Name";
+            cboxCategories.ValueMember = "Id";
+            cboxCategories.DataSource = categories;
 
-        private void btnAdd_Click(object sender, EventArgs e)
+            categoryId = (int)cboxCategories.SelectedValue;
+            List<Food> foods = db.FoodBL.GetByCategory(categoryId);
+            cboxYemekler.DisplayMember = "Name";
+            cboxYemekler.ValueMember = "Id";
+            cboxYemekler.DataSource = foods;
+        }
+
+        private void UserAddMeal_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in lviewMeal.SelectedItems)
+            {
+                item.Selected = false;
+            }
+            btnAdd.Text = "Kaydet";
+        }
+
+        private void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lviewMeal.SelectedItems.Count > 0)
+            {
+
+                AddedFood added = (AddedFood)lviewMeal.SelectedItems[0].Tag;
+                bool isDeleted = db.AddedFoodBL.Delete(added.Id);
+                if (isDeleted)
+                {
+                    MessageBox.Show("Yemek silindi");
+                }
+                else
+                {
+                    MessageBox.Show("Yemek silinemedi");
+                }
+                FillList();
+            }
+        }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
         {
             if (lviewMeal.SelectedItems.Count > 0)
             {
@@ -134,10 +175,9 @@ namespace UI_Layer
                 }
 
             }
-
         }
 
-        private void cboxCategories_SelectedIndexChanged(object sender, EventArgs e)
+        private void cboxCategories_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             categoryId = (int)cboxCategories.SelectedValue;
             List<Food> foods = db.FoodBL.GetByCategory(categoryId);
@@ -146,61 +186,25 @@ namespace UI_Layer
             cboxYemekler.DataSource = foods;
         }
 
-        private void FillList()
+        private void cboxYemekler_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lviewMeal.Items.Clear();
-            List<AddedFood> addeds = db.AddedFoodBL.GetAllByUserIdAndDayAndMeal(userId, DateTime.Today, mealType);
-            foreach (AddedFood item in addeds)
-            {
-                ListViewItem lv = new ListViewItem();
-                Food food = db.FoodBL.Find(item.FoodId);
-                lv.Text = food.Name;
-                lv.SubItems.Add(item.Quantity.ToString());
-                lv.SubItems.Add(item.TotalCalory.ToString());
-                lv.Tag = item;
-                lviewMeal.Items.Add(lv);
-            }
+
         }
 
-        private void FillComboBox()
+        private void lviewMeal_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            List<Category> categories = db.CategoryBL.GetAll();
-            cboxCategories.DisplayMember = "Name";
-            cboxCategories.ValueMember = "Id";
-            cboxCategories.DataSource = categories;
-
-            categoryId = (int)cboxCategories.SelectedValue;
-            List<Food> foods = db.FoodBL.GetByCategory(categoryId);
-            cboxYemekler.DisplayMember = "Name";
-            cboxYemekler.ValueMember = "Id";
-            cboxYemekler.DataSource = foods;
-        }
-
-        private void UserAddMeal_Click(object sender, EventArgs e)
-        {
-            foreach (ListViewItem item in lviewMeal.SelectedItems)
-            {
-                item.Selected = false;
-            }
-            btnAdd.Text = "Kaydet";
-        }
-
-        private void silToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+            btnAdd.Text = "Güncelle";
             if (lviewMeal.SelectedItems.Count > 0)
             {
-
                 AddedFood added = (AddedFood)lviewMeal.SelectedItems[0].Tag;
-                bool isDeleted = db.AddedFoodBL.Delete(added.Id);
-                if (isDeleted)
-                {
-                    MessageBox.Show("Yemek silindi");
-                }
-                else
-                {
-                    MessageBox.Show("Yemek silinemedi");
-                }
-                FillList();
+                Food food = db.FoodBL.Find(added.FoodId);
+                Category category = db.CategoryBL.Find(food.CategoryId);
+
+                cboxCategories.SelectedValue = category.Id;
+                cboxYemekler.SelectedValue = food.Id;
+                nudPorsiyon.Value = (int)added.Quantity;
+
+
             }
         }
     }

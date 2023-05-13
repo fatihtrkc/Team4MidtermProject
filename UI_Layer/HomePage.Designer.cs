@@ -44,6 +44,7 @@
             // 
             // menus
             // 
+            menus.BackColor = Color.PaleVioletRed;
             menus.Items.AddRange(new ToolStripItem[] { anaSayfa, kisiselBilgiler, ogunler, raporlarToolStripMenuItem });
             menus.Location = new Point(0, 0);
             menus.Name = "menus";
@@ -125,6 +126,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.PaleVioletRed;
             ClientSize = new Size(800, 450);
             Controls.Add(menus);
             IsMdiContainer = true;
