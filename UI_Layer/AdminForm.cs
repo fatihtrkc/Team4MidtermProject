@@ -55,5 +55,10 @@ namespace UI_Layer
         {
             pctrbxExit.BackColor = default;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

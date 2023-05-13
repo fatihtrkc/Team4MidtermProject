@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblUnitType = new Label();
             pboxYemekFoto = new PictureBox();
             Sil = new ContextMenuStrip(components);
@@ -71,6 +71,7 @@
             pboxYemekFoto.Location = new Point(115, 21);
             pboxYemekFoto.Name = "pboxYemekFoto";
             pboxYemekFoto.Size = new Size(261, 154);
+            pboxYemekFoto.SizeMode = PictureBoxSizeMode.StretchImage;
             pboxYemekFoto.TabIndex = 64;
             pboxYemekFoto.TabStop = false;
             // 
@@ -121,7 +122,7 @@
             // 
             cboxYemekler.BackColor = Color.Transparent;
             cboxYemekler.BorderRadius = 10;
-            cboxYemekler.CustomizableEdges = customizableEdges9;
+            cboxYemekler.CustomizableEdges = customizableEdges1;
             cboxYemekler.DrawMode = DrawMode.OwnerDrawFixed;
             cboxYemekler.DropDownStyle = ComboBoxStyle.DropDownList;
             cboxYemekler.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -131,7 +132,7 @@
             cboxYemekler.ItemHeight = 30;
             cboxYemekler.Location = new Point(117, 245);
             cboxYemekler.Name = "cboxYemekler";
-            cboxYemekler.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            cboxYemekler.ShadowDecoration.CustomizableEdges = customizableEdges2;
             cboxYemekler.Size = new Size(259, 36);
             cboxYemekler.TabIndex = 76;
             cboxYemekler.SelectedIndexChanged += cboxYemekler_SelectedIndexChanged;
@@ -140,7 +141,7 @@
             // 
             cboxCategories.BackColor = Color.Transparent;
             cboxCategories.BorderRadius = 10;
-            cboxCategories.CustomizableEdges = customizableEdges11;
+            cboxCategories.CustomizableEdges = customizableEdges3;
             cboxCategories.DrawMode = DrawMode.OwnerDrawFixed;
             cboxCategories.DropDownStyle = ComboBoxStyle.DropDownList;
             cboxCategories.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -150,7 +151,7 @@
             cboxCategories.ItemHeight = 30;
             cboxCategories.Location = new Point(117, 190);
             cboxCategories.Name = "cboxCategories";
-            cboxCategories.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            cboxCategories.ShadowDecoration.CustomizableEdges = customizableEdges4;
             cboxCategories.Size = new Size(259, 36);
             cboxCategories.TabIndex = 75;
             cboxCategories.SelectedIndexChanged += cboxCategories_SelectedIndexChanged_1;
@@ -159,11 +160,11 @@
             // 
             nudPorsiyon.BackColor = Color.Transparent;
             nudPorsiyon.BorderRadius = 10;
-            nudPorsiyon.CustomizableEdges = customizableEdges13;
+            nudPorsiyon.CustomizableEdges = customizableEdges5;
             nudPorsiyon.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             nudPorsiyon.Location = new Point(256, 294);
             nudPorsiyon.Name = "nudPorsiyon";
-            nudPorsiyon.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            nudPorsiyon.ShadowDecoration.CustomizableEdges = customizableEdges6;
             nudPorsiyon.Size = new Size(120, 36);
             nudPorsiyon.TabIndex = 77;
             // 
@@ -172,7 +173,7 @@
             btnAdd.BorderColor = Color.White;
             btnAdd.BorderRadius = 10;
             btnAdd.BorderThickness = 2;
-            btnAdd.CustomizableEdges = customizableEdges15;
+            btnAdd.CustomizableEdges = customizableEdges7;
             btnAdd.DisabledState.BorderColor = Color.DarkGray;
             btnAdd.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -181,7 +182,7 @@
             btnAdd.ForeColor = Color.White;
             btnAdd.Location = new Point(179, 347);
             btnAdd.Name = "btnAdd";
-            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnAdd.Size = new Size(136, 40);
             btnAdd.TabIndex = 78;
             btnAdd.Text = "Kaydet";
