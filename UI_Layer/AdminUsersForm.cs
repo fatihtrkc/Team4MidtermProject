@@ -25,7 +25,7 @@ namespace UI_Layer
         UserBL userbl;
         private void AdminUsersForm_Load(object sender, EventArgs e)
         {
-            dtgridPassiveUsers.DataSource = userbl.GetAllByUserSituation().Select(user => new { user.Email, user.ActivePassiveSituation }).ToList();
+            dtgridPassiveUsers.DataSource = userbl.GetAllByUserSituation().Select(user => new { user.Email, user.ActivePassiveSituation }).OrderBy(user => user.Email).ToList();
         }
 
         User user;
