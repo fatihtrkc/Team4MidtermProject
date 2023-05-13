@@ -22,11 +22,8 @@ namespace UI_Layer
         private void PasswordQuestionForm_Load(object sender, EventArgs e)
         {
             dbbl = new();
-            txtName.Enabled = false;
-            txtSurname.Enabled = false;
-            txtCevap.Enabled = false;
-            lblSoru.Visible = false;
-            btnSifre.Visible = false;
+            ChangeButton(false);
+
         }
 
         Team4ContextBL dbbl;
@@ -41,11 +38,7 @@ namespace UI_Layer
                 if (user != null && user.ActivePassiveSituation)
                 {
                     txtEMail.Enabled = false;
-                    btnSifre.Visible = true;
-                    txtName.Enabled = true;
-                    txtSurname.Enabled = true;
-                    txtCevap.Enabled = true;
-                    lblSoru.Visible = true;
+                    ChangeButton(true);
 
 
                     lblSoru.Text = user.SpecificQuestion;
@@ -88,6 +81,26 @@ namespace UI_Layer
                 {
                     user.ActivePassiveSituation = false;
                 }
+            }
+        }
+
+        private void ChangeButton(bool check)
+        {
+            if (check)
+            {
+                btnSifre.Visible = true;
+                txtName.Enabled = true;
+                txtSurname.Enabled = true;
+                txtCevap.Enabled = true;
+                lblSoru.Visible = true;
+            }
+            else
+            {
+                txtName.Enabled = false;
+                txtSurname.Enabled = false;
+                txtCevap.Enabled = false;
+                lblSoru.Visible = false;
+                btnSifre.Visible = false;
             }
         }
     }

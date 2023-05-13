@@ -176,7 +176,7 @@
             txtEMail.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtEMail.ForeColor = Color.Black;
             txtEMail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEMail.Location = new Point(89, 73);
+            txtEMail.Location = new Point(89, 71);
             txtEMail.Name = "txtEMail";
             txtEMail.PasswordChar = '\0';
             txtEMail.PlaceholderText = "Mail Adresi Giriniz";

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            rdWeek = new RadioButton();
-            rdMounth = new RadioButton();
             lviewCategory = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
@@ -38,33 +36,15 @@
             columnHeader4 = new ColumnHeader();
             columnHeader5 = new ColumnHeader();
             columnHeader6 = new ColumnHeader();
+            rdbWeek = new Guna.UI2.WinForms.Guna2RadioButton();
+            rdbMounth = new Guna.UI2.WinForms.Guna2RadioButton();
             SuspendLayout();
-            // 
-            // rdWeek
-            // 
-            rdWeek.Checked = true;
-            rdWeek.Location = new Point(327, 337);
-            rdWeek.Name = "rdWeek";
-            rdWeek.Size = new Size(69, 64);
-            rdWeek.TabIndex = 0;
-            rdWeek.TabStop = true;
-            rdWeek.Text = "Haftalık";
-            rdWeek.UseVisualStyleBackColor = true;
-            rdWeek.CheckedChanged += rdWeek_CheckedChanged;
-            // 
-            // rdMounth
-            // 
-            rdMounth.Location = new Point(439, 337);
-            rdMounth.Name = "rdMounth";
-            rdMounth.Size = new Size(54, 64);
-            rdMounth.TabIndex = 1;
-            rdMounth.Text = "Aylık";
-            rdMounth.UseVisualStyleBackColor = true;
-            rdMounth.CheckedChanged += rdMounth_CheckedChanged;
             // 
             // lviewCategory
             // 
+            lviewCategory.BackColor = Color.CornflowerBlue;
             lviewCategory.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3 });
+            lviewCategory.ForeColor = SystemColors.Window;
             lviewCategory.GridLines = true;
             lviewCategory.Location = new Point(12, 38);
             lviewCategory.Name = "lviewCategory";
@@ -92,7 +72,9 @@
             // 
             // lviewMeal
             // 
+            lviewMeal.BackColor = Color.CornflowerBlue;
             lviewMeal.Columns.AddRange(new ColumnHeader[] { columnHeader4, columnHeader5, columnHeader6 });
+            lviewMeal.ForeColor = SystemColors.Window;
             lviewMeal.GridLines = true;
             lviewMeal.Location = new Point(459, 38);
             lviewMeal.Name = "lviewMeal";
@@ -118,14 +100,54 @@
             columnHeader6.TextAlign = HorizontalAlignment.Center;
             columnHeader6.Width = 130;
             // 
+            // rdbWeek
+            // 
+            rdbWeek.Checked = true;
+            rdbWeek.CheckedState.BorderColor = Color.Black;
+            rdbWeek.CheckedState.BorderThickness = 1;
+            rdbWeek.CheckedState.FillColor = Color.Ivory;
+            rdbWeek.CheckedState.InnerColor = Color.CornflowerBlue;
+            rdbWeek.CheckedState.InnerOffset = -4;
+            rdbWeek.ForeColor = SystemColors.Control;
+            rdbWeek.Location = new Point(342, 347);
+            rdbWeek.Name = "rdbWeek";
+            rdbWeek.Size = new Size(78, 31);
+            rdbWeek.TabIndex = 41;
+            rdbWeek.TabStop = true;
+            rdbWeek.Text = "Haftalık";
+            rdbWeek.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            rdbWeek.UncheckedState.BorderThickness = 2;
+            rdbWeek.UncheckedState.FillColor = Color.Transparent;
+            rdbWeek.UncheckedState.InnerColor = Color.Transparent;
+            // 
+            // rdbMounth
+            // 
+            rdbMounth.CheckedState.BorderColor = Color.Black;
+            rdbMounth.CheckedState.BorderThickness = 1;
+            rdbMounth.CheckedState.FillColor = Color.Ivory;
+            rdbMounth.CheckedState.InnerColor = Color.CornflowerBlue;
+            rdbMounth.CheckedState.InnerOffset = -4;
+            rdbMounth.ForeColor = SystemColors.Control;
+            rdbMounth.Location = new Point(476, 347);
+            rdbMounth.Name = "rdbMounth";
+            rdbMounth.Size = new Size(78, 31);
+            rdbMounth.TabIndex = 42;
+            rdbMounth.Text = "Aylık";
+            rdbMounth.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            rdbMounth.UncheckedState.BorderThickness = 2;
+            rdbMounth.UncheckedState.FillColor = Color.Transparent;
+            rdbMounth.UncheckedState.InnerColor = Color.Transparent;
+            // 
             // ReportForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
+            BackColor = Color.PaleVioletRed;
             ClientSize = new Size(879, 454);
+            Controls.Add(rdbMounth);
+            Controls.Add(rdbWeek);
             Controls.Add(lviewMeal);
-            Controls.Add(rdMounth);
-            Controls.Add(rdWeek);
             Controls.Add(lviewCategory);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ReportForm";
@@ -135,9 +157,6 @@
         }
 
         #endregion
-
-        private RadioButton rdWeek;
-        private RadioButton rdMounth;
         private ListView lviewCategory;
         private ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
@@ -146,5 +165,7 @@
         private ColumnHeader columnHeader4;
         private ColumnHeader columnHeader5;
         private ColumnHeader columnHeader6;
+        private Guna.UI2.WinForms.Guna2RadioButton rdbWeek;
+        private Guna.UI2.WinForms.Guna2RadioButton rdbMounth;
     }
 }
