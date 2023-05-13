@@ -31,7 +31,7 @@ namespace UI_Layer
         private void UserPage_Load(object sender, EventArgs e)
         {
             user = dbbl.UserBL.Find(userId);
-            string name = user.Name.ToLower()+" "+user.Surname.ToLower() ;
+            string name = user.Name.ToLower() + " " + user.Surname.ToLower();
             TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
             lblAdSoyad.Text = "Hoşgeldin " + textInfo.ToTitleCase(name);
             lblBoy.Text = user.Height.ToString();
@@ -41,41 +41,39 @@ namespace UI_Layer
             FillList(DateTime.Today);
             lblTotalCalory.Text = totalCalory.ToString("N2");
         }
-
-
-        private void btnDownDay_Click(object sender, EventArgs e)
+        private void btnToday_Click_1(object sender, EventArgs e)
         {
-            count--;
-            FillList(DateTime.Today.AddDays(count));
+            count = 0;
+            FillList(DateTime.Today);
         }
 
-        private void btnUpDay_Click(object sender, EventArgs e)
+        private void btnUpDay_Click_1(object sender, EventArgs e)
         {
             count++;
             FillList(DateTime.Today.AddDays(count));
         }
 
-        private void btnToday_Click(object sender, EventArgs e)
+        private void btnDownDay_Click_1(object sender, EventArgs e)
         {
-            count = 0;
-            FillList(DateTime.Today);
+            count--;
+            FillList(DateTime.Today.AddDays(count));
+        } 
+        private void chboxAraOgun_CheckedChanged_1(object sender, EventArgs e)
+        {
+            FillList(DateTime.Today.AddDays(count));
         }
+
+        private void chboxAksam_CheckedChanged_1(object sender, EventArgs e)
+        {
+            FillList(DateTime.Today.AddDays(count));
+        }
+
+        private void chboxOgle_CheckedChanged_1(object sender, EventArgs e)
+        {
+            FillList(DateTime.Today.AddDays(count));
+        }
+
         private void chboxKahvalti_CheckedChanged(object sender, EventArgs e)
-        {
-            FillList(DateTime.Today.AddDays(count));
-        }
-
-        private void chboxOgle_CheckedChanged(object sender, EventArgs e)
-        {
-            FillList(DateTime.Today.AddDays(count));
-        }
-
-        private void chboxAksam_CheckedChanged(object sender, EventArgs e)
-        {
-            FillList(DateTime.Today.AddDays(count));
-        }
-
-        private void chboxAraOgun_CheckedChanged(object sender, EventArgs e)
         {
             FillList(DateTime.Today.AddDays(count));
         }
