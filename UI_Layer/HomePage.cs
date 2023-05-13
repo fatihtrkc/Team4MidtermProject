@@ -80,6 +80,21 @@ namespace UI_Layer
 
         private void kisiselBilgiler_Click(object sender, EventArgs e)
         {
+            //YeniFormEkle(new UserInformation(userId));
+        }
+
+        private void kişiselBilgileriGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YeniFormEkle(new UserDetails(userId));
+        }
+
+        private void şifreGünceleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            YeniFormEkle(new NewPassword(userId));
+        }
+
+        private void boyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             YeniFormEkle(new UserInformation(userId));
         }
     }

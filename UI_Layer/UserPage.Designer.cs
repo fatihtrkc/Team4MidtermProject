@@ -53,9 +53,9 @@
             // 
             // lblAdSoyad
             // 
-            lblAdSoyad.Location = new Point(198, 51);
+            lblAdSoyad.Location = new Point(93, 51);
             lblAdSoyad.Name = "lblAdSoyad";
-            lblAdSoyad.Size = new Size(143, 20);
+            lblAdSoyad.Size = new Size(338, 20);
             lblAdSoyad.TabIndex = 67;
             lblAdSoyad.Text = "kullanıcı adı soyadı";
             lblAdSoyad.TextAlign = ContentAlignment.MiddleCenter;

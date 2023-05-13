@@ -31,6 +31,9 @@
             menus = new MenuStrip();
             anaSayfa = new ToolStripMenuItem();
             kisiselBilgiler = new ToolStripMenuItem();
+            boyToolStripMenuItem = new ToolStripMenuItem();
+            kişiselBilgileriGüncelleToolStripMenuItem = new ToolStripMenuItem();
+            şifreGünceleToolStripMenuItem = new ToolStripMenuItem();
             ogunler = new ToolStripMenuItem();
             kahvaltıToolStripMenuItem = new ToolStripMenuItem();
             öğlenToolStripMenuItem = new ToolStripMenuItem();
@@ -61,10 +64,32 @@
             // 
             // kisiselBilgiler
             // 
+            kisiselBilgiler.DropDownItems.AddRange(new ToolStripItem[] { boyToolStripMenuItem, kişiselBilgileriGüncelleToolStripMenuItem, şifreGünceleToolStripMenuItem });
             kisiselBilgiler.Name = "kisiselBilgiler";
             kisiselBilgiler.Size = new Size(90, 20);
             kisiselBilgiler.Text = "Kişisel Bilgiler";
             kisiselBilgiler.Click += kisiselBilgiler_Click;
+            // 
+            // boyToolStripMenuItem
+            // 
+            boyToolStripMenuItem.Name = "boyToolStripMenuItem";
+            boyToolStripMenuItem.Size = new Size(197, 22);
+            boyToolStripMenuItem.Text = "Hedef Güncelle";
+            boyToolStripMenuItem.Click += boyToolStripMenuItem_Click;
+            // 
+            // kişiselBilgileriGüncelleToolStripMenuItem
+            // 
+            kişiselBilgileriGüncelleToolStripMenuItem.Name = "kişiselBilgileriGüncelleToolStripMenuItem";
+            kişiselBilgileriGüncelleToolStripMenuItem.Size = new Size(197, 22);
+            kişiselBilgileriGüncelleToolStripMenuItem.Text = "Kişisel Bilgileri Güncelle";
+            kişiselBilgileriGüncelleToolStripMenuItem.Click += kişiselBilgileriGüncelleToolStripMenuItem_Click;
+            // 
+            // şifreGünceleToolStripMenuItem
+            // 
+            şifreGünceleToolStripMenuItem.Name = "şifreGünceleToolStripMenuItem";
+            şifreGünceleToolStripMenuItem.Size = new Size(197, 22);
+            şifreGünceleToolStripMenuItem.Text = "Şifre Güncele";
+            şifreGünceleToolStripMenuItem.Click += şifreGünceleToolStripMenuItem_Click;
             // 
             // ogunler
             // 
@@ -152,5 +177,8 @@
         private ToolStripMenuItem raporlarToolStripMenuItem;
         private ToolStripMenuItem günlükToolStripMenuItem;
         private ToolStripMenuItem haftalıkToolStripMenuItem;
+        private ToolStripMenuItem boyToolStripMenuItem;
+        private ToolStripMenuItem kişiselBilgileriGüncelleToolStripMenuItem;
+        private ToolStripMenuItem şifreGünceleToolStripMenuItem;
     }
 }
