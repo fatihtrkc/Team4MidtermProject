@@ -16,7 +16,7 @@ namespace EntityLayer.Entities
         public string Name { get; set; }
         public double CaloryPerUnit { get; set; }
 
-
+        public string? Image { get; set; }
         //Relations
         public int CategoryId { get; set; }
         public Category Category { get; set; }
@@ -24,5 +24,7 @@ namespace EntityLayer.Entities
         public UnitType UnitId { get; set; }
         public Unit Unit { get; set; }
         public ICollection<AddedFood> AddedFoods { get; set; }
+
+       
     }
 }

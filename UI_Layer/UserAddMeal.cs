@@ -200,6 +200,7 @@ namespace UI_Layer
             Food foods = db.FoodBL.Find(foodId);
             UnitType unit = foods.UnitId;
             lblUnitType.Text = unit.ToString();
+            FillPictureBox(foodId);
         }
 
         private void lviewMeal_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -217,6 +218,12 @@ namespace UI_Layer
 
 
             }
+        }
+        private void FillPictureBox(int foodId)
+        {
+            Food food = db.FoodBL.Find(foodId);
+            pboxYemekFoto.Image = Image.FromFile(food.Image);
+
         }
     }
 }

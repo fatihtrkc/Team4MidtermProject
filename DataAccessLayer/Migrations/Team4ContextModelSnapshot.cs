@@ -33,7 +33,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<DateTime>("CreationDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 13, 1, 29, 4, 581, DateTimeKind.Local).AddTicks(2486));
+                        .HasDefaultValue(new DateTime(2023, 5, 13, 19, 53, 21, 197, DateTimeKind.Local).AddTicks(7962));
 
                     b.Property<int>("FoodId")
                         .HasColumnType("int");
@@ -92,7 +92,7 @@ namespace DataAccessLayer.Migrations
                         new
                         {
                             Id = 1,
-                            CreationDate = new DateTime(2023, 5, 13, 1, 29, 4, 581, DateTimeKind.Local).AddTicks(4963),
+                            CreationDate = new DateTime(2023, 5, 13, 19, 53, 21, 197, DateTimeKind.Local).AddTicks(8690),
                             Email = "admin@admin.com",
                             Password = "Admin1234"
                         });
@@ -204,7 +204,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<DateTime>("CreationDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2023, 5, 13, 1, 29, 4, 582, DateTimeKind.Local).AddTicks(1346));
+                        .HasDefaultValue(new DateTime(2023, 5, 13, 19, 53, 21, 198, DateTimeKind.Local).AddTicks(913));
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -267,7 +267,7 @@ namespace DataAccessLayer.Migrations
                             Id = 1,
                             ActivePassiveSituation = false,
                             BirthDate = new DateTime(2000, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreationDate = new DateTime(2023, 5, 13, 1, 29, 4, 582, DateTimeKind.Local).AddTicks(1683),
+                            CreationDate = new DateTime(2023, 5, 13, 19, 53, 21, 198, DateTimeKind.Local).AddTicks(979),
                             Email = "ahmetyilmaz@yilmaz.com",
                             Gender = 2,
                             GoalTypeId = 1,
@@ -285,7 +285,7 @@ namespace DataAccessLayer.Migrations
                             Id = 2,
                             ActivePassiveSituation = false,
                             BirthDate = new DateTime(1997, 7, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreationDate = new DateTime(2023, 5, 13, 1, 29, 4, 582, DateTimeKind.Local).AddTicks(1816),
+                            CreationDate = new DateTime(2023, 5, 13, 19, 53, 21, 198, DateTimeKind.Local).AddTicks(1054),
                             Email = "ayşesevgi@sevgi.com",
                             Gender = 1,
                             GoalTypeId = 3,
@@ -297,42 +297,6 @@ namespace DataAccessLayer.Migrations
                             SpecificQuestion = "En Sevdiğin Programlama Dili?",
                             Surname = "SEVGİ",
                             Weight = 55.0
-                        },
-                        new
-                        {
-                            Id = 3,
-                            ActivePassiveSituation = false,
-                            BirthDate = new DateTime(1998, 7, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreationDate = new DateTime(2023, 5, 13, 1, 29, 4, 582, DateTimeKind.Local).AddTicks(1828),
-                            Email = "mehmetotur@bilgeadam.com",
-                            Gender = 2,
-                            GoalTypeId = 3,
-                            Height = 180.0,
-                            LifeStyleId = 3,
-                            Name = "MEHMET",
-                            Password = "AaBb12.,",
-                            QuestionAnswer = "JAVA",
-                            SpecificQuestion = "En Sevdiğin Programlama Dili?",
-                            Surname = "OTUR",
-                            Weight = 85.0
-                        },
-                        new
-                        {
-                            Id = 4,
-                            ActivePassiveSituation = false,
-                            BirthDate = new DateTime(1999, 7, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            CreationDate = new DateTime(2023, 5, 13, 1, 29, 4, 582, DateTimeKind.Local).AddTicks(1833),
-                            Email = "auyaran@bilge.com",
-                            Gender = 2,
-                            GoalTypeId = 3,
-                            Height = 170.0,
-                            LifeStyleId = 4,
-                            Name = "ASLI",
-                            Password = "AaBb12.,",
-                            QuestionAnswer = "JAVA",
-                            SpecificQuestion = "En Sevdiğin Programlama Dili?",
-                            Surname = "UYARAN",
-                            Weight = 65.0
                         });
                 });
 
@@ -423,6 +387,9 @@ namespace DataAccessLayer.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(30)
@@ -445,6 +412,7 @@ namespace DataAccessLayer.Migrations
                             Id = 1,
                             CaloryPerUnit = 75.0,
                             CategoryId = 1,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=1 Yumurta.png",
                             Name = "Haşlanmış Yumurta",
                             UnitId = 3
                         },
@@ -453,6 +421,7 @@ namespace DataAccessLayer.Migrations
                             Id = 2,
                             CaloryPerUnit = 4.2000000000000002,
                             CategoryId = 1,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=2 siyah zeytin.png",
                             Name = "Siyah Zeytin",
                             UnitId = 3
                         },
@@ -461,6 +430,7 @@ namespace DataAccessLayer.Migrations
                             Id = 3,
                             CaloryPerUnit = 6.0,
                             CategoryId = 1,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=3 yeşil zeytin.jpg",
                             Name = "Yeşil Zeytin",
                             UnitId = 3
                         },
@@ -469,6 +439,7 @@ namespace DataAccessLayer.Migrations
                             Id = 4,
                             CaloryPerUnit = 2.2999999999999998,
                             CategoryId = 1,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=4 çilek reçeli2.jpg",
                             Name = "Çilek Reçeli",
                             UnitId = 1
                         },
@@ -477,6 +448,7 @@ namespace DataAccessLayer.Migrations
                             Id = 5,
                             CaloryPerUnit = 2.7000000000000002,
                             CategoryId = 1,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=5 vişne reçeli.png",
                             Name = "Vişne Reçeli",
                             UnitId = 1
                         },
@@ -485,6 +457,7 @@ namespace DataAccessLayer.Migrations
                             Id = 6,
                             CaloryPerUnit = 3.5,
                             CategoryId = 1,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=6 pekmez.jpg",
                             Name = "Pekmez",
                             UnitId = 1
                         },
@@ -493,6 +466,7 @@ namespace DataAccessLayer.Migrations
                             Id = 7,
                             CaloryPerUnit = 6.4000000000000004,
                             CategoryId = 1,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=7 tahin.png",
                             Name = "Tahin",
                             UnitId = 1
                         },
@@ -501,6 +475,7 @@ namespace DataAccessLayer.Migrations
                             Id = 8,
                             CaloryPerUnit = 2.7000000000000002,
                             CategoryId = 2,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=8 beyaz peynir.png",
                             Name = "Beyaz Peynir",
                             UnitId = 1
                         },
@@ -509,6 +484,7 @@ namespace DataAccessLayer.Migrations
                             Id = 9,
                             CaloryPerUnit = 3.5,
                             CategoryId = 2,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=9 kasar peynir.png",
                             Name = "Kaşar Peyniri",
                             UnitId = 1
                         },
@@ -517,6 +493,7 @@ namespace DataAccessLayer.Migrations
                             Id = 10,
                             CaloryPerUnit = 500.0,
                             CategoryId = 2,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=10 süt.jpg",
                             Name = "Süt",
                             UnitId = 2
                         },
@@ -525,6 +502,7 @@ namespace DataAccessLayer.Migrations
                             Id = 11,
                             CaloryPerUnit = 0.72999999999999998,
                             CategoryId = 2,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=11 yoğurt.png",
                             Name = "Yoğurt",
                             UnitId = 1
                         },
@@ -533,6 +511,7 @@ namespace DataAccessLayer.Migrations
                             Id = 12,
                             CaloryPerUnit = 23.0,
                             CategoryId = 3,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=12 domates.jpeg",
                             Name = "Domates",
                             UnitId = 3
                         },
@@ -541,6 +520,7 @@ namespace DataAccessLayer.Migrations
                             Id = 13,
                             CaloryPerUnit = 14.0,
                             CategoryId = 3,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=13 salatalık.jpg",
                             Name = "Salatalık",
                             UnitId = 3
                         },
@@ -549,6 +529,7 @@ namespace DataAccessLayer.Migrations
                             Id = 14,
                             CaloryPerUnit = 20.0,
                             CategoryId = 3,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=14 biber.jpg",
                             Name = "Carliston Biber",
                             UnitId = 3
                         },
@@ -557,6 +538,7 @@ namespace DataAccessLayer.Migrations
                             Id = 15,
                             CaloryPerUnit = 30.0,
                             CategoryId = 3,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=15 köy biberi.png",
                             Name = "Köy Biberi",
                             UnitId = 3
                         },
@@ -565,6 +547,7 @@ namespace DataAccessLayer.Migrations
                             Id = 16,
                             CaloryPerUnit = 25.0,
                             CategoryId = 3,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=16 kapya biber.png",
                             Name = "Kapya Biberi",
                             UnitId = 3
                         },
@@ -573,6 +556,7 @@ namespace DataAccessLayer.Migrations
                             Id = 17,
                             CaloryPerUnit = 45.0,
                             CategoryId = 3,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=17 kırmızı elma.jpg",
                             Name = "Kırmızı Elma",
                             UnitId = 3
                         },
@@ -581,6 +565,7 @@ namespace DataAccessLayer.Migrations
                             Id = 18,
                             CaloryPerUnit = 50.0,
                             CategoryId = 3,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=18 yeşil elma.jpg",
                             Name = "Yeşil Elma",
                             UnitId = 3
                         },
@@ -589,6 +574,7 @@ namespace DataAccessLayer.Migrations
                             Id = 19,
                             CaloryPerUnit = 47.0,
                             CategoryId = 3,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=19 portakal.jpg",
                             Name = "Portakal",
                             UnitId = 3
                         },
@@ -597,6 +583,7 @@ namespace DataAccessLayer.Migrations
                             Id = 20,
                             CaloryPerUnit = 40.0,
                             CategoryId = 3,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=20 mandalina.jpg",
                             Name = "Mandalina",
                             UnitId = 3
                         },
@@ -605,6 +592,7 @@ namespace DataAccessLayer.Migrations
                             Id = 21,
                             CaloryPerUnit = 1.3999999999999999,
                             CategoryId = 3,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=21 kiraz.jpg",
                             Name = "Kiraz",
                             UnitId = 3
                         },
@@ -613,6 +601,7 @@ namespace DataAccessLayer.Migrations
                             Id = 22,
                             CaloryPerUnit = 45.0,
                             CategoryId = 3,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=22 karpuz.jpg",
                             Name = "Karpuz",
                             UnitId = 4
                         },
@@ -621,6 +610,7 @@ namespace DataAccessLayer.Migrations
                             Id = 23,
                             CaloryPerUnit = 150.0,
                             CategoryId = 4,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=23 tarhana çorbası.png",
                             Name = "Tarhana Çorbası",
                             UnitId = 4
                         },
@@ -629,6 +619,7 @@ namespace DataAccessLayer.Migrations
                             Id = 24,
                             CaloryPerUnit = 140.0,
                             CategoryId = 4,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=24 mercimek çorbası.png",
                             Name = "Mercimek Çorbası",
                             UnitId = 4
                         },
@@ -637,6 +628,7 @@ namespace DataAccessLayer.Migrations
                             Id = 25,
                             CaloryPerUnit = 95.0,
                             CategoryId = 4,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=25 ezogelin çorbası.png",
                             Name = "Ezogelin Çorbası",
                             UnitId = 4
                         },
@@ -645,6 +637,7 @@ namespace DataAccessLayer.Migrations
                             Id = 26,
                             CaloryPerUnit = 132.0,
                             CategoryId = 4,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=26 tavuk çorbası.png",
                             Name = "Tavuk Çorbası",
                             UnitId = 4
                         },
@@ -653,6 +646,7 @@ namespace DataAccessLayer.Migrations
                             Id = 27,
                             CaloryPerUnit = 200.0,
                             CategoryId = 4,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=27 pirinç pilavı.png",
                             Name = "Pirinç Pilavı",
                             UnitId = 4
                         },
@@ -661,6 +655,7 @@ namespace DataAccessLayer.Migrations
                             Id = 28,
                             CaloryPerUnit = 240.0,
                             CategoryId = 4,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=28 bulgur pilavı.png",
                             Name = "Bulgur Pilavı",
                             UnitId = 4
                         },
@@ -669,6 +664,7 @@ namespace DataAccessLayer.Migrations
                             Id = 29,
                             CaloryPerUnit = 265.0,
                             CategoryId = 4,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=29 kuru fasülye.png",
                             Name = "Kuru Fasülye",
                             UnitId = 4
                         },
@@ -677,6 +673,7 @@ namespace DataAccessLayer.Migrations
                             Id = 30,
                             CaloryPerUnit = 160.0,
                             CategoryId = 4,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=30 kuru fasülye.png",
                             Name = "Nohut",
                             UnitId = 4
                         },
@@ -685,6 +682,7 @@ namespace DataAccessLayer.Migrations
                             Id = 31,
                             CaloryPerUnit = 80.0,
                             CategoryId = 4,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=31 pırasa yemeği.png",
                             Name = "Pırasa",
                             UnitId = 4
                         },
@@ -693,6 +691,7 @@ namespace DataAccessLayer.Migrations
                             Id = 32,
                             CaloryPerUnit = 40.0,
                             CategoryId = 4,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=32 brokoli yemeği.png",
                             Name = "Brokoli",
                             UnitId = 4
                         },
@@ -701,6 +700,7 @@ namespace DataAccessLayer.Migrations
                             Id = 33,
                             CaloryPerUnit = 250.0,
                             CategoryId = 5,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=33 cağ kebap.png",
                             Name = "Cağ Kebap",
                             UnitId = 3
                         },
@@ -709,6 +709,7 @@ namespace DataAccessLayer.Migrations
                             Id = 34,
                             CaloryPerUnit = 400.0,
                             CategoryId = 5,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=34 adana kebap.png",
                             Name = "Adana Kebap",
                             UnitId = 4
                         },
@@ -717,6 +718,7 @@ namespace DataAccessLayer.Migrations
                             Id = 35,
                             CaloryPerUnit = 380.0,
                             CategoryId = 5,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=35 urfa kebap.png",
                             Name = "Urfa Kebap",
                             UnitId = 4
                         },
@@ -725,6 +727,7 @@ namespace DataAccessLayer.Migrations
                             Id = 36,
                             CaloryPerUnit = 500.0,
                             CategoryId = 5,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=36 şiş köfte.png",
                             Name = "Şiş Köfte",
                             UnitId = 4
                         },
@@ -733,6 +736,7 @@ namespace DataAccessLayer.Migrations
                             Id = 37,
                             CaloryPerUnit = 280.0,
                             CategoryId = 5,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=37 antrikot.jpg",
                             Name = "Antrikot",
                             UnitId = 4
                         },
@@ -741,6 +745,7 @@ namespace DataAccessLayer.Migrations
                             Id = 38,
                             CaloryPerUnit = 300.0,
                             CategoryId = 5,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=38 biftek.jpeg",
                             Name = "Biftek",
                             UnitId = 4
                         },
@@ -749,6 +754,7 @@ namespace DataAccessLayer.Migrations
                             Id = 39,
                             CaloryPerUnit = 450.0,
                             CategoryId = 5,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=39 pirzola.png",
                             Name = "Pirzola",
                             UnitId = 4
                         },
@@ -757,6 +763,7 @@ namespace DataAccessLayer.Migrations
                             Id = 40,
                             CaloryPerUnit = 351.0,
                             CategoryId = 6,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=40 hamburger.png",
                             Name = "Hamburger",
                             UnitId = 4
                         },
@@ -765,6 +772,7 @@ namespace DataAccessLayer.Migrations
                             Id = 41,
                             CaloryPerUnit = 265.0,
                             CategoryId = 6,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=41 pizza.png",
                             Name = "Orta Boy Pizza",
                             UnitId = 4
                         },
@@ -773,6 +781,7 @@ namespace DataAccessLayer.Migrations
                             Id = 42,
                             CaloryPerUnit = 355.0,
                             CategoryId = 6,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=42 patates kızartması.png",
                             Name = "Patates Kızartması",
                             UnitId = 4
                         },
@@ -781,6 +790,7 @@ namespace DataAccessLayer.Migrations
                             Id = 43,
                             CaloryPerUnit = 272.0,
                             CategoryId = 6,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=43 tavuk döner.png",
                             Name = "Tavuk Döner",
                             UnitId = 4
                         },
@@ -789,6 +799,7 @@ namespace DataAccessLayer.Migrations
                             Id = 44,
                             CaloryPerUnit = 391.0,
                             CategoryId = 6,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=44 et döner.png",
                             Name = "Et Döner",
                             UnitId = 4
                         },
@@ -797,6 +808,7 @@ namespace DataAccessLayer.Migrations
                             Id = 45,
                             CaloryPerUnit = 15.0,
                             CategoryId = 6,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=45 midye.png",
                             Name = "Midye",
                             UnitId = 3
                         },
@@ -805,6 +817,7 @@ namespace DataAccessLayer.Migrations
                             Id = 46,
                             CaloryPerUnit = 202.0,
                             CategoryId = 7,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=46 kazandibi.png",
                             Name = "Kazan Dibi",
                             UnitId = 4
                         },
@@ -813,6 +826,7 @@ namespace DataAccessLayer.Migrations
                             Id = 47,
                             CaloryPerUnit = 293.0,
                             CategoryId = 7,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=47 sütlaç.png",
                             Name = "Sütlaç",
                             UnitId = 4
                         },
@@ -821,6 +835,7 @@ namespace DataAccessLayer.Migrations
                             Id = 48,
                             CaloryPerUnit = 288.0,
                             CategoryId = 7,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=48 baklava.png",
                             Name = "Baklava",
                             UnitId = 4
                         },
@@ -829,6 +844,7 @@ namespace DataAccessLayer.Migrations
                             Id = 49,
                             CaloryPerUnit = 76.0,
                             CategoryId = 8,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=49 beyaz ekmek.png",
                             Name = "Beyaz Ekmek",
                             UnitId = 4
                         },
@@ -837,6 +853,7 @@ namespace DataAccessLayer.Migrations
                             Id = 50,
                             CaloryPerUnit = 220.0,
                             CategoryId = 8,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=50 simit.png",
                             Name = "Simit",
                             UnitId = 4
                         },
@@ -845,6 +862,7 @@ namespace DataAccessLayer.Migrations
                             Id = 51,
                             CaloryPerUnit = 288.0,
                             CategoryId = 8,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=51 poğaça.jpg",
                             Name = "Poğaça",
                             UnitId = 4
                         },
@@ -853,6 +871,7 @@ namespace DataAccessLayer.Migrations
                             Id = 52,
                             CaloryPerUnit = 6.2999999999999998,
                             CategoryId = 9,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=52 Kuru Meyve.png",
                             Name = "Kuru Meyve",
                             UnitId = 1
                         },
@@ -861,6 +880,7 @@ namespace DataAccessLayer.Migrations
                             Id = 53,
                             CaloryPerUnit = 3.6000000000000001,
                             CategoryId = 9,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=53 Leblebi.png",
                             Name = "Leblebi",
                             UnitId = 1
                         },
@@ -869,6 +889,7 @@ namespace DataAccessLayer.Migrations
                             Id = 54,
                             CaloryPerUnit = 5.7999999999999998,
                             CategoryId = 9,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=54 Karışık Kuruyemiş.png",
                             Name = "Karışık Kureyemiş",
                             UnitId = 1
                         },
@@ -877,6 +898,7 @@ namespace DataAccessLayer.Migrations
                             Id = 55,
                             CaloryPerUnit = 484.0,
                             CategoryId = 10,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=55 Kola.png",
                             Name = "Cola",
                             UnitId = 2
                         },
@@ -885,6 +907,7 @@ namespace DataAccessLayer.Migrations
                             Id = 56,
                             CaloryPerUnit = 360.0,
                             CategoryId = 10,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=56 Ayran.png",
                             Name = "Ayran",
                             UnitId = 2
                         },
@@ -893,6 +916,7 @@ namespace DataAccessLayer.Migrations
                             Id = 57,
                             CaloryPerUnit = 133.0,
                             CategoryId = 10,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=57 enerji içeceği.png",
                             Name = "Enerji İçeceği",
                             UnitId = 3
                         },
@@ -901,6 +925,7 @@ namespace DataAccessLayer.Migrations
                             Id = 58,
                             CaloryPerUnit = 185.0,
                             CategoryId = 10,
+                            Image = "C:\\Users\\nskar\\source\\repos\\Team4MidtermProject\\DataAccessLayer\\Pictures\\Id=58 bira.png",
                             Name = "Bira",
                             UnitId = 3
                         });
