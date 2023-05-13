@@ -80,7 +80,7 @@ namespace UI_Layer
 
         private void kisiselBilgiler_Click(object sender, EventArgs e)
         {
-            YeniFormEkle(new UserInformationForm(userId));
+            YeniFormEkle(new UserInformation(userId));
         }
     }
 }
