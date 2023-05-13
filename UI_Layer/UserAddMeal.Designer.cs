@@ -47,9 +47,9 @@
             columnHeader3 = new ColumnHeader();
             cboxYemekler = new Guna.UI2.WinForms.Guna2ComboBox();
             cboxCategories = new Guna.UI2.WinForms.Guna2ComboBox();
-            nudPorsiyon = new Guna.UI2.WinForms.Guna2NumericUpDown();
             btnAdd = new Guna.UI2.WinForms.Guna2Button();
             lblMeal = new Label();
+            nudPorsiyon = new Guna.UI2.WinForms.Guna2NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)pboxYemekFoto).BeginInit();
             Sil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudPorsiyon).BeginInit();
@@ -71,7 +71,6 @@
             pboxYemekFoto.Location = new Point(115, 21);
             pboxYemekFoto.Name = "pboxYemekFoto";
             pboxYemekFoto.Size = new Size(261, 154);
-            pboxYemekFoto.SizeMode = PictureBoxSizeMode.StretchImage;
             pboxYemekFoto.TabIndex = 64;
             pboxYemekFoto.TabStop = false;
             // 
@@ -156,24 +155,12 @@
             cboxCategories.TabIndex = 75;
             cboxCategories.SelectedIndexChanged += cboxCategories_SelectedIndexChanged_1;
             // 
-            // nudPorsiyon
-            // 
-            nudPorsiyon.BackColor = Color.Transparent;
-            nudPorsiyon.BorderRadius = 10;
-            nudPorsiyon.CustomizableEdges = customizableEdges5;
-            nudPorsiyon.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            nudPorsiyon.Location = new Point(256, 294);
-            nudPorsiyon.Name = "nudPorsiyon";
-            nudPorsiyon.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            nudPorsiyon.Size = new Size(120, 36);
-            nudPorsiyon.TabIndex = 77;
-            // 
             // btnAdd
             // 
             btnAdd.BorderColor = Color.White;
             btnAdd.BorderRadius = 10;
             btnAdd.BorderThickness = 2;
-            btnAdd.CustomizableEdges = customizableEdges7;
+            btnAdd.CustomizableEdges = customizableEdges5;
             btnAdd.DisabledState.BorderColor = Color.DarkGray;
             btnAdd.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -182,7 +169,7 @@
             btnAdd.ForeColor = Color.White;
             btnAdd.Location = new Point(179, 347);
             btnAdd.Name = "btnAdd";
-            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnAdd.Size = new Size(136, 40);
             btnAdd.TabIndex = 78;
             btnAdd.Text = "Kaydet";
@@ -199,15 +186,27 @@
             lblMeal.Text = "Öğün";
             lblMeal.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // nudPorsiyon
+            // 
+            nudPorsiyon.BackColor = Color.Transparent;
+            nudPorsiyon.BorderRadius = 10;
+            nudPorsiyon.CustomizableEdges = customizableEdges7;
+            nudPorsiyon.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            nudPorsiyon.Location = new Point(256, 294);
+            nudPorsiyon.Name = "nudPorsiyon";
+            nudPorsiyon.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            nudPorsiyon.Size = new Size(120, 36);
+            nudPorsiyon.TabIndex = 80;
+            // 
             // UserAddMeal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.PaleVioletRed;
             ClientSize = new Size(487, 638);
+            Controls.Add(nudPorsiyon);
             Controls.Add(lblMeal);
             Controls.Add(btnAdd);
-            Controls.Add(nudPorsiyon);
             Controls.Add(cboxYemekler);
             Controls.Add(cboxCategories);
             Controls.Add(lviewMeal);
@@ -235,8 +234,8 @@
         private ColumnHeader columnHeader3;
         private Guna.UI2.WinForms.Guna2ComboBox cboxYemekler;
         private Guna.UI2.WinForms.Guna2ComboBox cboxCategories;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nudPorsiyon;
         private Guna.UI2.WinForms.Guna2Button btnAdd;
         private Label lblMeal;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudPorsiyon;
     }
 }
