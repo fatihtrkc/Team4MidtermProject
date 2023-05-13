@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +31,9 @@ namespace UI_Layer
         private void UserPage_Load(object sender, EventArgs e)
         {
             user = dbbl.UserBL.Find(userId);
-            lblAdSoyad.Text = "Hoşgeldin " + user.Name + " " + user.Surname;
+            string name = user.Name.ToLower()+" "+user.Surname.ToLower() ;
+            TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
+            lblAdSoyad.Text = "Hoşgeldin " + textInfo.ToTitleCase(name);
             lblBoy.Text = user.Height.ToString();
             lblKilo.Text = user.Weight.ToString();
             TargetCalory(user);
@@ -163,13 +166,13 @@ namespace UI_Layer
             double goal;
             if (user.Gender == Gender.Male)
             {
-                bmr = 66 + (13.75 * user.Weight) + (5 * user.Height * 100) - (6.75 * (DateTime.Now.Year - user.BirthDate.Year));
+                bmr = 66 + (13.75 * user.Weight) + (5 * user.Height) - (6.75 * (DateTime.Now.Year - user.BirthDate.Year));
                 activity = ActivityFactor(user, bmr);
                 goal = GoalFactor(user, activity);
             }
             else
             {
-                bmr = 655 + (9.56 * user.Weight) + (1.85 * user.Height * 100) - (4.68 * (DateTime.Now.Year - user.BirthDate.Year));
+                bmr = 655 + (9.56 * user.Weight) + (1.85 * user.Height) - (4.68 * (DateTime.Now.Year - user.BirthDate.Year));
                 activity = ActivityFactor(user, bmr);
                 goal = GoalFactor(user, activity);
             }

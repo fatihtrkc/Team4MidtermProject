@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            llabelUpdPass = new LinkLabel();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblWelcome = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -49,22 +48,9 @@
             cboxLifeStyle = new Guna.UI2.WinForms.Guna2ComboBox();
             nudWeight = new Guna.UI2.WinForms.Guna2NumericUpDown();
             nudHeight = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            llabelUserDetails = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)nudWeight).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudHeight).BeginInit();
             SuspendLayout();
-            // 
-            // llabelUpdPass
-            // 
-            llabelUpdPass.AutoSize = true;
-            llabelUpdPass.LinkColor = Color.White;
-            llabelUpdPass.Location = new Point(353, 541);
-            llabelUpdPass.Name = "llabelUpdPass";
-            llabelUpdPass.Size = new Size(79, 15);
-            llabelUpdPass.TabIndex = 83;
-            llabelUpdPass.TabStop = true;
-            llabelUpdPass.Text = "Şifre Güncelle";
-            llabelUpdPass.LinkClicked += llabelUpdPass_LinkClicked;
             // 
             // lblWelcome
             // 
@@ -102,7 +88,7 @@
             // btnUpdate
             // 
             btnUpdate.BorderRadius = 10;
-            btnUpdate.CustomizableEdges = customizableEdges1;
+            btnUpdate.CustomizableEdges = customizableEdges11;
             btnUpdate.DisabledState.BorderColor = Color.DarkGray;
             btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray;
             btnUpdate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -111,7 +97,7 @@
             btnUpdate.ForeColor = Color.White;
             btnUpdate.Location = new Point(160, 418);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnUpdate.Size = new Size(187, 45);
             btnUpdate.TabIndex = 78;
             btnUpdate.Text = "Güncelle";
@@ -143,7 +129,7 @@
             // 
             cboxGoal.BackColor = Color.Transparent;
             cboxGoal.BorderRadius = 10;
-            cboxGoal.CustomizableEdges = customizableEdges3;
+            cboxGoal.CustomizableEdges = customizableEdges13;
             cboxGoal.DrawMode = DrawMode.OwnerDrawFixed;
             cboxGoal.DropDownStyle = ComboBoxStyle.DropDownList;
             cboxGoal.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -153,7 +139,7 @@
             cboxGoal.ItemHeight = 30;
             cboxGoal.Location = new Point(69, 347);
             cboxGoal.Name = "cboxGoal";
-            cboxGoal.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            cboxGoal.ShadowDecoration.CustomizableEdges = customizableEdges14;
             cboxGoal.Size = new Size(363, 36);
             cboxGoal.TabIndex = 75;
             // 
@@ -161,7 +147,7 @@
             // 
             cboxLifeStyle.BackColor = Color.Transparent;
             cboxLifeStyle.BorderRadius = 10;
-            cboxLifeStyle.CustomizableEdges = customizableEdges5;
+            cboxLifeStyle.CustomizableEdges = customizableEdges15;
             cboxLifeStyle.DrawMode = DrawMode.OwnerDrawFixed;
             cboxLifeStyle.DropDownStyle = ComboBoxStyle.DropDownList;
             cboxLifeStyle.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -171,7 +157,7 @@
             cboxLifeStyle.ItemHeight = 30;
             cboxLifeStyle.Location = new Point(70, 255);
             cboxLifeStyle.Name = "cboxLifeStyle";
-            cboxLifeStyle.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            cboxLifeStyle.ShadowDecoration.CustomizableEdges = customizableEdges16;
             cboxLifeStyle.Size = new Size(363, 36);
             cboxLifeStyle.TabIndex = 74;
             // 
@@ -179,13 +165,13 @@
             // 
             nudWeight.BackColor = Color.Transparent;
             nudWeight.BorderRadius = 10;
-            nudWeight.CustomizableEdges = customizableEdges7;
+            nudWeight.CustomizableEdges = customizableEdges17;
             nudWeight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             nudWeight.Location = new Point(269, 152);
             nudWeight.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
             nudWeight.Minimum = new decimal(new int[] { 35, 0, 0, 0 });
             nudWeight.Name = "nudWeight";
-            nudWeight.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            nudWeight.ShadowDecoration.CustomizableEdges = customizableEdges18;
             nudWeight.Size = new Size(100, 36);
             nudWeight.TabIndex = 73;
             nudWeight.Value = new decimal(new int[] { 35, 0, 0, 0 });
@@ -194,37 +180,23 @@
             // 
             nudHeight.BackColor = Color.Transparent;
             nudHeight.BorderRadius = 10;
-            nudHeight.CustomizableEdges = customizableEdges9;
+            nudHeight.CustomizableEdges = customizableEdges19;
             nudHeight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             nudHeight.Location = new Point(269, 93);
             nudHeight.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
             nudHeight.Minimum = new decimal(new int[] { 130, 0, 0, 0 });
             nudHeight.Name = "nudHeight";
-            nudHeight.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            nudHeight.ShadowDecoration.CustomizableEdges = customizableEdges20;
             nudHeight.Size = new Size(100, 36);
             nudHeight.TabIndex = 72;
             nudHeight.Value = new decimal(new int[] { 130, 0, 0, 0 });
-            // 
-            // llabelUserDetails
-            // 
-            llabelUserDetails.LinkColor = Color.White;
-            llabelUserDetails.Location = new Point(71, 527);
-            llabelUserDetails.Name = "llabelUserDetails";
-            llabelUserDetails.Size = new Size(86, 43);
-            llabelUserDetails.TabIndex = 84;
-            llabelUserDetails.TabStop = true;
-            llabelUserDetails.Text = "Kişisel Bilgileri Güncelle";
-            llabelUserDetails.TextAlign = ContentAlignment.MiddleCenter;
-            llabelUserDetails.LinkClicked += llabelUserDetails_LinkClicked;
             // 
             // UserInformation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.PaleVioletRed;
-            ClientSize = new Size(481, 635);
-            Controls.Add(llabelUserDetails);
-            Controls.Add(llabelUpdPass);
+            ClientSize = new Size(481, 545);
             Controls.Add(lblWelcome);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -243,12 +215,9 @@
             ((System.ComponentModel.ISupportInitialize)nudWeight).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudHeight).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private LinkLabel llabelUpdPass;
         private Label lblWelcome;
         private Label label4;
         private Label label3;
@@ -259,6 +228,5 @@
         private Guna.UI2.WinForms.Guna2ComboBox cboxLifeStyle;
         private Guna.UI2.WinForms.Guna2NumericUpDown nudWeight;
         private Guna.UI2.WinForms.Guna2NumericUpDown nudHeight;
-        private LinkLabel llabelUserDetails;
     }
 }
