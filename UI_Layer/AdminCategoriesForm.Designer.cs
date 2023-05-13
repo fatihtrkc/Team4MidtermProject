@@ -98,7 +98,7 @@
             dtgridCategory.BorderStyle = BorderStyle.Fixed3D;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.White;
-            dataGridViewCellStyle2.Font = new Font("Comic Sans MS", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = Color.LightCoral;
             dataGridViewCellStyle2.SelectionBackColor = Color.SkyBlue;
             dataGridViewCellStyle2.SelectionForeColor = Color.White;
@@ -118,7 +118,7 @@
             dtgridCategory.Name = "dtgridCategory";
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = Color.White;
-            dataGridViewCellStyle4.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.Font = new Font("Comic Sans MS", 10F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle4.ForeColor = Color.LightCoral;
             dataGridViewCellStyle4.SelectionBackColor = Color.SkyBlue;
             dataGridViewCellStyle4.SelectionForeColor = Color.White;
