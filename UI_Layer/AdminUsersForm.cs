@@ -26,6 +26,7 @@ namespace UI_Layer
         private void AdminUsersForm_Load(object sender, EventArgs e)
         {
             dtgridPassiveUsers.DataSource = userbl.GetAllByUserSituation().Select(user => new { user.Email, user.ActivePassiveSituation }).OrderBy(user => user.Email).ToList();
+            Helper.WriteSelectClear(this.Controls);
         }
 
         User user;
@@ -39,15 +40,15 @@ namespace UI_Layer
                 if (user is not null)
                 {
                     txtUsername.Text = user.Email;
-                    txtActivePassiveSituation.Text = user.ActivePassiveSituation.ToString();
+                    btnUpdate.Enabled = true;
                 }
             }
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (user == userbl.FindByEmail(user.Email))
+            if (user == userbl.FindByEmail(user.Email) && dtgridPassiveUsers.SelectedRows.Count > 0)
             {
-                DialogResult dr = MessageBox.Show($"{user.Email} üyesinin pasif olan durumunu aktif olarak değiştirme işlemini onaylıyor musunuz?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                DialogResult dr = MessageBox.Show($"   {user.Email} üyesinin pasif olan durumunu aktif olarak değiştirme işlemini onaylıyor musunuz?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                 if (dr == DialogResult.OK)
                 {
                     user.ActivePassiveSituation = true;
@@ -55,10 +56,12 @@ namespace UI_Layer
                     bool IsUpdated = userbl.Update(user);
                     if (IsUpdated)
                     {
-                        MessageBox.Show($"{user.Email} üyesinin durumunu {user.ActivePassiveSituation} olarak güncelleme işlemi başarılı !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"   {user.Email} üyesinin durumunu aktif olarak güncelleme işlemi başarılı !", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         dtgridPassiveUsers.DataSource = userbl.GetAllByUserSituation().Select(user => new { user.Email, user.ActivePassiveSituation }).ToList();
                         Helper.WriteSelectClear(this.Controls);
+                        txtUsername.Clear();
+                        btnUpdate.Enabled = false;
                     }
                     else MessageBox.Show("Güncelleme işlemi tamamlanamadı, lütfen daha sonra tekrar deneyiniz !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -69,6 +72,10 @@ namespace UI_Layer
         private void AdminUsersForm_Click(object sender, EventArgs e)
         {
             Helper.WriteSelectClear(this.Controls);
+            txtUsername.Clear();
+            btnUpdate.Enabled = false;
+            user = null;
+            email = null;
         }
         private void pctrbxExit_Click(object sender, EventArgs e)
         {
@@ -78,9 +85,8 @@ namespace UI_Layer
         {
             pctrbxExit.BackColor = Color.LightCoral;
         }
-        private void pctrbxExit_ClientSizeChanged(object sender, EventArgs e)
+        private void pctrbxExit_MouseLeave(object sender, EventArgs e)
         {
-
             pctrbxExit.BackColor = default;
         }
     }
