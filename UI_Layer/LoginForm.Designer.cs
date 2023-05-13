@@ -50,10 +50,10 @@
             // 
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Control;
-            label1.Location = new Point(5, 66);
+            label1.Location = new Point(47, 135);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(403, 146);
+            label1.Size = new Size(316, 180);
             label1.TabIndex = 22;
             label1.Text = resources.GetString("label1.Text");
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -71,7 +71,7 @@
             txtPassword.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtPassword.ForeColor = Color.Black;
             txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPassword.Location = new Point(105, 351);
+            txtPassword.Location = new Point(105, 437);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '\0';
             txtPassword.PlaceholderText = "Şifrenizi Giriniz";
@@ -93,7 +93,7 @@
             txtMail.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtMail.ForeColor = Color.Black;
             txtMail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMail.Location = new Point(105, 252);
+            txtMail.Location = new Point(105, 338);
             txtMail.Name = "txtMail";
             txtMail.PasswordChar = '\0';
             txtMail.PlaceholderText = "Mail Adresi Giriniz..";
@@ -104,6 +104,9 @@
             // 
             // btnGiris
             // 
+            btnGiris.BorderColor = SystemColors.Window;
+            btnGiris.BorderRadius = 10;
+            btnGiris.BorderThickness = 2;
             btnGiris.CustomizableEdges = customizableEdges5;
             btnGiris.DisabledState.BorderColor = Color.DarkGray;
             btnGiris.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -112,7 +115,7 @@
             btnGiris.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnGiris.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnGiris.ForeColor = Color.White;
-            btnGiris.Location = new Point(105, 428);
+            btnGiris.Location = new Point(105, 514);
             btnGiris.Name = "btnGiris";
             btnGiris.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnGiris.Size = new Size(195, 45);
@@ -124,7 +127,7 @@
             // 
             lblKayit.AutoSize = true;
             lblKayit.LinkColor = Color.White;
-            lblKayit.Location = new Point(47, 511);
+            lblKayit.Location = new Point(47, 597);
             lblKayit.Name = "lblKayit";
             lblKayit.Size = new Size(48, 15);
             lblKayit.TabIndex = 25;
@@ -136,7 +139,7 @@
             // 
             lblSifre.AutoSize = true;
             lblSifre.LinkColor = Color.White;
-            lblSifre.Location = new Point(268, 511);
+            lblSifre.Location = new Point(268, 597);
             lblSifre.Name = "lblSifre";
             lblSifre.Size = new Size(95, 15);
             lblSifre.TabIndex = 24;
@@ -151,7 +154,7 @@
             ToggleSwitch.CheckedState.InnerBorderColor = Color.White;
             ToggleSwitch.CheckedState.InnerColor = Color.White;
             ToggleSwitch.CustomizableEdges = customizableEdges7;
-            ToggleSwitch.Location = new Point(188, 393);
+            ToggleSwitch.Location = new Point(188, 479);
             ToggleSwitch.Name = "ToggleSwitch";
             ToggleSwitch.ShadowDecoration.CustomizableEdges = customizableEdges8;
             ToggleSwitch.Size = new Size(35, 25);
@@ -167,7 +170,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.PaleVioletRed;
-            ClientSize = new Size(412, 580);
+            ClientSize = new Size(412, 656);
             Controls.Add(ToggleSwitch);
             Controls.Add(lblKayit);
             Controls.Add(lblSifre);

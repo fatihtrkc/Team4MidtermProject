@@ -31,7 +31,7 @@ namespace UI_Layer
         }
         private void FillCategoriesList()
         {
-            if (rdWeek.Checked)
+            if (rdbWeek.Checked)
             {
                 lviewCategory.Items.Clear();
                 List<Category> allCategories = db.CategoryBL.GetAll();
@@ -45,7 +45,7 @@ namespace UI_Layer
                     lviewCategory.Items.Add(lv);
                 }
             }
-            else if (rdMounth.Checked)
+            else if (rdbMounth.Checked)
             {
                 lviewCategory.Items.Clear();
                 List<Category> allCategories = db.CategoryBL.GetAll();
@@ -63,7 +63,7 @@ namespace UI_Layer
 
         private void FillMealList()
         {
-            if (rdWeek.Checked)
+            if (rdbWeek.Checked)
             {
                 lviewMeal.Items.Clear();
                 List<Meal> allMeal = db.MealBL.GetAll();
@@ -92,7 +92,7 @@ namespace UI_Layer
                     lviewMeal.Items.Add(lv);
                 }
             }
-            else if (rdMounth.Checked)
+            else if (rdbMounth.Checked)
             {
                 lviewMeal.Items.Clear();
                 List<Meal> allMeal = db.MealBL.GetAll();

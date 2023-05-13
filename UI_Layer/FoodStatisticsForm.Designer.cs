@@ -39,14 +39,15 @@
             label2 = new Label();
             label3 = new Label();
             lviewTop = new ListView();
-            columnHeader7 = new ColumnHeader();
             columnHeader6 = new ColumnHeader();
+            columnHeader7 = new ColumnHeader();
             SuspendLayout();
             // 
             // lviewFoods
             // 
-            lviewFoods.BackColor = SystemColors.InactiveCaption;
+            lviewFoods.BackColor = Color.CornflowerBlue;
             lviewFoods.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5 });
+            lviewFoods.ForeColor = SystemColors.Window;
             lviewFoods.GridLines = true;
             lviewFoods.Location = new Point(111, 140);
             lviewFoods.Name = "lviewFoods";
@@ -84,7 +85,7 @@
             // label1
             // 
             label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ControlText;
+            label1.ForeColor = SystemColors.Window;
             label1.Location = new Point(111, 55);
             label1.Name = "label1";
             label1.Size = new Size(529, 23);
@@ -103,7 +104,7 @@
             // label2
             // 
             label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ControlText;
+            label2.ForeColor = SystemColors.Window;
             label2.Location = new Point(111, 95);
             label2.Name = "label2";
             label2.Size = new Size(221, 23);
@@ -114,7 +115,7 @@
             // label3
             // 
             label3.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = SystemColors.ControlText;
+            label3.ForeColor = SystemColors.Window;
             label3.Location = new Point(111, 379);
             label3.Name = "label3";
             label3.Size = new Size(529, 23);
@@ -124,16 +125,22 @@
             // 
             // lviewTop
             // 
-            lviewTop.BackColor = SystemColors.InactiveCaption;
+            lviewTop.BackColor = Color.CornflowerBlue;
             lviewTop.Columns.AddRange(new ColumnHeader[] { columnHeader6, columnHeader7 });
+            lviewTop.ForeColor = SystemColors.Window;
             lviewTop.GridLines = true;
             lviewTop.Location = new Point(260, 421);
             lviewTop.Name = "lviewTop";
-            lviewTop.Size = new Size(236, 155);
+            lviewTop.Size = new Size(226, 155);
             lviewTop.Sorting = SortOrder.Ascending;
             lviewTop.TabIndex = 8;
             lviewTop.UseCompatibleStateImageBehavior = false;
             lviewTop.View = View.Details;
+            // 
+            // columnHeader6
+            // 
+            columnHeader6.Text = "Yemek Adı";
+            columnHeader6.Width = 120;
             // 
             // columnHeader7
             // 
@@ -141,16 +148,11 @@
             columnHeader7.TextAlign = HorizontalAlignment.Center;
             columnHeader7.Width = 100;
             // 
-            // columnHeader6
-            // 
-            columnHeader6.Text = "Yemek Adı";
-            columnHeader6.Width = 120;
-            // 
             // FoodStatisticsForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.RosyBrown;
+            BackColor = Color.PaleVioletRed;
             ClientSize = new Size(765, 630);
             Controls.Add(lviewTop);
             Controls.Add(label3);

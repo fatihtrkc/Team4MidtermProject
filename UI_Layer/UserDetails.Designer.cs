@@ -57,7 +57,7 @@
             txtName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtName.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtName.Location = new Point(239, 105);
+            txtName.Location = new Point(181, 105);
             txtName.Name = "txtName";
             txtName.PasswordChar = '\0';
             txtName.PlaceholderText = "";
@@ -78,7 +78,7 @@
             txtSurname.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSurname.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtSurname.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSurname.Location = new Point(239, 166);
+            txtSurname.Location = new Point(181, 166);
             txtSurname.Name = "txtSurname";
             txtSurname.PasswordChar = '\0';
             txtSurname.PlaceholderText = "";
@@ -89,7 +89,9 @@
             // 
             // btnUpdate
             // 
+            btnUpdate.BorderColor = Color.White;
             btnUpdate.BorderRadius = 10;
+            btnUpdate.BorderThickness = 2;
             btnUpdate.CustomizableEdges = customizableEdges5;
             btnUpdate.DisabledState.BorderColor = Color.DarkGray;
             btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -97,7 +99,7 @@
             btnUpdate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnUpdate.ForeColor = Color.White;
-            btnUpdate.Location = new Point(169, 310);
+            btnUpdate.Location = new Point(111, 310);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnUpdate.Size = new Size(164, 43);
@@ -114,7 +116,7 @@
             dtBirth.CustomizableEdges = customizableEdges7;
             dtBirth.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dtBirth.Format = DateTimePickerFormat.Short;
-            dtBirth.Location = new Point(239, 236);
+            dtBirth.Location = new Point(181, 236);
             dtBirth.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtBirth.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtBirth.Name = "dtBirth";
@@ -127,7 +129,7 @@
             // 
             label3.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(131, 101);
+            label3.Location = new Point(73, 101);
             label3.Name = "label3";
             label3.Size = new Size(67, 36);
             label3.TabIndex = 69;
@@ -138,7 +140,7 @@
             // 
             label1.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(131, 166);
+            label1.Location = new Point(73, 166);
             label1.Name = "label1";
             label1.Size = new Size(67, 36);
             label1.TabIndex = 70;
@@ -149,7 +151,7 @@
             // 
             label2.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(131, 236);
+            label2.Location = new Point(73, 236);
             label2.Name = "label2";
             label2.Size = new Size(102, 36);
             label2.TabIndex = 71;
@@ -161,7 +163,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.PaleVioletRed;
-            ClientSize = new Size(505, 477);
+            ClientSize = new Size(378, 451);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(label3);

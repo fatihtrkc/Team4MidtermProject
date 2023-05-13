@@ -27,14 +27,22 @@ namespace UI_Layer
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
             User user = dbbll.UserBL.Find(userId);
-            if (!string.IsNullOrWhiteSpace(txtPassword.Text) || !string.IsNullOrWhiteSpace(txtAgain.Text))
+            if (string.IsNullOrWhiteSpace(txtNewPassword.Text) || string.IsNullOrWhiteSpace(txtAgainPassword.Text))
             {
-                if (txtPassword.Text == txtAgain.Text)
+                MessageBox.Show("Alanları boş bırakmamalısınız", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (txtNewPassword.Text != txtAgainPassword.Text)
                 {
-                    user.Password = txtAgain.Text;
+                    MessageBox.Show("Şifreler uyuşmuyor", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    user.Password = txtNewPassword.Text;
                     bool isUpdated = dbbll.UserBL.Update(user);
                     if (isUpdated)
                     {
@@ -45,16 +53,9 @@ namespace UI_Layer
                     {
                         MessageBox.Show("Yeni şifre oluşturulamadı");
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Şifreler uyuşmuyor", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
 
-            }
-            else
-            {
-                MessageBox.Show("Alanları boş bırakmamalısınız", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

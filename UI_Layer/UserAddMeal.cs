@@ -188,7 +188,10 @@ namespace UI_Layer
 
         private void cboxYemekler_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            int foodId = (int)cboxYemekler.SelectedValue;
+            Food foods = db.FoodBL.Find(foodId);
+            UnitType unit = foods.UnitId;
+            lblUnitType.Text = unit.ToString();
         }
 
         private void lviewMeal_SelectedIndexChanged_1(object sender, EventArgs e)
