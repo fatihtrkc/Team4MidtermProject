@@ -121,7 +121,7 @@
             btnSifre.FillColor = Color.Transparent;
             btnSifre.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnSifre.ForeColor = Color.White;
-            btnSifre.Location = new Point(155, 261);
+            btnSifre.Location = new Point(166, 261);
             btnSifre.Name = "btnSifre";
             btnSifre.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnSifre.Size = new Size(106, 26);

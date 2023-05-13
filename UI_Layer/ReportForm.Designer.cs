@@ -108,17 +108,20 @@
             rdbWeek.CheckedState.FillColor = Color.Ivory;
             rdbWeek.CheckedState.InnerColor = Color.CornflowerBlue;
             rdbWeek.CheckedState.InnerOffset = -4;
+            rdbWeek.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             rdbWeek.ForeColor = SystemColors.Control;
-            rdbWeek.Location = new Point(342, 347);
+            rdbWeek.Location = new Point(334, 347);
             rdbWeek.Name = "rdbWeek";
-            rdbWeek.Size = new Size(78, 31);
+            rdbWeek.Size = new Size(86, 31);
             rdbWeek.TabIndex = 41;
             rdbWeek.TabStop = true;
             rdbWeek.Text = "Haftalık";
+            rdbWeek.TextAlign = ContentAlignment.MiddleCenter;
             rdbWeek.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
             rdbWeek.UncheckedState.BorderThickness = 2;
             rdbWeek.UncheckedState.FillColor = Color.Transparent;
             rdbWeek.UncheckedState.InnerColor = Color.Transparent;
+            rdbWeek.CheckedChanged += rdbWeek_CheckedChanged;
             // 
             // rdbMounth
             // 
@@ -127,16 +130,19 @@
             rdbMounth.CheckedState.FillColor = Color.Ivory;
             rdbMounth.CheckedState.InnerColor = Color.CornflowerBlue;
             rdbMounth.CheckedState.InnerOffset = -4;
+            rdbMounth.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             rdbMounth.ForeColor = SystemColors.Control;
-            rdbMounth.Location = new Point(476, 347);
+            rdbMounth.Location = new Point(459, 347);
             rdbMounth.Name = "rdbMounth";
             rdbMounth.Size = new Size(78, 31);
             rdbMounth.TabIndex = 42;
             rdbMounth.Text = "Aylık";
+            rdbMounth.TextAlign = ContentAlignment.MiddleCenter;
             rdbMounth.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
             rdbMounth.UncheckedState.BorderThickness = 2;
             rdbMounth.UncheckedState.FillColor = Color.Transparent;
             rdbMounth.UncheckedState.InnerColor = Color.Transparent;
+            rdbMounth.CheckedChanged += rdbMounth_CheckedChanged;
             // 
             // ReportForm
             // 

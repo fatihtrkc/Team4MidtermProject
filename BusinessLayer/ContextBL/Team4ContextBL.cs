@@ -19,6 +19,7 @@ namespace BusinessLayer.ContextBL
             UnitBL = new UnitBL();
             UserBL = new UserBL();
             GoalBL = new GoalBL();
+            AdminBL = new AdminBL();
         }
 
         public AddedFoodBL AddedFoodBL { get; set; }
@@ -29,5 +30,6 @@ namespace BusinessLayer.ContextBL
         public UnitBL UnitBL { get; set; }
         public UserBL UserBL { get; set; }
         public GoalBL GoalBL { get; set; }
+        public AdminBL AdminBL { get; set; }
     }
 }

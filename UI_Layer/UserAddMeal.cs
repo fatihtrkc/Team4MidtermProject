@@ -100,18 +100,26 @@ namespace UI_Layer
         {
             if (lviewMeal.SelectedItems.Count > 0)
             {
-
-                AddedFood added = (AddedFood)lviewMeal.SelectedItems[0].Tag;
-                bool isDeleted = db.AddedFoodBL.Delete(added.Id);
-                if (isDeleted)
+                DialogResult dialogResult = MessageBox.Show("Silmek istediğine emin misin?", "UYARI", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    MessageBox.Show("Yemek silindi");
+                    AddedFood added = (AddedFood)lviewMeal.SelectedItems[0].Tag;
+                    bool isDeleted = db.AddedFoodBL.Delete(added.Id);
+                    if (isDeleted)
+                    {
+                        MessageBox.Show("Yemek silindi");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Yemek silinemedi");
+                    }
+                    FillList();
+
                 }
                 else
                 {
-                    MessageBox.Show("Yemek silinemedi");
+                    MessageBox.Show("Silme işlemi iptal edildi");
                 }
-                FillList();
             }
         }
 

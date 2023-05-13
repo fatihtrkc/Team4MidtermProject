@@ -45,19 +45,7 @@ namespace UI_Layer
 
         }
 
-        private bool alreadyMail(string mail)
-        {
-            mail = txtMail.Text;
-            user = dbbll.UserBL.FindByEmail(mail);
-            if (user != null)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
+        
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
@@ -76,7 +64,7 @@ namespace UI_Layer
                 }
             }
 
-            if (!alreadyMail(txtMail.Text))
+            if (alreadyMail(txtMail.Text))
             {
                 MessageBox.Show("Bu mail adresi zaten kullanılıyor!", "HATA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -123,6 +111,19 @@ namespace UI_Layer
             }
             else
                 return false;
+        }
+        private bool alreadyMail(string mail)
+        {
+            mail = txtMail.Text;
+            user = dbbll.UserBL.FindByEmail(mail);
+            if (user != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

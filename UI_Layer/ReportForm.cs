@@ -122,14 +122,13 @@ namespace UI_Layer
                 }
             }
         }
-
-        private void rdWeek_CheckedChanged(object sender, EventArgs e)
+        private void rdbWeek_CheckedChanged(object sender, EventArgs e)
         {
             FillCategoriesList();
             FillMealList();
         }
 
-        private void rdMounth_CheckedChanged(object sender, EventArgs e)
+        private void rdbMounth_CheckedChanged(object sender, EventArgs e)
         {
             FillCategoriesList();
             FillMealList();

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lviewFoods = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
@@ -35,12 +37,12 @@
             columnHeader4 = new ColumnHeader();
             columnHeader5 = new ColumnHeader();
             label1 = new Label();
-            txtSearch = new TextBox();
             label2 = new Label();
             label3 = new Label();
             lviewTop = new ListView();
             columnHeader6 = new ColumnHeader();
             columnHeader7 = new ColumnHeader();
+            txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             SuspendLayout();
             // 
             // lviewFoods
@@ -86,28 +88,20 @@
             // 
             label1.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Window;
-            label1.Location = new Point(111, 55);
+            label1.Location = new Point(111, 37);
             label1.Name = "label1";
             label1.Size = new Size(529, 23);
             label1.TabIndex = 1;
             label1.Text = "Hangi Öğünde Ne Yedim?";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // txtSearch
-            // 
-            txtSearch.Location = new Point(338, 95);
-            txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(302, 23);
-            txtSearch.TabIndex = 5;
-            txtSearch.TextChanged += txtSearch_TextChanged;
-            // 
             // label2
             // 
             label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.Window;
-            label2.Location = new Point(111, 95);
+            label2.Location = new Point(111, 81);
             label2.Name = "label2";
-            label2.Size = new Size(221, 23);
+            label2.Size = new Size(223, 37);
             label2.TabIndex = 6;
             label2.Text = "Arama Çubuğu :";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -148,16 +142,39 @@
             columnHeader7.TextAlign = HorizontalAlignment.Center;
             columnHeader7.Width = 100;
             // 
+            // txtSearch
+            // 
+            txtSearch.BorderRadius = 10;
+            txtSearch.BorderThickness = 2;
+            txtSearch.CustomizableEdges = customizableEdges1;
+            txtSearch.DefaultText = "";
+            txtSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSearch.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSearch.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSearch.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSearch.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSearch.Location = new Point(359, 81);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PasswordChar = '\0';
+            txtSearch.PlaceholderText = "";
+            txtSearch.SelectedText = "";
+            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtSearch.Size = new Size(281, 37);
+            txtSearch.TabIndex = 9;
+            txtSearch.TextChanged += txtSearch_TextChanged_1;
+            // 
             // FoodStatisticsForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.PaleVioletRed;
             ClientSize = new Size(765, 630);
+            Controls.Add(txtSearch);
             Controls.Add(lviewTop);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(txtSearch);
             Controls.Add(label1);
             Controls.Add(lviewFoods);
             FormBorderStyle = FormBorderStyle.None;
@@ -165,7 +182,6 @@
             Text = "FoodStatisticsForm";
             Load += FoodStatisticsForm_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -177,11 +193,11 @@
         private ColumnHeader columnHeader4;
         private ColumnHeader columnHeader5;
         private Label label1;
-        private TextBox txtSearch;
         private Label label2;
         private Label label3;
         private ListView lviewTop;
         private ColumnHeader columnHeader6;
         private ColumnHeader columnHeader7;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
     }
 }

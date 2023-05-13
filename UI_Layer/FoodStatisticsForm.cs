@@ -49,23 +49,6 @@ namespace UI_Layer
             }
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            lviewFoods.Items.Clear();
-            List<Food> list = dbbl.FoodBL.GetByText(txtSearch.Text);
-            foreach (Food item in list)
-            {
-                ListViewItem lvi = new ListViewItem();
-                lvi.Text = item.Name;
-                lvi.SubItems.Add(dbbl.AddedFoodBL.GetCountFood(userId, item.Id, MealType.Breakfast).ToString());
-                lvi.SubItems.Add(dbbl.AddedFoodBL.GetCountFood(userId, item.Id, MealType.Lunch).ToString());
-                lvi.SubItems.Add(dbbl.AddedFoodBL.GetCountFood(userId, item.Id, MealType.Dinner).ToString());
-                lvi.SubItems.Add(dbbl.AddedFoodBL.GetCountFood(userId, item.Id, MealType.Snack).ToString());
-
-                lviewFoods.Items.Add(lvi);
-            }
-        }
-
         private void FillListTopFood()
         {
             lviewTop.Items.Clear();
@@ -89,6 +72,23 @@ namespace UI_Layer
             }
 
 
+        }
+
+        private void txtSearch_TextChanged_1(object sender, EventArgs e)
+        {
+            lviewFoods.Items.Clear();
+            List<Food> list = dbbl.FoodBL.GetByText(txtSearch.Text);
+            foreach (Food item in list)
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.Text = item.Name;
+                lvi.SubItems.Add(dbbl.AddedFoodBL.GetCountFood(userId, item.Id, MealType.Breakfast).ToString());
+                lvi.SubItems.Add(dbbl.AddedFoodBL.GetCountFood(userId, item.Id, MealType.Lunch).ToString());
+                lvi.SubItems.Add(dbbl.AddedFoodBL.GetCountFood(userId, item.Id, MealType.Dinner).ToString());
+                lvi.SubItems.Add(dbbl.AddedFoodBL.GetCountFood(userId, item.Id, MealType.Snack).ToString());
+
+                lviewFoods.Items.Add(lvi);
+            }
         }
     }
 }
