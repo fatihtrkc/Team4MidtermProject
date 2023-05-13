@@ -64,6 +64,7 @@
             // 
             // kisiselBilgiler
             // 
+            kisiselBilgiler.BackColor = Color.PaleVioletRed;
             kisiselBilgiler.DropDownItems.AddRange(new ToolStripItem[] { boyToolStripMenuItem, kişiselBilgileriGüncelleToolStripMenuItem, şifreGünceleToolStripMenuItem });
             kisiselBilgiler.Name = "kisiselBilgiler";
             kisiselBilgiler.Size = new Size(90, 20);
@@ -72,6 +73,7 @@
             // 
             // boyToolStripMenuItem
             // 
+            boyToolStripMenuItem.BackColor = Color.PaleVioletRed;
             boyToolStripMenuItem.Name = "boyToolStripMenuItem";
             boyToolStripMenuItem.Size = new Size(197, 22);
             boyToolStripMenuItem.Text = "Hedef Güncelle";
@@ -79,6 +81,7 @@
             // 
             // kişiselBilgileriGüncelleToolStripMenuItem
             // 
+            kişiselBilgileriGüncelleToolStripMenuItem.BackColor = Color.PaleVioletRed;
             kişiselBilgileriGüncelleToolStripMenuItem.Name = "kişiselBilgileriGüncelleToolStripMenuItem";
             kişiselBilgileriGüncelleToolStripMenuItem.Size = new Size(197, 22);
             kişiselBilgileriGüncelleToolStripMenuItem.Text = "Kişisel Bilgileri Güncelle";
@@ -86,6 +89,7 @@
             // 
             // şifreGünceleToolStripMenuItem
             // 
+            şifreGünceleToolStripMenuItem.BackColor = Color.PaleVioletRed;
             şifreGünceleToolStripMenuItem.Name = "şifreGünceleToolStripMenuItem";
             şifreGünceleToolStripMenuItem.Size = new Size(197, 22);
             şifreGünceleToolStripMenuItem.Text = "Şifre Güncele";
@@ -93,6 +97,7 @@
             // 
             // ogunler
             // 
+            ogunler.BackColor = Color.PaleVioletRed;
             ogunler.DropDownItems.AddRange(new ToolStripItem[] { kahvaltıToolStripMenuItem, öğlenToolStripMenuItem, akşamToolStripMenuItem, araToolStripMenuItem });
             ogunler.Name = "ogunler";
             ogunler.Size = new Size(73, 20);
@@ -100,34 +105,39 @@
             // 
             // kahvaltıToolStripMenuItem
             // 
+            kahvaltıToolStripMenuItem.BackColor = Color.PaleVioletRed;
             kahvaltıToolStripMenuItem.Name = "kahvaltıToolStripMenuItem";
-            kahvaltıToolStripMenuItem.Size = new Size(176, 22);
+            kahvaltıToolStripMenuItem.Size = new Size(180, 22);
             kahvaltıToolStripMenuItem.Text = "Kahvaltı Ekle";
             kahvaltıToolStripMenuItem.Click += kahvaltıToolStripMenuItem_Click;
             // 
             // öğlenToolStripMenuItem
             // 
+            öğlenToolStripMenuItem.BackColor = Color.PaleVioletRed;
             öğlenToolStripMenuItem.Name = "öğlenToolStripMenuItem";
-            öğlenToolStripMenuItem.Size = new Size(176, 22);
+            öğlenToolStripMenuItem.Size = new Size(180, 22);
             öğlenToolStripMenuItem.Text = "Öğlen Yemeği Ekle";
             öğlenToolStripMenuItem.Click += öğlenToolStripMenuItem_Click;
             // 
             // akşamToolStripMenuItem
             // 
+            akşamToolStripMenuItem.BackColor = Color.PaleVioletRed;
             akşamToolStripMenuItem.Name = "akşamToolStripMenuItem";
-            akşamToolStripMenuItem.Size = new Size(176, 22);
+            akşamToolStripMenuItem.Size = new Size(180, 22);
             akşamToolStripMenuItem.Text = "Akşam Yemeği Ekle";
             akşamToolStripMenuItem.Click += akşamToolStripMenuItem_Click;
             // 
             // araToolStripMenuItem
             // 
+            araToolStripMenuItem.BackColor = Color.PaleVioletRed;
             araToolStripMenuItem.Name = "araToolStripMenuItem";
-            araToolStripMenuItem.Size = new Size(176, 22);
+            araToolStripMenuItem.Size = new Size(180, 22);
             araToolStripMenuItem.Text = "Ara Öğün Ekle";
             araToolStripMenuItem.Click += araToolStripMenuItem_Click;
             // 
             // raporlarToolStripMenuItem
             // 
+            raporlarToolStripMenuItem.BackColor = Color.PaleVioletRed;
             raporlarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { günlükToolStripMenuItem, haftalıkToolStripMenuItem });
             raporlarToolStripMenuItem.Name = "raporlarToolStripMenuItem";
             raporlarToolStripMenuItem.Size = new Size(63, 20);
@@ -135,6 +145,7 @@
             // 
             // günlükToolStripMenuItem
             // 
+            günlükToolStripMenuItem.BackColor = Color.PaleVioletRed;
             günlükToolStripMenuItem.Name = "günlükToolStripMenuItem";
             günlükToolStripMenuItem.Size = new Size(182, 22);
             günlükToolStripMenuItem.Text = "Aylık ve Haftalık";
@@ -142,6 +153,7 @@
             // 
             // haftalıkToolStripMenuItem
             // 
+            haftalıkToolStripMenuItem.BackColor = Color.PaleVioletRed;
             haftalıkToolStripMenuItem.Name = "haftalıkToolStripMenuItem";
             haftalıkToolStripMenuItem.Size = new Size(182, 22);
             haftalıkToolStripMenuItem.Text = "Yemek İstatistiklerim";

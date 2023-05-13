@@ -41,11 +41,26 @@ namespace UI_Layer
             if (!string.IsNullOrWhiteSpace(txtMail.Text) || !string.IsNullOrWhiteSpace(txtPassword.Text))
             {
                 int userid = dbbll.UserBL.Login(txtMail.Text, txtPassword.Text);
+                int adminid = dbbll.AdminBL.Login(txtMail.Text, txtPassword.Text);
                 if (userid > 0)
                 {
-                    HomePage homePage = new HomePage(userid);
+                    User user = dbbll.UserBL.Find(userid);
+                    if (user.ActivePassiveSituation==true)
+                    {
+                        HomePage homePage = new HomePage(userid);
+                        this.Hide();
+                        homePage.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Üyeliğiniz aktif değil. Admin ile iletişime geçin!", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else if (adminid > 0)
+                {
+                    AdminPage adminForm = new AdminPage();
                     this.Hide();
-                    homePage.ShowDialog();
+                    adminForm.ShowDialog();
                 }
                 else
                 {

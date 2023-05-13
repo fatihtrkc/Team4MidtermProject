@@ -28,16 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            lblTargetCalory = new Label();
-            label1 = new Label();
-            lblTotalCalory = new Label();
-            label2 = new Label();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            lblTarget = new Label();
+            lblTotal = new Label();
             lblAdSoyad = new Label();
             lblKilo = new Label();
             lblBoy = new Label();
@@ -57,56 +55,35 @@
             btnToday = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
-            // lblTargetCalory
+            // lblTarget
             // 
-            lblTargetCalory.AutoSize = true;
-            lblTargetCalory.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTargetCalory.ForeColor = Color.WhiteSmoke;
-            lblTargetCalory.Location = new Point(323, 141);
-            lblTargetCalory.Name = "lblTargetCalory";
-            lblTargetCalory.Size = new Size(55, 20);
-            lblTargetCalory.TabIndex = 105;
-            lblTargetCalory.Text = "180 cm";
+            lblTarget.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTarget.ForeColor = Color.WhiteSmoke;
+            lblTarget.Location = new Point(93, 150);
+            lblTarget.Name = "lblTarget";
+            lblTarget.Size = new Size(428, 20);
+            lblTarget.TabIndex = 104;
+            lblTarget.Text = "Günlük İhtiyacım Olan Kalori:";
+            lblTarget.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // lblTotal
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.WhiteSmoke;
-            label1.Location = new Point(155, 141);
-            label1.Name = "label1";
-            label1.Size = new Size(208, 20);
-            label1.TabIndex = 104;
-            label1.Text = "Günlük İhtiyacım Olan Kalori:";
-            // 
-            // lblTotalCalory
-            // 
-            lblTotalCalory.AutoSize = true;
-            lblTotalCalory.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lblTotalCalory.ForeColor = Color.WhiteSmoke;
-            lblTotalCalory.Location = new Point(322, 115);
-            lblTotalCalory.Name = "lblTotalCalory";
-            lblTotalCalory.Size = new Size(55, 20);
-            lblTotalCalory.TabIndex = 103;
-            lblTotalCalory.Text = "180 cm";
-            // 
-            // label2
-            // 
-            label2.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.WhiteSmoke;
-            label2.Location = new Point(155, 115);
-            label2.Name = "label2";
-            label2.Size = new Size(161, 15);
-            label2.TabIndex = 102;
-            label2.Text = "Toplam Alınan Kalori:";
+            lblTotal.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTotal.ForeColor = Color.WhiteSmoke;
+            lblTotal.Location = new Point(93, 115);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(428, 20);
+            lblTotal.TabIndex = 102;
+            lblTotal.Text = "Toplam Alınan Kalori:";
+            lblTotal.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblAdSoyad
             // 
             lblAdSoyad.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblAdSoyad.ForeColor = Color.WhiteSmoke;
-            lblAdSoyad.Location = new Point(103, 37);
+            lblAdSoyad.Location = new Point(93, 43);
             lblAdSoyad.Name = "lblAdSoyad";
-            lblAdSoyad.Size = new Size(338, 20);
+            lblAdSoyad.Size = new Size(428, 20);
             lblAdSoyad.TabIndex = 101;
             lblAdSoyad.Text = "kullanıcı adı soyadı";
             lblAdSoyad.TextAlign = ContentAlignment.MiddleCenter;
@@ -127,7 +104,7 @@
             lblBoy.AutoSize = true;
             lblBoy.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblBoy.ForeColor = Color.WhiteSmoke;
-            lblBoy.Location = new Point(208, 86);
+            lblBoy.Location = new Point(220, 86);
             lblBoy.Name = "lblBoy";
             lblBoy.Size = new Size(55, 20);
             lblBoy.TabIndex = 99;
@@ -149,7 +126,7 @@
             lblBoyLabel.AutoSize = true;
             lblBoyLabel.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblBoyLabel.ForeColor = Color.WhiteSmoke;
-            lblBoyLabel.Location = new Point(169, 86);
+            lblBoyLabel.Location = new Point(181, 86);
             lblBoyLabel.Name = "lblBoyLabel";
             lblBoyLabel.Size = new Size(43, 20);
             lblBoyLabel.TabIndex = 97;
@@ -188,7 +165,7 @@
             chboxAksam.CheckState = CheckState.Checked;
             chboxAksam.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             chboxAksam.ForeColor = Color.WhiteSmoke;
-            chboxAksam.Location = new Point(307, 193);
+            chboxAksam.Location = new Point(299, 193);
             chboxAksam.Name = "chboxAksam";
             chboxAksam.Size = new Size(125, 24);
             chboxAksam.TabIndex = 95;
@@ -210,7 +187,7 @@
             chboxOgle.CheckState = CheckState.Checked;
             chboxOgle.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             chboxOgle.ForeColor = Color.WhiteSmoke;
-            chboxOgle.Location = new Point(181, 193);
+            chboxOgle.Location = new Point(180, 193);
             chboxOgle.Name = "chboxOgle";
             chboxOgle.Size = new Size(113, 24);
             chboxOgle.TabIndex = 94;
@@ -232,7 +209,7 @@
             chboxKahvalti.CheckState = CheckState.Checked;
             chboxKahvalti.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             chboxKahvalti.ForeColor = Color.WhiteSmoke;
-            chboxKahvalti.Location = new Point(66, 193);
+            chboxKahvalti.Location = new Point(93, 193);
             chboxKahvalti.Name = "chboxKahvalti";
             chboxKahvalti.Size = new Size(81, 24);
             chboxKahvalti.TabIndex = 93;
@@ -249,9 +226,9 @@
             lviewGunluk.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
             lviewGunluk.ForeColor = Color.White;
             lviewGunluk.GridLines = true;
-            lviewGunluk.Location = new Point(106, 231);
+            lviewGunluk.Location = new Point(93, 223);
             lviewGunluk.Name = "lviewGunluk";
-            lviewGunluk.Size = new Size(338, 210);
+            lviewGunluk.Size = new Size(428, 219);
             lviewGunluk.TabIndex = 92;
             lviewGunluk.UseCompatibleStateImageBehavior = false;
             lviewGunluk.View = View.Details;
@@ -259,37 +236,38 @@
             // columnHeader1
             // 
             columnHeader1.Text = "Yemek";
-            columnHeader1.Width = 120;
+            columnHeader1.Width = 150;
             // 
             // columnHeader2
             // 
             columnHeader2.Text = "Adet/Porsiyon";
-            columnHeader2.Width = 50;
+            columnHeader2.Width = 100;
             // 
             // columnHeader3
             // 
             columnHeader3.Text = "Kalori";
+            columnHeader3.Width = 98;
             // 
             // columnHeader4
             // 
             columnHeader4.Text = "Öğün";
-            columnHeader4.Width = 100;
+            columnHeader4.Width = 75;
             // 
             // btnUpDay
             // 
             btnUpDay.BorderColor = Color.WhiteSmoke;
             btnUpDay.BorderRadius = 7;
             btnUpDay.BorderThickness = 3;
-            btnUpDay.CustomizableEdges = customizableEdges19;
+            btnUpDay.CustomizableEdges = customizableEdges1;
             btnUpDay.DisabledState.BorderColor = Color.DarkGray;
             btnUpDay.DisabledState.CustomBorderColor = Color.DarkGray;
             btnUpDay.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnUpDay.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnUpDay.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            btnUpDay.ForeColor = Color.Black;
-            btnUpDay.Location = new Point(480, 252);
+            btnUpDay.ForeColor = SystemColors.Window;
+            btnUpDay.Location = new Point(533, 252);
             btnUpDay.Name = "btnUpDay";
-            btnUpDay.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnUpDay.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnUpDay.Size = new Size(41, 172);
             btnUpDay.TabIndex = 91;
             btnUpDay.Text = ">";
@@ -300,16 +278,16 @@
             btnDownDay.BorderColor = Color.WhiteSmoke;
             btnDownDay.BorderRadius = 7;
             btnDownDay.BorderThickness = 3;
-            btnDownDay.CustomizableEdges = customizableEdges21;
+            btnDownDay.CustomizableEdges = customizableEdges3;
             btnDownDay.DisabledState.BorderColor = Color.DarkGray;
             btnDownDay.DisabledState.CustomBorderColor = Color.DarkGray;
             btnDownDay.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnDownDay.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnDownDay.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDownDay.ForeColor = Color.Black;
+            btnDownDay.ForeColor = SystemColors.Window;
             btnDownDay.Location = new Point(33, 252);
             btnDownDay.Name = "btnDownDay";
-            btnDownDay.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btnDownDay.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnDownDay.Size = new Size(41, 172);
             btnDownDay.TabIndex = 90;
             btnDownDay.Text = "<";
@@ -320,16 +298,16 @@
             btnToday.BorderColor = Color.WhiteSmoke;
             btnToday.BorderRadius = 7;
             btnToday.BorderThickness = 3;
-            btnToday.CustomizableEdges = customizableEdges23;
+            btnToday.CustomizableEdges = customizableEdges5;
             btnToday.DisabledState.BorderColor = Color.DarkGray;
             btnToday.DisabledState.CustomBorderColor = Color.DarkGray;
             btnToday.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnToday.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnToday.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnToday.ForeColor = Color.White;
-            btnToday.Location = new Point(191, 463);
+            btnToday.Location = new Point(220, 462);
             btnToday.Name = "btnToday";
-            btnToday.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            btnToday.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnToday.Size = new Size(172, 41);
             btnToday.TabIndex = 89;
             btnToday.Text = "Bugün";
@@ -340,11 +318,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.PaleVioletRed;
-            ClientSize = new Size(569, 544);
-            Controls.Add(lblTargetCalory);
-            Controls.Add(label1);
-            Controls.Add(lblTotalCalory);
-            Controls.Add(label2);
+            ClientSize = new Size(586, 574);
+            Controls.Add(lblTarget);
+            Controls.Add(lblTotal);
             Controls.Add(lblAdSoyad);
             Controls.Add(lblKilo);
             Controls.Add(lblBoy);
@@ -367,11 +343,8 @@
         }
 
         #endregion
-
-        private Label lblTargetCalory;
-        private Label label1;
-        private Label lblTotalCalory;
-        private Label label2;
+        private Label lblTarget;
+        private Label lblTotal;
         private Label lblAdSoyad;
         private Label lblKilo;
         private Label lblBoy;

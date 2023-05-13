@@ -1,6 +1,7 @@
 ﻿using BusinessLayer.Interfaces;
 using DataAccessLayer.Context;
 using EntityLayer.Entities;
+using EntityLayer.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,10 @@ namespace BusinessLayer.EntitiesBL
         }
 
         public Unit Find(int entityId)
+        {
+            return db.Units.Find(entityId);
+        }
+        public Unit FindByMeal(UnitType entityId)
         {
             return db.Units.Find(entityId);
         }

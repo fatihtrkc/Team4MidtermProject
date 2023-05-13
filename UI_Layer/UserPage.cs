@@ -37,9 +37,11 @@ namespace UI_Layer
             lblBoy.Text = user.Height.ToString();
             lblKilo.Text = user.Weight.ToString();
             TargetCalory(user);
-            FillTargetCalory(user);
             FillList(DateTime.Today);
-            lblTotalCalory.Text = totalCalory.ToString("N2");
+            lblTotal.Text = "Toplam Alınan Kalori Miktarı" + " " + totalCalory.ToString("N2");
+            FillTargetCalory(user);
+
+
         }
         private void btnToday_Click_1(object sender, EventArgs e)
         {
@@ -57,7 +59,7 @@ namespace UI_Layer
         {
             count--;
             FillList(DateTime.Today.AddDays(count));
-        } 
+        }
         private void chboxAraOgun_CheckedChanged_1(object sender, EventArgs e)
         {
             FillList(DateTime.Today.AddDays(count));
@@ -143,13 +145,13 @@ namespace UI_Layer
                 FillListMeal(time, type);
                 totalCalory += dbbl.AddedFoodBL.GetSumColory(userId, time, type);
             }
-            lblTotalCalory.Text = totalCalory.ToString("N2");
+
         }
 
         public void FillTargetCalory(User user)
         {
             double target = TargetCalory(user);
-            lblTargetCalory.Text = target.ToString("N2");
+            lblTarget.Text = "Günlük İhtiyacım Olan Kalori:" + " " + target.ToString("N2");
         }
 
         /// <summary>
