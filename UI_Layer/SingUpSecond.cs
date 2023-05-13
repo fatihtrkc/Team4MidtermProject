@@ -44,7 +44,7 @@ namespace UI_Layer
             cboxGoal.DataSource = goals;
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
             foreach (Control item in Controls)
             {
@@ -90,7 +90,7 @@ namespace UI_Layer
             }
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
             SignUpForm signUpForm = new SignUpForm(name, surname, email, password, speque, answer, dateTime);
             this.Hide();

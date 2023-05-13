@@ -28,166 +28,260 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label13 = new Label();
-            cboxLifeStyle = new ComboBox();
-            rdMale = new RadioButton();
-            rdFemale = new RadioButton();
-            label12 = new Label();
-            nudWeight = new NumericUpDown();
-            nudHeight = new NumericUpDown();
-            label11 = new Label();
-            label8 = new Label();
-            label1 = new Label();
-            cboxGoal = new ComboBox();
-            btnSave = new Button();
-            btnBack = new Button();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            lblLifeStyle = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            btnBack = new Guna.UI2.WinForms.Guna2Button();
+            btnSave = new Guna.UI2.WinForms.Guna2Button();
+            cboxGoal = new Guna.UI2.WinForms.Guna2ComboBox();
+            lblGoal = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            nudWeight = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            nudHeight = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            cboxLifeStyle = new Guna.UI2.WinForms.Guna2ComboBox();
+            lblWeight = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblHeight = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblCinsiyet = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            rdMale = new Guna.UI2.WinForms.Guna2RadioButton();
+            rdFemale = new Guna.UI2.WinForms.Guna2RadioButton();
             ((System.ComponentModel.ISupportInitialize)nudWeight).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudHeight).BeginInit();
             SuspendLayout();
             // 
-            // label13
+            // lblLifeStyle
             // 
-            label13.Location = new Point(39, 96);
-            label13.Name = "label13";
-            label13.Size = new Size(109, 23);
-            label13.TabIndex = 56;
-            label13.Text = "Hayat Biçimi";
-            label13.TextAlign = ContentAlignment.MiddleLeft;
+            lblLifeStyle.BackColor = Color.Transparent;
+            lblLifeStyle.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblLifeStyle.ForeColor = Color.WhiteSmoke;
+            lblLifeStyle.Location = new Point(29, 107);
+            lblLifeStyle.Name = "lblLifeStyle";
+            lblLifeStyle.Size = new Size(91, 22);
+            lblLifeStyle.TabIndex = 26;
+            lblLifeStyle.Text = "Hayat Biçimi";
+            // 
+            // btnBack
+            // 
+            btnBack.BorderColor = Color.White;
+            btnBack.BorderRadius = 10;
+            btnBack.BorderThickness = 2;
+            btnBack.CustomizableEdges = customizableEdges1;
+            btnBack.DisabledState.BorderColor = Color.DarkGray;
+            btnBack.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnBack.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnBack.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnBack.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBack.ForeColor = Color.White;
+            btnBack.Location = new Point(29, 434);
+            btnBack.Name = "btnBack";
+            btnBack.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnBack.Size = new Size(117, 31);
+            btnBack.TabIndex = 25;
+            btnBack.Text = "Geri Dön";
+            btnBack.Click += btnBack_Click_1;
+            // 
+            // btnSave
+            // 
+            btnSave.BorderColor = Color.White;
+            btnSave.BorderRadius = 10;
+            btnSave.BorderThickness = 2;
+            btnSave.CustomizableEdges = customizableEdges3;
+            btnSave.DisabledState.BorderColor = Color.DarkGray;
+            btnSave.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSave.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSave.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSave.ForeColor = Color.White;
+            btnSave.Location = new Point(277, 434);
+            btnSave.Name = "btnSave";
+            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnSave.Size = new Size(117, 31);
+            btnSave.TabIndex = 24;
+            btnSave.Text = "Kayıt Ol";
+            btnSave.Click += btnSave_Click_1;
+            // 
+            // cboxGoal
+            // 
+            cboxGoal.BackColor = Color.Transparent;
+            cboxGoal.BorderRadius = 10;
+            cboxGoal.CustomizableEdges = customizableEdges5;
+            cboxGoal.DrawMode = DrawMode.OwnerDrawFixed;
+            cboxGoal.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboxGoal.FocusedColor = Color.FromArgb(94, 148, 255);
+            cboxGoal.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cboxGoal.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            cboxGoal.ForeColor = Color.FromArgb(68, 88, 112);
+            cboxGoal.ItemHeight = 30;
+            cboxGoal.Location = new Point(29, 343);
+            cboxGoal.Name = "cboxGoal";
+            cboxGoal.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            cboxGoal.Size = new Size(365, 36);
+            cboxGoal.TabIndex = 23;
+            // 
+            // lblGoal
+            // 
+            lblGoal.AutoSize = false;
+            lblGoal.BackColor = Color.Transparent;
+            lblGoal.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblGoal.ForeColor = Color.WhiteSmoke;
+            lblGoal.Location = new Point(29, 307);
+            lblGoal.Name = "lblGoal";
+            lblGoal.Size = new Size(365, 18);
+            lblGoal.TabIndex = 22;
+            lblGoal.Text = "Uygulamayı Hangi Amaçla Kullanıyorsunuz?";
+            lblGoal.TextAlignment = ContentAlignment.MiddleCenter;
+            // 
+            // nudWeight
+            // 
+            nudWeight.BackColor = Color.Transparent;
+            nudWeight.BorderRadius = 10;
+            nudWeight.CustomizableEdges = customizableEdges7;
+            nudWeight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            nudWeight.Location = new Point(222, 206);
+            nudWeight.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
+            nudWeight.Minimum = new decimal(new int[] { 35, 0, 0, 0 });
+            nudWeight.Name = "nudWeight";
+            nudWeight.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            nudWeight.Size = new Size(100, 36);
+            nudWeight.TabIndex = 21;
+            nudWeight.Value = new decimal(new int[] { 35, 0, 0, 0 });
+            // 
+            // nudHeight
+            // 
+            nudHeight.BackColor = Color.Transparent;
+            nudHeight.BorderRadius = 10;
+            nudHeight.CustomizableEdges = customizableEdges9;
+            nudHeight.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            nudHeight.Location = new Point(222, 154);
+            nudHeight.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
+            nudHeight.Minimum = new decimal(new int[] { 130, 0, 0, 0 });
+            nudHeight.Name = "nudHeight";
+            nudHeight.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            nudHeight.Size = new Size(100, 36);
+            nudHeight.TabIndex = 20;
+            nudHeight.Value = new decimal(new int[] { 130, 0, 0, 0 });
             // 
             // cboxLifeStyle
             // 
-            cboxLifeStyle.FormattingEnabled = true;
-            cboxLifeStyle.Location = new Point(175, 96);
+            cboxLifeStyle.BackColor = Color.Transparent;
+            cboxLifeStyle.BorderRadius = 10;
+            cboxLifeStyle.BorderThickness = 2;
+            cboxLifeStyle.CustomizableEdges = customizableEdges11;
+            cboxLifeStyle.DrawMode = DrawMode.OwnerDrawFixed;
+            cboxLifeStyle.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboxLifeStyle.FocusedColor = Color.FromArgb(94, 148, 255);
+            cboxLifeStyle.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cboxLifeStyle.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            cboxLifeStyle.ForeColor = Color.FromArgb(68, 88, 112);
+            cboxLifeStyle.ItemHeight = 30;
+            cboxLifeStyle.Location = new Point(151, 93);
             cboxLifeStyle.Name = "cboxLifeStyle";
-            cboxLifeStyle.Size = new Size(120, 23);
-            cboxLifeStyle.TabIndex = 55;
+            cboxLifeStyle.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            cboxLifeStyle.Size = new Size(243, 36);
+            cboxLifeStyle.TabIndex = 19;
+            // 
+            // lblWeight
+            // 
+            lblWeight.BackColor = Color.Transparent;
+            lblWeight.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblWeight.ForeColor = Color.WhiteSmoke;
+            lblWeight.Location = new Point(29, 220);
+            lblWeight.Name = "lblWeight";
+            lblWeight.Size = new Size(30, 22);
+            lblWeight.TabIndex = 18;
+            lblWeight.Text = "Kilo";
+            // 
+            // lblHeight
+            // 
+            lblHeight.BackColor = Color.Transparent;
+            lblHeight.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblHeight.ForeColor = Color.WhiteSmoke;
+            lblHeight.Location = new Point(29, 168);
+            lblHeight.Name = "lblHeight";
+            lblHeight.Size = new Size(30, 22);
+            lblHeight.TabIndex = 17;
+            lblHeight.Text = "Boy";
+            // 
+            // lblCinsiyet
+            // 
+            lblCinsiyet.BackColor = Color.Transparent;
+            lblCinsiyet.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCinsiyet.ForeColor = Color.WhiteSmoke;
+            lblCinsiyet.Location = new Point(29, 50);
+            lblCinsiyet.Name = "lblCinsiyet";
+            lblCinsiyet.Size = new Size(58, 22);
+            lblCinsiyet.TabIndex = 16;
+            lblCinsiyet.Text = "Cinsiyet";
             // 
             // rdMale
             // 
             rdMale.AutoSize = true;
-            rdMale.Location = new Point(240, 71);
+            rdMale.CheckedState.BorderColor = Color.Black;
+            rdMale.CheckedState.BorderThickness = 1;
+            rdMale.CheckedState.FillColor = Color.Ivory;
+            rdMale.CheckedState.InnerColor = Color.CornflowerBlue;
+            rdMale.CheckedState.InnerOffset = -4;
+            rdMale.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            rdMale.ForeColor = Color.WhiteSmoke;
+            rdMale.Location = new Point(305, 48);
             rdMale.Name = "rdMale";
-            rdMale.Size = new Size(53, 19);
-            rdMale.TabIndex = 54;
+            rdMale.Size = new Size(65, 24);
+            rdMale.TabIndex = 15;
             rdMale.Text = "Erkek";
-            rdMale.UseVisualStyleBackColor = true;
+            rdMale.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            rdMale.UncheckedState.BorderThickness = 2;
+            rdMale.UncheckedState.FillColor = Color.Transparent;
+            rdMale.UncheckedState.InnerColor = Color.Transparent;
             // 
             // rdFemale
             // 
             rdFemale.AutoSize = true;
             rdFemale.Checked = true;
-            rdFemale.Location = new Point(175, 71);
+            rdFemale.CheckedState.BorderColor = Color.Black;
+            rdFemale.CheckedState.BorderThickness = 1;
+            rdFemale.CheckedState.FillColor = Color.Ivory;
+            rdFemale.CheckedState.InnerColor = Color.CornflowerBlue;
+            rdFemale.CheckedState.InnerOffset = -4;
+            rdFemale.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            rdFemale.ForeColor = Color.WhiteSmoke;
+            rdFemale.Location = new Point(166, 48);
             rdFemale.Name = "rdFemale";
-            rdFemale.Size = new Size(55, 19);
-            rdFemale.TabIndex = 53;
+            rdFemale.Size = new Size(66, 24);
+            rdFemale.TabIndex = 14;
             rdFemale.TabStop = true;
             rdFemale.Text = "Kadın";
-            rdFemale.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            label12.Location = new Point(39, 69);
-            label12.Name = "label12";
-            label12.Size = new Size(109, 23);
-            label12.TabIndex = 52;
-            label12.Text = "Cinsiyet";
-            label12.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // nudWeight
-            // 
-            nudWeight.DecimalPlaces = 1;
-            nudWeight.Location = new Point(175, 161);
-            nudWeight.Maximum = new decimal(new int[] { 300, 0, 0, 0 });
-            nudWeight.Minimum = new decimal(new int[] { 35, 0, 0, 0 });
-            nudWeight.Name = "nudWeight";
-            nudWeight.Size = new Size(120, 23);
-            nudWeight.TabIndex = 60;
-            nudWeight.Value = new decimal(new int[] { 35, 0, 0, 0 });
-            // 
-            // nudHeight
-            // 
-            nudHeight.DecimalPlaces = 1;
-            nudHeight.Location = new Point(175, 132);
-            nudHeight.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
-            nudHeight.Minimum = new decimal(new int[] { 130, 0, 0, 0 });
-            nudHeight.Name = "nudHeight";
-            nudHeight.Size = new Size(120, 23);
-            nudHeight.TabIndex = 59;
-            nudHeight.Value = new decimal(new int[] { 130, 0, 0, 0 });
-            // 
-            // label11
-            // 
-            label11.Location = new Point(39, 161);
-            label11.Name = "label11";
-            label11.Size = new Size(109, 23);
-            label11.TabIndex = 58;
-            label11.Text = "Kilo";
-            label11.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label8
-            // 
-            label8.Location = new Point(39, 132);
-            label8.Name = "label8";
-            label8.Size = new Size(109, 23);
-            label8.TabIndex = 57;
-            label8.Text = "Boy";
-            label8.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // label1
-            // 
-            label1.Location = new Point(42, 210);
-            label1.Name = "label1";
-            label1.Size = new Size(254, 50);
-            label1.TabIndex = 62;
-            label1.Text = "Uygulamayı Hangi Amaçla Kullanıyorsunuz?";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // cboxGoal
-            // 
-            cboxGoal.FormattingEnabled = true;
-            cboxGoal.Location = new Point(42, 263);
-            cboxGoal.Name = "cboxGoal";
-            cboxGoal.Size = new Size(256, 23);
-            cboxGoal.TabIndex = 61;
-            // 
-            // btnSave
-            // 
-            btnSave.Location = new Point(200, 318);
-            btnSave.Name = "btnSave";
-            btnSave.Size = new Size(75, 23);
-            btnSave.TabIndex = 63;
-            btnSave.Text = "Kayıt Ol";
-            btnSave.UseVisualStyleBackColor = true;
-            btnSave.Click += btnSave_Click;
-            // 
-            // btnBack
-            // 
-            btnBack.Location = new Point(42, 318);
-            btnBack.Name = "btnBack";
-            btnBack.Size = new Size(75, 23);
-            btnBack.TabIndex = 64;
-            btnBack.Text = "Geri Dön";
-            btnBack.UseVisualStyleBackColor = true;
-            btnBack.Click += btnBack_Click;
+            rdFemale.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
+            rdFemale.UncheckedState.BorderThickness = 2;
+            rdFemale.UncheckedState.FillColor = Color.Transparent;
+            rdFemale.UncheckedState.InnerColor = Color.Transparent;
             // 
             // SingUpSecond
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(333, 413);
+            BackColor = Color.PaleVioletRed;
+            ClientSize = new Size(427, 497);
+            Controls.Add(lblLifeStyle);
             Controls.Add(btnBack);
             Controls.Add(btnSave);
-            Controls.Add(label1);
             Controls.Add(cboxGoal);
+            Controls.Add(lblGoal);
             Controls.Add(nudWeight);
             Controls.Add(nudHeight);
-            Controls.Add(label11);
-            Controls.Add(label8);
-            Controls.Add(label13);
             Controls.Add(cboxLifeStyle);
+            Controls.Add(lblWeight);
+            Controls.Add(lblHeight);
+            Controls.Add(lblCinsiyet);
             Controls.Add(rdMale);
             Controls.Add(rdFemale);
-            Controls.Add(label12);
             Name = "SingUpSecond";
             Text = "SingUpSecond";
             Load += SingUpSecond_Load;
@@ -199,18 +293,18 @@
 
         #endregion
 
-        private Label label13;
-        private ComboBox cboxLifeStyle;
-        private RadioButton rdMale;
-        private RadioButton rdFemale;
-        private Label label12;
-        private NumericUpDown nudWeight;
-        private NumericUpDown nudHeight;
-        private Label label11;
-        private Label label8;
-        private Label label1;
-        private ComboBox cboxGoal;
-        private Button btnSave;
-        private Button btnBack;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblLifeStyle;
+        private Guna.UI2.WinForms.Guna2Button btnBack;
+        private Guna.UI2.WinForms.Guna2Button btnSave;
+        private Guna.UI2.WinForms.Guna2ComboBox cboxGoal;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblGoal;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudWeight;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudHeight;
+        private Guna.UI2.WinForms.Guna2ComboBox cboxLifeStyle;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblWeight;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblHeight;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblCinsiyet;
+        private Guna.UI2.WinForms.Guna2RadioButton rdMale;
+        private Guna.UI2.WinForms.Guna2RadioButton rdFemale;
     }
 }
