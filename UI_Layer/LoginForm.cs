@@ -30,11 +30,6 @@ namespace UI_Layer
             txtMail.Clear();
             txtPassword.Clear();
             txtPassword.UseSystemPasswordChar = true;
-
-
-            //Proje bitince sil
-            txtMail.Text = "ahmetyilmaz@yilmaz.com";
-            txtPassword.Text = "AaBb12.,";
         }
 
         private void btnGiris_Click(object sender, EventArgs e)
