@@ -35,6 +35,7 @@ namespace UI_Layer
             txtSpe.Text = Speque;
             txtSpeAns.Text = Answer;
             dtBirth.Value = DateTime;
+            dbbll = new();
         }
 
         Team4ContextBL dbbll;

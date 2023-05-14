@@ -97,5 +97,12 @@ namespace UI_Layer
         {
             YeniFormEkle(new UserInformation(userId));
         }
+
+        private void HomePage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            this.Hide();
+            loginForm.ShowDialog();
+        }
     }
 }
