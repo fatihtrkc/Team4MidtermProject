@@ -17,6 +17,7 @@ namespace UI_Layer.Utilities
             }
         }
 
+
         public static bool SifreKontrol(string sifre)
         {
 
