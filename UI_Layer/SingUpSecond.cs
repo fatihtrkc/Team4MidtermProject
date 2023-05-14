@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI_Layer.Utilities;
 
 namespace UI_Layer
 {
@@ -64,7 +65,7 @@ namespace UI_Layer
             user.Name = name.ToUpper();
             user.Surname = surname.ToUpper();
             user.Email = email;
-            user.Password = password;
+            user.Password = Helper.sha256_hash(password);
             user.SpecificQuestion = speque;
             user.QuestionAnswer = answer.ToUpper();
             user.BirthDate = dateTime;

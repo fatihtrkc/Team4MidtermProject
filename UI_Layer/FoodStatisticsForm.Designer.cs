@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lviewFoods = new ListView();
             columnHeader1 = new ColumnHeader();
             columnHeader2 = new ColumnHeader();
@@ -53,7 +53,7 @@
             lviewFoods.GridLines = true;
             lviewFoods.Location = new Point(111, 140);
             lviewFoods.Name = "lviewFoods";
-            lviewFoods.Size = new Size(529, 221);
+            lviewFoods.Size = new Size(545, 227);
             lviewFoods.TabIndex = 0;
             lviewFoods.UseCompatibleStateImageBehavior = false;
             lviewFoods.View = View.Details;
@@ -146,7 +146,7 @@
             // 
             txtSearch.BorderRadius = 10;
             txtSearch.BorderThickness = 2;
-            txtSearch.CustomizableEdges = customizableEdges1;
+            txtSearch.CustomizableEdges = customizableEdges3;
             txtSearch.DefaultText = "";
             txtSearch.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearch.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -160,7 +160,7 @@
             txtSearch.PasswordChar = '\0';
             txtSearch.PlaceholderText = "";
             txtSearch.SelectedText = "";
-            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtSearch.Size = new Size(281, 37);
             txtSearch.TabIndex = 9;
             txtSearch.TextChanged += txtSearch_TextChanged_1;

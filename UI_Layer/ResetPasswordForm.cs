@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI_Layer.Utilities;
 
 namespace UI_Layer
 {
@@ -42,7 +43,13 @@ namespace UI_Layer
                 }
                 else
                 {
-                    user.Password = txtNewPassword.Text;
+                    if (!Helper.SifreKontrol(txtNewPassword.Text))
+                    {
+                        MessageBox.Show("Şifre en az iki küçük harf, en az iki büyük harf ve en az bir özel karakter içermeli ve en az sekiz karakter uzunluğunda olmalıdır");
+                        return;
+                    }
+
+                    user.Password = Helper.sha256_hash(txtNewPassword.Text);
                     bool isUpdated = dbbll.UserBL.Update(user);
                     if (isUpdated)
                     {

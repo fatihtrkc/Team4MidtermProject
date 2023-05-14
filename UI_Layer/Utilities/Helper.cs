@@ -1,79 +1,77 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace UI_Layer.Utilities
 {
-    internal static class Helper
+    public static class Helper
     {
-        internal static void ButtonSituation(Control.ControlCollection controlCollection, bool IdIsNotNull, bool NameIsNotNull)
+        public static string sha256_hash(string sifre)
         {
-            Button buttonAdd = null, buttonDelete = null, buttonUpdate = null;
-            foreach (Control control in controlCollection)
+            using (SHA256 hash = SHA256Managed.Create())
             {
-                if (control is Button)
-                {
-                    Button button = (Button)control;
-                    if (button.Name is "btnAdd") buttonAdd = button;
-                    if (button.Name is "btnDelete") buttonDelete = button;
-                    if (button.Name is "btnUpdate") buttonUpdate = button;
-
-                    if (buttonAdd is not null && buttonDelete is not null && buttonUpdate is not null) SituationChange(buttonAdd, buttonDelete, buttonUpdate, IdIsNotNull, NameIsNotNull);
-                }
+                return string.Concat(hash.ComputeHash(Encoding.UTF8.GetBytes(sifre)).Select(l => l.ToString("X2")));
             }
         }
-        static void SituationChange(Button buttonAdd, Button buttonDelete, Button buttonUpdate, bool IdIsNotNull, bool NameIsNotNull)
+
+        public static bool SifreKontrol(string sifre)
         {
-            if (IdIsNotNull && NameIsNotNull)
+
+            if (sifre.Length < 8)
             {
-                buttonAdd.Enabled = false;
-                buttonDelete.Enabled = true;
-                buttonUpdate.Enabled = true;
-            }
-            else if (!IdIsNotNull && NameIsNotNull)
-            {
-                buttonAdd.Enabled = true;
-                buttonDelete.Enabled = false;
-                buttonUpdate.Enabled = false;
-            }
-            else if (IdIsNotNull && !NameIsNotNull)
-            {
-                buttonAdd.Enabled = false;
-                buttonDelete.Enabled = false;
-                buttonUpdate.Enabled = false;
+                return false;
             }
             else
             {
-                buttonAdd.Enabled = false;
-                buttonDelete.Enabled = false;
-                buttonUpdate.Enabled = false;
+                int buyukHarfSayisi = 0;
+                int kucukHarfSayisi = 0;
+                int ozelKarakterSayisi = 0;
+
+
+                foreach (char c in sifre)
+                {
+                    if (Char.IsUpper(c))
+                    {
+                        buyukHarfSayisi++;
+                    }
+                    else if (Char.IsLower(c))
+                    {
+                        kucukHarfSayisi++;
+                    }
+                    else if (c == '!' || c == ':' || c == '@' || c == '*')
+                    {
+                        ozelKarakterSayisi++;
+                    }
+
+                }
+
+                if (buyukHarfSayisi < 2 || kucukHarfSayisi < 2 || ozelKarakterSayisi < 1)
+                {
+                    return false;
+                }
+
+
+                return true;
             }
         }
 
-        internal static void WriteSelectClear(Control.ControlCollection controlCollection)
+        public static bool MailKontrol(string email)
         {
-            foreach (Control control in controlCollection)
-            {
-                if (control is TextBox)
-                {
-                    ((TextBox)control).Clear();
-                }
-                else if (control is DataGridView)
-                {
-                    ((DataGridView)control).ClearSelection();
-                }
-                else if (control is ComboBox)
-                {
-                    ((ComboBox)control).SelectedIndex = 0;
-                }
-                else if (control is NumericUpDown)
-                {
-                    ((NumericUpDown)control).Value = default;
-                }
-            }
+            
+            if (email.Count(c => c == '@') != 1)
+                return false;
+
+            
+            if (!email.EndsWith(".com"))
+                return false;
+
+            return true;
         }
+
     }
 }
+
 

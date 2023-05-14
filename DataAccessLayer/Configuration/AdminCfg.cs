@@ -18,7 +18,7 @@ namespace DataAccessLayer.Configuration
 
             builder.HasData
                 (
-                new Admin() { Id = 1, Email = "admin@admin.com", Password = "Admin1234", CreationDate = DateTime.Now }
+                new Admin() { Id = 1, Email = "admin@admin.com", Password = "60FE74406E7F353ED979F350F2FBB6A2E8690A5FA7D1B0C32983D1D8B3F95F67", CreationDate = DateTime.Now }
                 );
         }
     }

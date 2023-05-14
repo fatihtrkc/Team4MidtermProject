@@ -9,9 +9,11 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI_Layer.Utilities;
 
 namespace UI_Layer
 {
@@ -37,9 +39,7 @@ namespace UI_Layer
 
         Team4ContextBL dbbll;
         User user;
-
-
-
+        
         private void SignUpForm_Load(object sender, EventArgs e)
         {
 
@@ -75,6 +75,17 @@ namespace UI_Layer
 
                     if (txtPassword.Text == txtAgain.Text)
                     {
+                        if(!Helper.SifreKontrol(txtPassword.Text))
+                        {
+                            MessageBox.Show("Şifre en az iki küçük harf, en az iki büyük harf ve en az bir özel karakter içermeli ve en az sekiz karakter uzunluğunda olmalıdır");
+                            return;
+                        }
+                        if(!Helper.MailKontrol(txtMail.Text))
+                        {
+                            MessageBox.Show("Geçerli bir mail adresi giriniz");
+                            return;
+                        }
+
 
                         string name = txtName.Text;
                         string surname = txtSurname.Text;
@@ -125,5 +136,6 @@ namespace UI_Layer
                 return false;
             }
         }
+        
     }
 }
