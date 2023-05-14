@@ -17,6 +17,7 @@ namespace EntityLayer.Entities
         public double CaloryPerUnit { get; set; }
 
         public string? Image { get; set; }
+
         //Relations
         public int CategoryId { get; set; }
         public Category Category { get; set; }

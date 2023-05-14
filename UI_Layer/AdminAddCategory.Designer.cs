@@ -108,7 +108,7 @@
             lviewCategory.GridLines = true;
             lviewCategory.Location = new Point(193, 215);
             lviewCategory.Name = "lviewCategory";
-            lviewCategory.Size = new Size(206, 196);
+            lviewCategory.Size = new Size(234, 196);
             lviewCategory.TabIndex = 77;
             lviewCategory.UseCompatibleStateImageBehavior = false;
             lviewCategory.View = View.Details;

@@ -196,7 +196,7 @@
             lviewFood.GridLines = true;
             lviewFood.Location = new Point(51, 376);
             lviewFood.Name = "lviewFood";
-            lviewFood.Size = new Size(462, 196);
+            lviewFood.Size = new Size(483, 196);
             lviewFood.TabIndex = 75;
             lviewFood.UseCompatibleStateImageBehavior = false;
             lviewFood.View = View.Details;
@@ -277,6 +277,7 @@
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Resim Ekle";
             linkLabel1.TextAlign = ContentAlignment.MiddleCenter;
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // AdminAddFood
             // 

@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.ContextBL;
+using BusinessLayer.EntitiesBL;
 using EntitiyLayer.Entities;
 using EntityLayer.Entities;
 using EntityLayer.Enums;
@@ -8,25 +9,30 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI_Layer.Properties;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace UI_Layer
 {
     public partial class UserAddMeal : Form
     {
+
         public UserAddMeal(int id, MealType meal)
         {
             InitializeComponent();
             userId = id;
             mealType = meal;
             db = new();
+
         }
         int userId;
         MealType mealType;
         Team4ContextBL db;
+
 
         int categoryId;
         private void UserAddMeal_Load(object sender, EventArgs e)
@@ -55,6 +61,7 @@ namespace UI_Layer
                 lblMeal.Text = "Öğlen Yemekleri";
                 FillList();
             }
+
         }
 
         private void FillList()
@@ -71,6 +78,7 @@ namespace UI_Layer
                 lv.Tag = item;
                 lviewMeal.Items.Add(lv);
             }
+
         }
 
         private void FillComboBox()
@@ -201,6 +209,7 @@ namespace UI_Layer
             UnitType unit = foods.UnitId;
             lblUnitType.Text = unit.ToString();
             FillPictureBox(foodId);
+
         }
 
         private void lviewMeal_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -223,7 +232,6 @@ namespace UI_Layer
         {
             Food food = db.FoodBL.Find(foodId);
             pboxYemekFoto.Image = Image.FromFile(food.Image);
-
         }
     }
 }

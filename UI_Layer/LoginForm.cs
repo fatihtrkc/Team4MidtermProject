@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI_Layer.Utilities;
 
 namespace UI_Layer
 {
@@ -40,8 +41,8 @@ namespace UI_Layer
         {
             if (!string.IsNullOrWhiteSpace(txtMail.Text) || !string.IsNullOrWhiteSpace(txtPassword.Text))
             {
-                int userid = dbbll.UserBL.Login(txtMail.Text, txtPassword.Text);
-                int adminid = dbbll.AdminBL.Login(txtMail.Text, txtPassword.Text);
+                int userid = dbbll.UserBL.Login(txtMail.Text, Helper.sha256_hash(txtPassword.Text));
+                int adminid = dbbll.AdminBL.Login(txtMail.Text, Helper.sha256_hash(txtPassword.Text));
                 if (userid > 0)
                 {
                     User user = dbbll.UserBL.Find(userid);
@@ -64,7 +65,7 @@ namespace UI_Layer
                 }
                 else
                 {
-                    MessageBox.Show("Giriş başarısız oldu", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Mail adresi veya şifreniz hatalı. Kayıtlı değilseniz linke tıklayarak kayıt olabilirsiniz", "UYARI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
             }

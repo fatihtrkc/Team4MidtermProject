@@ -40,7 +40,7 @@ namespace UI_Layer
                     if (isDeleted)
                     {
                         MessageBox.Show("Kategori silindi!");
-                        
+
                     }
                     else
                     {
@@ -72,7 +72,7 @@ namespace UI_Layer
                     if (isupdated)
                     {
                         MessageBox.Show("Kategori güncellendi!", "BİLGİ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
+
                     }
                     else
                     {
@@ -84,7 +84,7 @@ namespace UI_Layer
                     Category category = new Category();
                     category.Name = txtCategoryName.Text;
                     dbbl.CategoryBL.Add(category);
-                    
+
                 }
                 FillListView();
             }

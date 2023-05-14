@@ -71,6 +71,7 @@
             pboxYemekFoto.Location = new Point(115, 21);
             pboxYemekFoto.Name = "pboxYemekFoto";
             pboxYemekFoto.Size = new Size(261, 154);
+            pboxYemekFoto.SizeMode = PictureBoxSizeMode.StretchImage;
             pboxYemekFoto.TabIndex = 64;
             pboxYemekFoto.TabStop = false;
             // 
