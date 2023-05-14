@@ -107,7 +107,7 @@
             // 
             kahvaltıToolStripMenuItem.BackColor = Color.PaleVioletRed;
             kahvaltıToolStripMenuItem.Name = "kahvaltıToolStripMenuItem";
-            kahvaltıToolStripMenuItem.Size = new Size(180, 22);
+            kahvaltıToolStripMenuItem.Size = new Size(176, 22);
             kahvaltıToolStripMenuItem.Text = "Kahvaltı Ekle";
             kahvaltıToolStripMenuItem.Click += kahvaltıToolStripMenuItem_Click;
             // 
@@ -115,7 +115,7 @@
             // 
             öğlenToolStripMenuItem.BackColor = Color.PaleVioletRed;
             öğlenToolStripMenuItem.Name = "öğlenToolStripMenuItem";
-            öğlenToolStripMenuItem.Size = new Size(180, 22);
+            öğlenToolStripMenuItem.Size = new Size(176, 22);
             öğlenToolStripMenuItem.Text = "Öğlen Yemeği Ekle";
             öğlenToolStripMenuItem.Click += öğlenToolStripMenuItem_Click;
             // 
@@ -123,7 +123,7 @@
             // 
             akşamToolStripMenuItem.BackColor = Color.PaleVioletRed;
             akşamToolStripMenuItem.Name = "akşamToolStripMenuItem";
-            akşamToolStripMenuItem.Size = new Size(180, 22);
+            akşamToolStripMenuItem.Size = new Size(176, 22);
             akşamToolStripMenuItem.Text = "Akşam Yemeği Ekle";
             akşamToolStripMenuItem.Click += akşamToolStripMenuItem_Click;
             // 
@@ -131,7 +131,7 @@
             // 
             araToolStripMenuItem.BackColor = Color.PaleVioletRed;
             araToolStripMenuItem.Name = "araToolStripMenuItem";
-            araToolStripMenuItem.Size = new Size(180, 22);
+            araToolStripMenuItem.Size = new Size(176, 22);
             araToolStripMenuItem.Text = "Ara Öğün Ekle";
             araToolStripMenuItem.Click += araToolStripMenuItem_Click;
             // 
@@ -169,6 +169,7 @@
             IsMdiContainer = true;
             Name = "HomePage";
             Text = "HomePage";
+            FormClosed += HomePage_FormClosed;
             Load += HomePage_Load;
             menus.ResumeLayout(false);
             menus.PerformLayout();
